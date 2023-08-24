@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Hola, Gracias por registrarse en F5 </h1> <br>
+        <h1>¡A continuación confirme su correo electrónico!</h1>
+
+        <p>
+            Confirme su correo electrónico haciendo clic en el siguiente enlace: <br><br>
+            <a href="{{ signedUrl|raw }}">Confirmar mi correo electrónico</a>.<br>
+            Este enlace se caducará en {{ expiresAtMessageKey|trans(expiresAtMessageData, 'VerifyEmailBundle') }}.
+        </p>
+
+        <p> 
+            ¡Que tenga una excelente dia!<br>
+            Un saludo muy cordial de parte de <strong>Equipo de Factoria F5</strong>
+        </p>
+    </div>
+</body>
+</html>
