@@ -41,17 +41,24 @@ class RegistrationController extends AbstractController
                 )
             );
 
+            $user->setName($form->get('name')->getData());
+
             $entityManager->persist($user);
             $entityManager->flush();
 
             // generate a signed url and email it to the user
             $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,
-                (new TemplatedEmail())
-                    ->from(new Address('mariamoria4040@gmail.com', 'Verificación del login F5'))
-                    ->to($user->getEmail())
-                    ->subject('Please Confirm your Email')
-                    ->htmlTemplate('registration/confirmation_email.html.twig')
-            );
+            (new TemplatedEmail())
+                ->from(new Address('mariamoria4040@gmail.com', 'Verificación del login F5'))
+                ->to($user->getEmail())
+                ->subject('Por favor confirme su correo')
+                ->htmlTemplate('registration/confirmation_email.html.twig')
+                ->context([
+                    'userName' => $user->getName(), // Pasar el nombre del usuario a la plantilla
+                    // ...
+                ])
+        );
+        
             // do anything else you need here, like send an email
 
             return $this->redirectToRoute('app_login');

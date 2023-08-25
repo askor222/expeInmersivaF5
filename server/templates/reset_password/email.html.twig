@@ -1,9 +1,14 @@
-<h1>Hi!</h1>
+<h1>¡Hola de nuevo!</h1>
 
-<p>To reset your password, please visit the following link</p>
+<p>Veo que ha olvidado la contraseña de su Eamil.</p> <br>
+<p>Para restablecer su contraseña a continuación haga click en el siguiente enlace:</p>
 
 <a href="{{ url('app_reset_password', {token: resetToken.token}) }}">{{ url('app_reset_password', {token: resetToken.token}) }}</a>
 
-<p>This link will expire in {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p>
+<p>Este enlace se caducarar en: {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p> <br>
+<p>Este enlace solo sirve una vez para restablecer su contraseña.</p> <br>
 
-<p>Cheers!</p>
+<p> 
+    ¡Que tenga una excelente dia!<br>
+    Un saludo muy cordial de parte de <strong>Equipo de F5</strong>
+</p>
