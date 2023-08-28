@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PagesLinks index{% endblock %}
+
+{% block body %}
+    <h1>PagesLinks index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Link</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pages_link in pages_links %}
+            <tr>
+                <td>{{ pages_link.id }}</td>
+                <td>{{ pages_link.name }}</td>
+                <td>{{ pages_link.link }}</td>
+                <td>
+                    <a href="{{ path('app_pages_links_show', {'id': pages_link.id}) }}">show</a>
+                    <a href="{{ path('app_pages_links_edit', {'id': pages_link.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_pages_links_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New PagesLinks{% endblock %}
+
+{% block body %}
+    <h1>Create new PagesLinks</h1>
+
+    {{ include('pages_links/_form.html.twig') }}
+
+    <a href="{{ path('app_pages_links_index') }}">back to list</a>
+{% endblock %}

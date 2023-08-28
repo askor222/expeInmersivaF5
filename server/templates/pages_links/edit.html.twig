@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit PagesLinks{% endblock %}
+
+{% block body %}
+    <h1>Edit PagesLinks</h1>
+
+    {{ include('pages_links/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_pages_links_index') }}">back to list</a>
+
+    {{ include('pages_links/_delete_form.html.twig') }}
+{% endblock %}
