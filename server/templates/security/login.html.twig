@@ -2,8 +2,127 @@
 
 {% block title %}Log in!{% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+
+        body {
+            background-image: url('https://lh3.googleusercontent.com/drive-viewer/AITFw-y-AnRXrUTHOfOHphrlD0DPUN03x_F7e9iWB1J_m4xuRreUx7OyyXdNKT1otzCyaEVLDClxrFEFgEQcVXot2vSKXCQ8=w1366-h651');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat; 
+            height: 100vh;
+        }
+
+        .title-register{
+            width: 100%;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            color: white;
+            font-size: 3rem;
+        }
+
+        p{
+            font-family: 'Inter', sans-serif;
+
+        }
+        
+
+        .contenedor{
+            width: 100%;
+            height: 100%;
+            display:grid;
+            justify-content: center;
+            align-items: center;
+        }
+        
+
+        .formBasicEmail {
+            background-color: rgb(0 0 0 / 51%);
+
+            display: grid;
+            
+            height: 500px;
+            width: 600px;
+
+            text-align: center;
+            align-content: center;
+            gap: 12px;
+
+
+            z-index: 3;
+        }
+
+        .formBasicEmail label {
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
+        }
+
+        .recovery_password{
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
+            text-decoration: none;
+            width: 100%;
+            text-align: center;
+        
+        }        
+
+        .button {
+            width: 93%;
+            font-family: 'Kanit', sans-serif;
+            font-size: 2rem;
+            margin: 0 auto;
+            margin-top:15px;
+            padding: 5px;
+            cursor: pointer;
+
+        }
+
+        /* Cambiar el color del borde cuando se enfoca en el campo */
+        .formBasicEmail .form-control:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Add a subtle box shadow */
+        }
+
+        /* Cambiar el color del placeholder (texto de relleno) */
+        .formBasicEmail .form-control::placeholder {
+            color: #999;
+        }
+
+        /* Cambiar el color del texto cuando el campo está deshabilitado */
+        .formBasicEmail .form-control:disabled {
+            color: #ccc;
+            background-color: rgba(255, 255, 255, 0.2); /* Example background color */
+            cursor: not-allowed;
+        }
+
+        .formBasicEmail input[type="text"],
+        .formBasicEmail input[type="email"],
+        .formBasicEmail input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            color: black;
+            font-size: 16px;
+            margin: 0 auto;
+        }
+
+
+        
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
-<form method="post">
+<div class="contenedor">
+<form method="post" class="formBasicEmail">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -14,21 +133,23 @@
         </div>
     {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <h1 class="title-register">Por favor inicia sesión</h1>
     <label for="inputEmail">Email</label>
     <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-    <label for="inputPassword">Password</label>
+
+    <label for="inputPassword">Contraseña</label>
     <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
 
     <input type="hidden" name="_csrf_token"
            value="{{ csrf_token('authenticate') }}"
     >
 
-    <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
+    <a class="recovery_password" href="{{path('app_forgot_password_request')}}"> Olvidaste la contraseña? </a>
+
+    <button class="button" type="submit">
+        iniciar sesión
     </button>
+
 </form>
-<div>
-	<a href="{{path('app_forgot_password_request')}}"> Forgot your password? </a>
 </div>
 {% endblock %}
