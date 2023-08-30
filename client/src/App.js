@@ -1,17 +1,17 @@
-import React from 'react';
+import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Inmersive from './components/Inmersive.js';
+import Home from './Components/Home';
+
 
 function App() {
   return (
-    <>
-    <BrowserRouter>
-     <Routes>
-        <Route path='/inmersive' element={<Inmersive />} >Inmersive</Route>
-     </Routes>
-    </BrowserRouter>
-
-    </>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path='/Home' element={<Home />}>Home</Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
