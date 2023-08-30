@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Inmersive from './routes/InmersiveExpe';
+import Inmersive from './components/Inmersive';
 
 function App() {
   return (
