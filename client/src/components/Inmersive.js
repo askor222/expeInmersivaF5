@@ -1,113 +1,44 @@
 import React from 'react'
 
-
-function Inmersive() {
+const Inmersive = () => {
   return (
     <div>
 
-      <a-scene>
+<a-scene>
+        <a-assets>
+          {/* <!-- <a-asset-item id="Salon1ConVentanas" src="https://cdn.glitch.global/23cd5e74-01aa-459b-a8e9-7e365f343eac/OficinaGeneral8.1.glb?v=1693238054010"></a-asset-item> -->
+            <!-- <a-asset-item id="Salon1ConVentanas" src="https://cdn.glitch.global/ad4a9a20-adce-40d5-917e-275b16b65d45/OfinicaFactoriaGlobal5tama%C3%B1o.glb?v=1693072331118"></a-asset-item> -->
+            <!-- <a-asset-item id="General" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/Oficinaventanas12.glb?v=1693321571039"></a-asset-item> --> */}
+          <a-asset-item id="General" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/Oficina10.glb?v=1693378684016"></a-asset-item>
 
-        {/* Default lighting injected by A-Frame */}
-        <a-entity light="type: ambient; color: #BBB"></a-entity>
-        <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1"></a-entity>
+        </a-assets>
 
-        {/* ground & walls & ceiling */}
-        <a-entity position="0 0 0">
-          <a-entity id="walls" position="0 7.245 0"
-            gltf-model="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/Oficina10.glb?v=1693381953265">
-          </a-entity>
+        <a-entity light="intensity: 0.6; castShadow: true" position="48.39988 65.39308 1" data-aframe-default-light="" aframe-injected=""></a-entity>
+        {/* <!-- <a-light id="luz 1" type="point" color="white" position="-0.786 95.77771 77.74846" light="color: #f3f2ec"></a-light>         -->
+        <!-- <a-light id="luz 2" type="point" color="white" position="55.08244 133.63435 -79.61394" light="color: #f3f2ec"></a-light>
+        <a-light id="luz 3" type="point" color="white" position="72.45906 81.72083 167.16657" light="color: #f3f2ec"></a-light>        
+         -->
+        <!-- <a-camera id="cameraAerea" camera="" position="0 100 0" rotation="-5.271000000000001 102.789 0" look-controls="" wasd-controls="" data-aframe-inspector-original-camera="">
+        <a-cursor material="" raycaster="" cursor="" geometry=""></a-cursor>
+       </a-camera> --> */}
 
-          <a-entity id="ground" position="-199.308 3.629 230.262" scale="21 10 27.500"
-            gltf-model="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/floor_whitetile_20x20_meters.glb?v=1692870723480">
-          </a-entity>
+        <a-camera id="camera1" far="10000" camera="" position="0.08716 22 0" rotation="6.302535746439053 27.043607930174847 0"
+          look-controls="" wasd-controls="" data-aframe-inspector-original-camera="">
+          <a-cursor position="0 4 0" material="" cursor="" geometry="" raycaster="objects: [data-raycastable]"></a-cursor>
+        </a-camera>
+        <a-entity src="#Salon1ConVentanas" static-body raycaster="objects: .collidable" position="0 -34.7561 0" gltf-model="#Salon1ConVentanas"></a-entity>
+        <a-entity src="#General" static-body raycaster="objects: .collidable" position="0 -34.7561 0" gltf-model="#General"></a-entity>
 
-          <a-entity id="ceiling" position="-199.928 106.298 233.193" scale="21 100 27.500"
-            gltf-model="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/floor_whitetile_20x20_meters.glb?v=1692870723480">
-          </a-entity>
 
-        </a-entity>
+        <a-plane id="sueloPrueba" color="white" position="8.104 -16.73558 -7.009" rotation="90 360 360" material="side: double; displacementTextureRepeat: 1.02 1" geometry="" scale="1000 1000 10"></a-plane>
 
-        {/* sidewalk & flowers */}
-        <a-entity position="0 0 0">
-          <a-entity id="sidewalkright" position="237.867 0.026 -15.488" scale="0.285 0.200 0.200" rotation="0 90 0"
-            gltf-model="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/sidewalk_mm1.glb?v=1693303827295">
-          </a-entity>
+        <a-entity id="Salon1ConVentanas" collider-check></a-entity>
 
-          <a-entity id="sidewalkleft" position="8.619 -0.913 281.197" scale="0.285 0.200 0.200"
-            gltf-model="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/sidewalk_mm1.glb?v=1693303827295">
-          </a-entity>
 
-          <a-entity id="cylinderone" position="282.606 7.817 310.944" scale="90 90 90" rotation="90 0 0"
-            gltf-model="https://cdn.glitch.me/078ce1a5-734a-4824-8ef5-cf5a78251ea1/concrete_test_cylinder_w1_1.glb?v=1693308727583">
-          </a-entity>
-
-          <a-entity id="cylindertwo" position="217.727 7.817 310.944" scale="90 90 90" rotation="90 0 0"
-            gltf-model="https://cdn.glitch.me/078ce1a5-734a-4824-8ef5-cf5a78251ea1/concrete_test_cylinder_w1_1.glb?v=1693308727583">
-          </a-entity>
-
-          <a-entity id="cylinderthree" position="152.860 7.817 310.944" scale="90 90 90" rotation="90 0 0"
-            gltf-model="https://cdn.glitch.me/078ce1a5-734a-4824-8ef5-cf5a78251ea1/concrete_test_cylinder_w1_1.glb?v=1693308727583">
-          </a-entity>
-
-          <a-entity id="cylinderfour" position="282.594 7.817 247.407" scale="90 90 90" rotation="90 0 0"
-            gltf-model="https://cdn.glitch.me/078ce1a5-734a-4824-8ef5-cf5a78251ea1/concrete_test_cylinder_w1_1.glb?v=1693308727583">
-          </a-entity>
-
-          <a-entity id="cylinderfive" position="282.594 7.817 182.540" scale="90 90 90" rotation="90 0 0"
-            gltf-model="https://cdn.glitch.me/078ce1a5-734a-4824-8ef5-cf5a78251ea1/concrete_test_cylinder_w1_1.glb?v=1693308727583">
-          </a-entity>
-
-          <a-entity id="cylindersix" position="282.594 7.817 117.673" scale="90 90 90" rotation="90 0 0"
-            gltf-model="https://cdn.glitch.me/078ce1a5-734a-4824-8ef5-cf5a78251ea1/concrete_test_cylinder_w1_1.glb?v=1693308727583">
-          </a-entity>
-
-          <a-entity id="sign" position="186.319 41.320 328.063" scale="90 200 100" rotation="0 90 0"
-            gltf-model="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/forward_right_mandatory_direction_sign_traffic.glb?v=1693310898480">
-          </a-entity>
-
-          <a-entity id="flowerone" position="237.202 0.877 -154.653" scale="1 1 1"
-            gltf-model="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/geranium_flower.glb?v=1693311919022">
-          </a-entity>
-
-          <a-entity id="flowertwo" position="237.202 0.877 -13.968" scale="0.100 0.100 0.100"
-            gltf-model="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/flower.glb?v=1693311923466">
-          </a-entity>
-
-          <a-entity id="flowerthree" position="237.202 -2.026 122.992" scale="0.200 0.200 0.200"
-            gltf-model="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/colored_flower.glb?v=1693311926395">
-          </a-entity>
-
-          <a-entity id="flowerfour" position="237.202 0.877 261.317" scale="0.100 0.100 0.100"
-            gltf-model="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/white_flower.glb?v=1693311929581">
-          </a-entity>
-
-          <a-entity id="flowerfive" position="149.712 0.877 282.928" scale="0.100 0.100 0.100"
-            gltf-model="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/white_flower.glb?v=1693311929581">
-          </a-entity>
-
-          <a-entity id="flowersix" position="6.809 -2.026 280.969" scale="0.200 0.200 0.200"
-            gltf-model="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/colored_flower.glb?v=1693311926395">
-          </a-entity>
-
-          <a-entity id="flowerseven" position="-132.373 -2.026 280.969" scale="0.200 0.200 0.200"
-            gltf-model="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/colored_flower.glb?v=1693311926395">
-          </a-entity>
-
-        </a-entity>
-
-        {/* camera & controls */}
-        <a-entity>
-          <a-entity id="rig" position="-33.984 15 9.366" scale="1 1 1" rotation="0 45 0">
-            <a-entity id="camera" camera look-controls position="15.122 30.534 370.138" rotation="-13.178 -2.063 0">
-            </a-entity>
-          </a-entity>
-          <a-entity oculus-touch-controls="hand: left" trigger-check thumbstick-logging raycaster="showLine: true"></a-entity>
-          <a-entity id="rtcontroller" oculus-touch-controls="hand: right" trigger-check thumbstick-logging
-            raycaster="showLine: true"></a-entity>
-        </a-entity>
+        <a-sky color="lightblue"></a-sky>
       </a-scene>
-    </div>
 
+    </div>
   )
 }
 
