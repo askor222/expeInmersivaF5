@@ -34,12 +34,12 @@
 </head>
 <body>
     <div class="container"> 
-        <h1>¡Hola {{userName}}, Gracias por registrarse en F5 </h1> <br>
-        <h1>¡A continuación confirme su correo electrónico!</h1>
+        <h1>¡Hola {{userName}}, Gracias por registrarte en F5!</h1> <br>
+        <h1>¡A continuación confirma tu correo electrónico!</h1>
 
         <p>
-            Confirme su correo electrónico haciendo clic en el siguiente enlace: <br><br>
-            <a href="{{ signedUrl|raw }}">Confirmar mi correo electrónico</a>.<br>
+            Confirma tu correo electrónico haciendo clic en el siguiente enlace: <br><br>
+            <a href="{{ signedUrl|raw }}">Confirmo mi correo electrónico</a>.<br>
             Este enlace se caducará en {{ expiresAtMessageKey|trans(expiresAtMessageData, 'VerifyEmailBundle') }}.
         </p>
 
