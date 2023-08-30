@@ -17,7 +17,7 @@ const Inmersive = () => {
         gltf-model="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/Oficina10.glb?v=1693381953265">
     </a-entity>
   
-    <a-entity id="ground" position="-199.308 3.629 230.262" scale="21 10 27.500"
+    <a-entity id="ground" position="-199.308 3.629 230.262" scale="21 10 27.500" raycaster="objects: .data-raycastable"
         gltf-model="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/floor_whitetile_20x20_meters.glb?v=1692870723480">
       </a-entity>
     
@@ -97,13 +97,14 @@ const Inmersive = () => {
 
 {/* camera & controls */}
 <a-entity>
+<a-entity camera="" position="0  0" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
   <a-entity id="rig" position="-33.984 15 9.366" scale="1 1 1" rotation="0 45 0">
     <a-entity id="camera" camera look-controls position="15.122 30.534 370.138" rotation="-13.178 -2.063 0">
     </a-entity>
   </a-entity>
-  <a-entity oculus-touch-controls="hand: left" trigger-check thumbstick-logging raycaster="showLine: true"></a-entity>
+  <a-entity oculus-touch-controls="hand: left" trigger-check thumbstick-logging raycaster="showLine: true, objects: data-raycastable"></a-entity>
   <a-entity id="rtcontroller" oculus-touch-controls="hand: right" trigger-check thumbstick-logging
-    raycaster="showLine: true"></a-entity>
+    raycaster="showLine: true, objects: data-raycastable"></a-entity>
 </a-entity>  
 </a-scene>
 
