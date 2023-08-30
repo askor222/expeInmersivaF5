@@ -1,16 +1,15 @@
-import React, { Component } from "react"
-import InmersiveExpe  from"inmersiveExpe"
+import React from 'react'
 
-class InmersiveExpe extends Component {
-    render() {
-        return (
-            <a-scene>
+
+function Inmersive () {
+  return (
+    <div>
+      
+      <a-scene>
 
       {/* Default lighting injected by A-Frame */}
       <a-entity light="type: ambient; color: #BBB"></a-entity>
       <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1"></a-entity>
-    
-        
        
       {/* ground & walls & ceiling */}
       <a-entity position="0 0 0">
@@ -107,9 +106,9 @@ class InmersiveExpe extends Component {
           raycaster="showLine: true"></a-entity>
       </a-entity>  
     </a-scene>
-        )
-    }
+    </div>
+  
+  )
+}
 
-    }
-
-    export default InmersiveExpe;
+export default Inmersive

@@ -10,7 +10,7 @@ function App() {
         <Route path='/inmersiveExpe' element={<InmersiveExpe />} > </Route>
      </Routes>
     </BrowserRouter>
-     
+
     </>
   );
 }
