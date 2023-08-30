@@ -1,8 +1,7 @@
-import "inmersiveExpe"
-import React, { Component } from "react"
+import React from "react"
 
-class InmersiveExpe extends Component {
-    render() {
+class Inmersive extends Component {
+
         return (
             <a-scene>
 
@@ -10,7 +9,6 @@ class InmersiveExpe extends Component {
       <a-entity light="type: ambient; color: #BBB"></a-entity>
       <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1"></a-entity>
     
-        
        
       {/* ground & walls & ceiling */}
       <a-entity position="0 0 0">
@@ -112,4 +110,4 @@ class InmersiveExpe extends Component {
 
     }
 
-    export default InmersiveExpe;
+    export default Inmersive;
