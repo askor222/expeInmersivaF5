@@ -11,11 +11,7 @@
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.15.0",
-<<<<<<< HEAD
     "react-scripts": "^2.1.3",
-=======
-    "react-scripts": "5.0.1",
->>>>>>> ffa0dab8d2eb37584bda3beb24bf7b49e453b05b
     "web-vitals": "^2.1.4"
   },
   "scripts": {
