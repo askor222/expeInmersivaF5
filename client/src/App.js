@@ -1,11 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import InmersiveExpe from './routes/InmersiveExpe';
 
 function App() {
   return (
-    <div className="App">
-   
-    </div>
+    <>
+    <BrowserRouter>
+     <Routes>
+        <Route path='/inmersiveExpe' element={<InmersiveExpe />} > </Route>
+     </Routes>
+    </BrowserRouter>
+     
+    </>
   );
 }
 
