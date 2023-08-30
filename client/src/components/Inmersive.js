@@ -1,5 +1,5 @@
-import "inmersiveExpe"
 import React, { Component } from "react"
+import InmersiveExpe  from"inmersiveExpe"
 
 class InmersiveExpe extends Component {
     render() {

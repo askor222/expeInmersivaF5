@@ -3,7 +3,7 @@ import React from 'react'
 
 const InmersiveExpe = () => {
   return (
-    <div> InmersiveExpe
+    <div> 
         <h1>InmersiveExpe</h1>
     </div>
 
