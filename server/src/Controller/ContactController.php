@@ -16,44 +16,22 @@ use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 #[Route('/contact')]
 class ContactController extends AbstractController
 {
-    #[Route('/', name: 'app_contact_index', methods: ['GET'])]
+    #[Route('/dsf', name: 'app_contact_index', methods: ['GET'])]
     public function index(ContactRepository $contactRepository): Response
     {
-        return $this->render('contact/index.html.twig', [
+        return $this->render('contact/confirmation_contact.html.twig', [
+            'contacts' => $contactRepository->findAll(),
+        ]);
+    }
+    #[Route('/success', name: 'app_contact_success', methods: ['GET'])]
+    public function confirmation(ContactRepository $contactRepository): Response
+    {
+        return $this->render('contact/success.html.twig', [
             'contacts' => $contactRepository->findAll(),
         ]);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    #[Route('/new', name: 'app_contact_new', methods: ['GET', 'POST'])]
+    #[Route('/', name: 'app_contact_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager, MailerInterface $mailer): Response
     {
         $contact = new Contact();
@@ -74,7 +52,7 @@ class ContactController extends AbstractController
 
         $mailer->send($email);
 
-            return $this->redirectToRoute('app_contact_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_contact_success', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('contact/new.html.twig', [
