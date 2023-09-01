@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 
-#[Route('/contact')]
+#[Route('/contacto')]
 class ContactController extends AbstractController
 {
     #[Route('/', name: 'app_contact_index', methods: ['GET'])]

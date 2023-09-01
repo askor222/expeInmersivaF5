@@ -25,7 +25,7 @@ security:
         api:
             pattern:   ^/api
             stateless: true
-            jwt: ~
+            # jwt: ~
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
