@@ -15,7 +15,7 @@ use Lexik\Bundle\JWTAuthenticationBundle\Services\JWTTokenManagerInterface;
 
 // ...
 
-#[Route(path: '/lolo', name: 'app_lolo')]
+#[Route(path: '/api', name: 'app_lolo')]
 class ReactLoginController extends AbstractController
 {
     #[Route('/login', name: 'app_login', methods: ['POST'])]

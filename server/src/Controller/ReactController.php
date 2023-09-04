@@ -16,7 +16,7 @@ use Symfony\Component\Mime\Address;
 
 
 
-#[Route('/react')]
+#[Route('/api')]
 class ReactController extends AbstractController
 {
     private EmailVerifier $emailVerifier;
