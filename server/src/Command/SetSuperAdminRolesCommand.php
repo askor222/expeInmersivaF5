@@ -24,7 +24,7 @@ class SetSuperAdminRolesCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $user = $this->userRepository->findOneByEmail('email@gmail.com');
+        $user = $this->userRepository->findOneByEmail('oreurena@gmail.com');
 
         if ($user) {
             $user->setRoles(['ROLE_SUPER_ADMIN']);

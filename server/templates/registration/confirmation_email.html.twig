@@ -33,19 +33,17 @@
     </style>
 </head>
 <body>
-    <div class="container"> 
-        <h1>¡Hola {{userName}}, Gracias por registrarse en F5 </h1> <br>
-        <h1>¡A continuación confirme su correo electrónico!</h1>
-
-        <p>
-            Confirme su correo electrónico haciendo clic en el siguiente enlace: <br><br>
-            <a href="{{ signedUrl|raw }}">Confirmar mi correo electrónico</a>.<br>
+<div class="container"> 
+        <h1>¡Hola {{userName}}, gracias por registrarte en F5! </h1> <br>
+       <p>
+            Confirma tu correo electrónico haciendo clic en el siguiente enlace: <br><br>
+            <a href="{{ signedUrl|raw }}">Confirmó mi correo electrónico</a>.<br>
             Este enlace se caducará en {{ expiresAtMessageKey|trans(expiresAtMessageData, 'VerifyEmailBundle') }}.
         </p>
 
         <p> 
-            ¡Que tenga una excelente dia!<br>
-            Un saludo muy cordial de parte de <strong>Equipo de F5</strong>
+           ¡Que tengas una excelente día!<br>
+            Saludos, <strong>Equipo F5</strong>
         </p>
     </div>
 </body>
