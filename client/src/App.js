@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Components/Home';
+import InmersiveExpe from '../src/routes/InmersiveExpe';
 
 
 

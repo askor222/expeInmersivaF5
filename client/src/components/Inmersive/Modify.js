@@ -29,7 +29,7 @@ AFRAME.registerComponent('play-all-model-animations', {
 });
 
 
-AFRAME.registerComponent('thumbstick-logging',{
+AFRAME.registerComponent('thumbstick-logging', {
   init: function () {
     this.el.addEventListener('thumbstickmoved', this.logThumbstick);
   },
