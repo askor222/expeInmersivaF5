@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import InmersiveExpe from '.\src\routes\InmersiveExpe.js'
+import '../../routes/InmersiveExpe'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +33,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-    <InmersiveExpe />
+ 
     </div>
    
   );

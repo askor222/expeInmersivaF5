@@ -1,16 +1,22 @@
-import logo from './logo.svg';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import InmersiveExpe from './routes/InmersiveExpe';
+import Home from '../components/Login/Home.js';
+import Login from '../components/Login/Login.jsx';
+import Contact from '../components/Contact';
+import Inmersive from '../components/Inmersive/Inmersive.js';
+
 
 function App() {
   return (
     <div>
     <BrowserRouter>
-    <Routes>
-       <Route path='/' element={<InmersiveExpe />} > </Route>
-    </Routes>
-   </BrowserRouter>
+        <Routes>
+          <Route path='/Home' element={<Home />}></Route>
+          <Route path='/Login' element={<Login />}></Route>
+          <Route path='/Inmersive' element={<Inmersive />} > </Route>
+          <Route path='/Contacto' element={<Contact />}></Route>
+        </Routes>
+      </BrowserRouter>
    </div>
   );
 }

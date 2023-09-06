@@ -1,15 +1,11 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
-import Logo from '../Logo/Logo';
-import './Login.css';
-import Login from './Login';
+import Login from '../Login/Login';
 
-
-function LoginReg() {
+function Home() {
   return (
     <div>
-      <Logo />
       <Navbar />
       <Login />
       <Footer />
@@ -17,4 +13,4 @@ function LoginReg() {
   );
 }
 
-export default LoginReg;
+export default Home;
