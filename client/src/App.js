@@ -1,33 +1,26 @@
+import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import InmersiveExpe from '../src/routes/InmersiveExpe';
-
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import Register from './components/Register';
-import Login from './components/Login';
-import Contact from './components/Contact';
-
-
-import './App.css'
 
 function App() {
 
   return (
-    <>
-    <BrowserRouter>
-     <Routes>
-        <Route path='/' element={<InmersiveExpe />} > </Route>
-        <Route exact path="/" element={<Home/>} />       
-          <Route exact path="/Register" element={<Register/>} />       
-          <Route exact path="/Login" element={<Login/>} />       
-          <Route exact path="/Contact" element={<Contact/>} />
-     </Routes>
-    </BrowserRouter>
-
-    </>
-  )
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
-export default App
+export default App;
