@@ -1,11 +1,11 @@
 import React from 'react'
-import Inmersive from '../components/Inmersive/Inmersive';
+import Inmersive from '../Components/Inmersive/Inmersive';
 
 const InmersiveExpe = () => {
   
   return (
     <div>
-        <h1>Inmersive</h1>
+    
 <Inmersive />
     </div>
   );
