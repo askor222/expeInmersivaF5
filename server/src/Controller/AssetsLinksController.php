@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/assetslinks')]
+#[Route('/assets/links')]
 class AssetsLinksController extends AbstractController
 {
     #[Route('/', name: 'app_assets_links_index', methods: ['GET'])]
