@@ -19,19 +19,14 @@ function App() {
     <BrowserRouter>
      <Routes>
         <Route path='/' element={<InmersiveExpe />} > </Route>
-     </Routes>
-    </BrowserRouter>
-    </>
-  );
-    <Router>
-      <Routes>     
-          <Route exact path="/" element={<Home/>} />       
+        <Route exact path="/" element={<Home/>} />       
           <Route exact path="/Register" element={<Register/>} />       
           <Route exact path="/Login" element={<Login/>} />       
-          <Route exact path="/Contact" element={<Contact/>} />       
+          <Route exact path="/Contact" element={<Contact/>} />
+     </Routes>
+    </BrowserRouter>
 
-      </Routes>
-    </Router>
+    </>
   )
 }
 
