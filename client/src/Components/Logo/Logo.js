@@ -1,5 +1,4 @@
 
-import 'aframe';
 import './Logo.css';
 
 function Logo() {

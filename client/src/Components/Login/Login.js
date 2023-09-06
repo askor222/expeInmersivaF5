@@ -3,18 +3,18 @@ import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import Logo from '../Logo/Logo';
 import './Login.css';
+import Login from './Login';
 
-function Login() {
+
+function LoginReg() {
   return (
     <div>
-    
-      <Navbar />
-     
-      <Footer />
       <Logo />
-      
-      </div>
+      <Navbar />
+      <Login />
+      <Footer />
+    </div>
   );
 }
 
-export default Login;
+export default LoginReg;
