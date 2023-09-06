@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import './Navbar.css';
 
 const Navbar = () => {
@@ -17,7 +18,7 @@ const Navbar = () => {
       </div>
       <div className="container">
         <div className="logo">
-          <img src="../assets/logonegro.png" alt="Logo" />
+          <img src="../public/logonegro.png" alt="Logo" />
         </div>
         <div className="column">
           <p>Home</p>
