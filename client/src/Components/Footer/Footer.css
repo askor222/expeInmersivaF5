@@ -1,12 +1,14 @@
 footer {
   background-color: #F6D3C1;
-  color: #000000;
+  color:  #000;
   text-align: center;
-  padding: 20px 0;
+  padding: 1px ;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  height: auto; 
+  line-height: 1.5px; 
 }
 
 .container {
@@ -16,7 +18,7 @@ footer {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 0px;
 }
 
 .column {
@@ -25,7 +27,7 @@ footer {
 }
 
 .column p {
-  margin: 0;
+  margin: 1;
 }
 
 .logo img {

@@ -5,18 +5,16 @@ import Logo from '../Logo/Logo';
 import './Login.css';
 
 
-import backgroundImage from '../../assets/backgroun.jpg';
+
 
 function Login() {
   return (
     <div>
       <Navbar />
-      <div
-        className="background-image"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      >
-        <Logo />
-      </div>
+   
+      
+      <Logo/>
+      
       <Footer />
     </div>
   );

@@ -18,7 +18,7 @@ const Navbar = () => {
       </div>
       <div className="container">
         <div className="logo">
-          <img src="../public/logonegro.png" alt="Logo" />
+          <img src="../assets/Imagenes/logonegro.png" alt="Logo" />
         </div>
         <div className="column">
           <p>Home</p>

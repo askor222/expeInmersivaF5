@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="column">
           <div className="logo">
-            <img src="../assets/logonegro.png" height="60px" alt="Factoria F5" />
+             <img src="../assets/Imagenes/logonegro.png" height="60px" alt="Factoria F5" /> 
           </div>
           <p>Somos Fundación F5</p>
           <p>Calle Fernando Poo 25</p>
