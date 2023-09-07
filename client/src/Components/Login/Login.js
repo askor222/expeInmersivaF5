@@ -12,9 +12,9 @@ function Login() {
     <div>
       <Navbar />
    
-      
+      <div>
       <Logo/>
-      
+      </div>
       <Footer />
     </div>
   );
