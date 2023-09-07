@@ -1,6 +1,5 @@
 
-import 'aframe';
-import './Logo.css';
+import React from "react";
 
 function Logo() {
 
