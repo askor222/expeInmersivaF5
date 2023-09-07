@@ -18,16 +18,16 @@ const Navbar = () => {
       </div>
       <div className="container">
         <div className="logo">
-          <img src="../public/logonegro.png" alt="Logo" />
+          <a className='a-header'  href="/">Home</a>
         </div>
         <div className="column">
-          <p>Home</p>
+          <a className='a-header'  href="/register">Register</a>
         </div>
         <div className="column">
-          <p>Somos F5</p>
+          <a className='a-header'  href="/login">Login</a>
         </div>
         <div className="column">
-          <p>Contáctanos</p>
+          <a className='a-header'  href="/contact">Contáctanos</a>
         </div>
       </div>
     </nav>

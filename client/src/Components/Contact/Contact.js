@@ -2,12 +2,12 @@ import React from 'react';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import Logo from '../Logo/Logo';
-import './Login.css';
-import Login1 from "../components/Login";
+import './Contact.css';
+import Contact1 from "../components/Contact";
 
 import backgroundImage from '../../assets/backgroun.jpg';
 
-function Login() {
+const Contact = () => {
   return (
     <div>
       <Navbar />
@@ -17,7 +17,7 @@ function Login() {
       >
         <div className='login-box-container'>
           <div className='login-box'>
-            <Login1 />
+            <Contact1 />
           </div>
         </div>
       </div>
@@ -26,4 +26,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Contact
