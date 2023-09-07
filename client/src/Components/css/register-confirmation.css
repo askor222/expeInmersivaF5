@@ -1,0 +1,21 @@
+.contenedor-r2 {
+    height: 100vh;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #453c98d1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+.font1{
+    font-size: 2rem;
+    color: white;
+    margin: 0 0 5px 0;
+}
+
+.font2{
+    color: white;
+}
