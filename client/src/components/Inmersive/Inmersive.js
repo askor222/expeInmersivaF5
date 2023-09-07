@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Modal } from 'react-bootstrap';
 
-const Inmersive = () => {
+function InmersiveExpe() {
   const [showModal, setShowModal] = useState(false);
 
   const handleBoxClick = () => {
@@ -16,14 +16,16 @@ const Inmersive = () => {
   return (
 
     <div>
-      <a-scene physics="debug: true">
+      <a-scene>
+
         {/* Default lighting injected by A-Frame.  */}
         <a-entity light="type: ambient; color: #BBB"></a-entity>
         <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1"></a-entity>
         <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="0.5 -1 -1"></a-entity>
 
         {/* camera & controls  */}
-        <a-entity position="282 1 247">
+        {/* <a-entity position="282 1 247"> */}
+        <a-entity position="-15 30 0">
           <a-entity id="rig" position="-15 30 0" scale="1 1 1" rotation="0 45 0">
             <a-entity camera="" position="-15 30 0" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" raycaster="objects: [data-raycastable]">
               <a-cursor cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable; objects: .clickable"></a-cursor></a-entity>
@@ -49,6 +51,7 @@ const Inmersive = () => {
           <a-asset-item id="shelf" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/shoe_shelf.glb?v=1693829626150" crossorigin="anonymous"></a-asset-item>
           <a-asset-item id="counter" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/mesonCorcho.glb?v=1693828959299" crossorigin="anonymous"></a-asset-item>
           <a-asset-item id="fridge" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/avali_fridge.glb?v=1693834008536" crossorigin="anonymous"></a-asset-item>
+          <a-asset-item id="bin" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/rubbish_bin.glb?v=1693835604945"></a-asset-item>
           <a-asset-item id="OfficeDoor" animation-mixer="action" play-all-model-animations modify-materials src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/puertaOficina.glb?v=1693474755665" crossorigin="anonymous"></a-asset-item>
           <a-asset-item id="stairTables" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/escalerasCocho.glb?v=1693550218142" crossorigin="anonymous"></a-asset-item>
           <a-asset-item id="robot" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/robot.glb?v=1693812662910" crossorigin="anonymous"></a-asset-item>
@@ -72,15 +75,15 @@ const Inmersive = () => {
         </a-assets>
 
         {/* floor & walls & ceiling & sidewalk. */}
-        <a-entity position="0 0 0">
+       
           <a-gltf-model src="#ground" position="-199.308 5.800 230.262" scale="21 180 27.500"></a-gltf-model>
           <a-gltf-model src="#walls" position="0 2.099 0"></a-gltf-model>
-          <a-gltf-model src="#cabins" position="30.18148 14.307 -6.7067"></a-gltf-model>
+          <a-gltf-model src="#cabins" position="32.5898 14.307 -6.7067"></a-gltf-model>
           {/* <a-gltf-model src="#ceiling" position="-199.928 106.298 233.193" scale="21 180 27.500"></a-gltf-model> */}
-        </a-entity>
+        
 
         {/* sidewalk & flowers */}
-        <a-entity position="0 0 0">
+       
           <a-gltf-model src="#sidewalk" gltf-model="#sidewalk" position="237.867 14.805 -15.488" scale="0.285 2.5 0.200" rotation="0 90 0"></a-gltf-model>
           <a-gltf-model src="#sidewalk" gltf-model="#sidewalk" position="8.619 14.805 281.197" scale="0.285 2.5 0.200"></a-gltf-model>
           <a-gltf-model src="#sidewalk" gltf-model="#sidewalk" position="8.619 14.805 281.197" scale="0.285 2.5 0.200"></a-gltf-model>
@@ -99,11 +102,9 @@ const Inmersive = () => {
           <a-gltf-model src="#flower" gltf-model="#flower" position="147.931 17.195 284.336" scale="1 1 1"></a-gltf-model>
           <a-gltf-model src="#flower" gltf-model="#flower" position="6.809 15.496 280.969" scale="1 1 1"></a-gltf-model>
           <a-gltf-model src="#flower" gltf-model="#flower" position="-132.373 16.021 280.969" scale="1 1 1"></a-gltf-model>
-        </a-entity>
 
         {/* tables */}
-        <a-entity position="0 0 0">
-
+    
           {/* first classroom  */}
           <a-gltf-model src="#table" gltf-model="#table" position="139.311 37.004 70.728" scale="0.300 0.300 0.300"></a-gltf-model>
           <a-gltf-model src="#table" gltf-model="#table" position="138.502 37.004 94.596" scale="0.300 0.300 0.300"></a-gltf-model>
@@ -125,11 +126,8 @@ const Inmersive = () => {
           <a-gltf-model src="#table" gltf-model="#table" position="142.631 37.004 -207.443" scale="0.300 0.300 0.300"></a-gltf-model>
           <a-gltf-model src="#table" gltf-model="#table" position="142.590 37.004 -183.739" scale="0.300 0.300 0.300"></a-gltf-model>
           <a-gltf-model src="#table" gltf-model="#table" position="42.486 37.004 -159.104" scale="0.300 0.300 0.300"></a-gltf-model>
-        </a-entity>
 
         {/* chairs */}
-
-        <a-entity>
           {/* bigchairs  */}
           <a-gltf-model src="#bigchair" gltf-model="#bigchair" position="20.000 23.624 108.160" scale="0.250 0.250 0.250"></a-gltf-model>
           <a-gltf-model src="#bigchair" gltf-model="#bigchair" position="17.969 25.100 133.710" scale="0.250 0.250 0.250"></a-gltf-model>
@@ -181,10 +179,8 @@ const Inmersive = () => {
           <a-gltf-model src="#littlechair" gltf-model="#littlechair" position="163.764 13.977 -169.923" scale="35 35 35" rotation="0 180 0"></a-gltf-model>
           <a-gltf-model src="#littlechair" gltf-model="#littlechair" position="163.764 13.977 -193.045" scale="35 35 35" rotation="0 180 0"></a-gltf-model>
           <a-gltf-model src="#littlechair" gltf-model="#littlechair" position="163.764 13.977 -220.523" scale="35 35 35" rotation="0 180 0"></a-gltf-model>
-        </a-entity>
-
+        
         {/* kitchen  */}
-        <a-entity>
           <a-gltf-model src="#micro" gltf-model="#micro" position="-114.154 24.161 -8.873" scale="25 25 25"></a-gltf-model>
           <a-gltf-model src="#micro" gltf-model="#micro" position="-113.749 33.528 -7.532" scale="25 25 25"></a-gltf-model>
           <a-gltf-model src="#micro" gltf-model="#micro" position="-114.154 24.161 -60.539" scale="25 25 25"></a-gltf-model>
@@ -193,9 +189,7 @@ const Inmersive = () => {
           <a-gltf-model src="#shelf" gltf-model="#shelf" position="-203.512 19.356 9.226" scale="2 2 2" rotation="0 90 0"></a-gltf-model>
           <a-gltf-model src="#counter" gltf-model="#counter" position="-22.266 70.266 -39.094" scale="1 0.500 1.050" repeat="3 3"></a-gltf-model>
           <a-gltf-model src="#fridge" gltf-model="#fridge" position="-110.742 19.695 -35.267" scale="0.025 0.025 0.025" rotation="0 90 0"></a-gltf-model>
-          <a-gltf-model src="#bin" gltf-model="#bin" position="" scale="1 1 1" rotation=""></a-gltf-model>
           <a-gltf-model src="#stairTables" position="-21.36272 94.10765 -7.430" rotation="" scale="1 1 1.3" static-body repeat="3 3"></a-gltf-model>
-          {/* -- */}
           <a-gltf-model src="#bin" gltf-model="#bin" position="-115.820 25.987 -24.783" scale="4 4 4" rotation="0 0 -45"></a-gltf-model>
           <a-gltf-model src="#bin" gltf-model="#bin" position="-115.585 25.783 -31.989" scale="4 4 4" rotation="0 0 -45"></a-gltf-model>
           <a-gltf-model src="#bin" gltf-model="#bin" position="-119.014 31.562 -31.989" scale="4 4 4" rotation="0 0 -45"></a-gltf-model>
@@ -213,10 +207,8 @@ const Inmersive = () => {
           <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 37.339 74.636" scale="40 40 40"></a-gltf-model>
           <a-gltf-model src="#ktable" gltf-model="#ktable" position="-18.05361 33.61 14.857" scale="0.020 0.020 0.100"></a-gltf-model>
           {/* <a-gltf-model src="#ground" scale="21 180 27.5" gltf-model="#ground"></a-gltf-model> */}
-        </a-entity>
-
+      
         {/* lobby */}
-        <a-entity>
           <a-gltf-model src="#counter" gltf-model="#counter" position="40.011 227.093 115.608" scale="0.5 3.5 0.7" rotation="0 90 0" repeat="3 3"></a-gltf-model>
           <a-gltf-model src="#counter" gltf-model="#counter" position="58.558 225.800 151.523" scale="0.100 3.5 0.5" rotation="0 180 0" repeat="3 3"></a-gltf-model>
           <a-gltf-model src="#counter" gltf-model="#counter" position="9.897 225.128 157.324" scale="0.100 3.5 0.200" rotation="0 180 0" repeat="3 3"></a-gltf-model>
@@ -226,32 +218,22 @@ const Inmersive = () => {
           <a-gltf-model src="#stool" gltf-model="#stool" position="18.143 37.339 227" scale="40 40 40"></a-gltf-model>
           <a-gltf-model src="#stool" gltf-model="#stool" position="0.031 37.339 227" scale="40 40 40"></a-gltf-model>
           <a-gltf-model src="#stool" gltf-model="#stool" position="-23.797 37.339 227" scale="40 40 40"></a-gltf-model>
-        </a-entity>
-
-
+        
         {/* office */}
-        <a-entity>
-          <a-gltf-model src="#OfficeDoor" position="-85.21431 19.00612 251.69945" rotation="0 90 0" scale="38 38 27.5"></a-gltf-model>
-        </a-entity>
+        <a-gltf-model src="#OfficeDoor" position="-85.21431 19.00612 251.69945" rotation="0 90 0" scale="38 38 27.5"></a-gltf-model>
+        <a-gltf-model src="#table" gltf-model="#table" position="" scale="0.300 0.300 0.300" rotation=""></a-gltf-model>
 
         {/* Others extra */}
         <a-gltf-model src="#robot" position="-82.52723 -0.68568 -80.70277" rotation="0 29.999999999999996 0" scale="4 4 4"></a-gltf-model>
         <a-gltf-model src="#whiteDoor" position="-8.35728 18.7513 -99.35885" rotation="0 90 0" scale="25 31 3"></a-gltf-model>
         <a-gltf-model src="#whiteDoor" position="-8.35728 18.7513 -98.037" rotation="0 90 0" scale="25 31 3"></a-gltf-model>
-        {/* office  */}
-        <a-entity>
-          <a-gltf-model src="#table" gltf-model="#table" position="" scale="0.300 0.300 0.300" rotation=""></a-gltf-model>
-        </a-entity>
-
         <a-box id="modal-root" class="clickable" cursor-listener="true" position="-70.88825 63.88425 -60.95718" scale="4 4 4" material="" geometry=""
           animation="property: rotation; to: 0 360 0; loop: true; dur: 3000" color="darkblue"
           onClick={handleBoxClick}><a-text value="...Cursos-F5" text="color: #121111; side: double" scale="4 4 4" rotation="0 260 0"></a-text>
         </a-box>
-
         <a-entity id="textOrange" position="43.83693 76.71028 136.80361" scale="50 40 0.00001" geometry="primitive: box" material="src: #textwallOrange"></a-entity>
         <a-entity id="textwallKitchen" position="-107.69562 87.16169 -89.29855" scale="30 20 0.00001" rotation="0 270 0" geometry="primitive: box" material="src: #textwallKitchen"></a-entity>
         <a-entity id="textwallTables" position="-59.43186 79.69786 -154.5751" scale="70 40 0.00001" rotation="0 180 0" geometry="primitive: box" material="src: #textwallTables"></a-entity>
-
         <a-gltf-model src="#blueDoor" position="33.35131 -97.92487 -220" rotation="" scale="1 1 1.2"
           dynamic-body animation="property: position; to: 33.35131 -97.92487 -200; on: click; dur: 1000;"></a-gltf-model>
 
@@ -264,7 +246,7 @@ const Inmersive = () => {
           <Modal.Title>Bootcamps Tecnológicos</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          Contenido de Cursos ...
+          link
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleCloseModal}>
@@ -274,7 +256,8 @@ const Inmersive = () => {
       </Modal>
 
     </div>
+
   );
 }
 
-export default Inmersive
+export default InmersiveExpe;
