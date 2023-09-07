@@ -49,11 +49,9 @@ const Inmersive = () => {
           <a-asset-item id="shelf" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/shoe_shelf.glb?v=1693829626150" crossorigin="anonymous"></a-asset-item>
           <a-asset-item id="counter" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/mesonCorcho.glb?v=1693828959299" crossorigin="anonymous"></a-asset-item>
           <a-asset-item id="fridge" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/avali_fridge.glb?v=1693834008536" crossorigin="anonymous"></a-asset-item>
-          {/* <a-asset-item id="bin" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/rubbish_bin.glb?v=1693835604945" crossorigin="anonymous"></a-asset-item> */}
           <a-asset-item id="OfficeDoor" animation-mixer="action" play-all-model-animations modify-materials src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/puertaOficina.glb?v=1693474755665" crossorigin="anonymous"></a-asset-item>
           <a-asset-item id="stairTables" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/escalerasCocho.glb?v=1693550218142" crossorigin="anonymous"></a-asset-item>
           <a-asset-item id="robot" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/robot.glb?v=1693812662910" crossorigin="anonymous"></a-asset-item>
-          <a-asset-item id="" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/robot.glb?v=1693812662910" crossorigin="anonymous"></a-asset-item>
           <a-asset-item id="blueDoor" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/puertaAzulFlores.glb?v=1693570610262"></a-asset-item>
           <img id="textwallOrange" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/Captura%20de%20pantalla%202023-09-05%20212606.png?v=1693942112443" alt="textoOrange" />
           <img id="textwallKitchen" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/kitchen.JPG?v=1693943846102" alt="textoKitchen" />
@@ -193,10 +191,10 @@ const Inmersive = () => {
           <a-gltf-model src="#micro" gltf-model="#micro" position="-114.154 33.057 -60.539" scale="25 25 25"></a-gltf-model>
           <a-gltf-model src="#shelf" gltf-model="#shelf" position="-203.512 19.356 60.694" scale="2 2 2" rotation="0 90 0"></a-gltf-model>
           <a-gltf-model src="#shelf" gltf-model="#shelf" position="-203.512 19.356 9.226" scale="2 2 2" rotation="0 90 0"></a-gltf-model>
-          <a-gltf-model src="#counter" gltf-model="#counter" position="-22.266 70.266 -39.094" scale="1 0.500 1.050"></a-gltf-model>
+          <a-gltf-model src="#counter" gltf-model="#counter" position="-22.266 70.266 -39.094" scale="1 0.500 1.050" repeat="3 3"></a-gltf-model>
           <a-gltf-model src="#fridge" gltf-model="#fridge" position="-110.742 19.695 -35.267" scale="0.025 0.025 0.025" rotation="0 90 0"></a-gltf-model>
           <a-gltf-model src="#bin" gltf-model="#bin" position="" scale="1 1 1" rotation=""></a-gltf-model>
-          <a-gltf-model src="#stairTables" position="-21.36272 94.10765 -7.430" rotation="" scale="1 1 1.3" static-body></a-gltf-model>
+          <a-gltf-model src="#stairTables" position="-21.36272 94.10765 -7.430" rotation="" scale="1 1 1.3" static-body repeat="3 3"></a-gltf-model>
           {/* -- */}
           <a-gltf-model src="#bin" gltf-model="#bin" position="-115.820 25.987 -24.783" scale="4 4 4" rotation="0 0 -45"></a-gltf-model>
           <a-gltf-model src="#bin" gltf-model="#bin" position="-115.585 25.783 -31.989" scale="4 4 4" rotation="0 0 -45"></a-gltf-model>
@@ -219,10 +217,10 @@ const Inmersive = () => {
 
         {/* lobby */}
         <a-entity>
-          <a-gltf-model src="#counter" gltf-model="#counter" position="40.011 227.093 115.608" scale="0.5 3.5 0.7" rotation="0 90 0"></a-gltf-model>
-          <a-gltf-model src="#counter" gltf-model="#counter" position="58.558 225.800 151.523" scale="0.100 3.5 0.5" rotation="0 180 0"></a-gltf-model>
-          <a-gltf-model src="#counter" gltf-model="#counter" position="9.897 225.128 157.324" scale="0.100 3.5 0.200" rotation="0 180 0"></a-gltf-model>
-          <a-gltf-model src="#counter" gltf-model="#counter" position="6.023 56.91078 139.01875" scale="1 0.300 2" rotation="0 90 0"></a-gltf-model>
+          <a-gltf-model src="#counter" gltf-model="#counter" position="40.011 227.093 115.608" scale="0.5 3.5 0.7" rotation="0 90 0" repeat="3 3"></a-gltf-model>
+          <a-gltf-model src="#counter" gltf-model="#counter" position="58.558 225.800 151.523" scale="0.100 3.5 0.5" rotation="0 180 0" repeat="3 3"></a-gltf-model>
+          <a-gltf-model src="#counter" gltf-model="#counter" position="9.897 225.128 157.324" scale="0.100 3.5 0.200" rotation="0 180 0" repeat="3 3"></a-gltf-model>
+          <a-gltf-model src="#counter" gltf-model="#counter" position="6.023 56.91078 139.01875" scale="1 0.300 2" rotation="0 90 0" repeat="3 3"></a-gltf-model>
           <a-gltf-model src="#stool" gltf-model="#stool" position="59.940 37.339 227" scale="40 40 40"></a-gltf-model>
           <a-gltf-model src="#stool" gltf-model="#stool" position="37.335 37.339 227" scale="40 40 40"></a-gltf-model>
           <a-gltf-model src="#stool" gltf-model="#stool" position="18.143 37.339 227" scale="40 40 40"></a-gltf-model>
