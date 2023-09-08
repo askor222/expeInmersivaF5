@@ -1,9 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from '../components/Login/Home.js';
-import Login from '../components/Login/Login.jsx';
-import Contact from '../components/Contact';
-import Inmersive from '../components/Inmersive/Inmersive.js';
+import InmersiveExpe from './src/components/';
 
 
 function App() {

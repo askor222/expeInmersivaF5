@@ -34,8 +34,10 @@ AFRAME.registerComponent('log', {
       }
     }
   });
-    
-   
+  
+  
+  
+  
   AFRAME.registerComponent('collider-check', {
     dependencies: ['raycaster'],
   

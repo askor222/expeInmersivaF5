@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Modal } from 'react-bootstrap';
-import './Inmersive.css'
+import './Inmersive/Inmersive.css'
 
 function InmersiveExpe() {
   const [showModal, setShowModal] = useState(false);
