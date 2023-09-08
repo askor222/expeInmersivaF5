@@ -52,3 +52,4 @@ AFRAME.registerComponent('collider-check', {
   }
 });
 
+
