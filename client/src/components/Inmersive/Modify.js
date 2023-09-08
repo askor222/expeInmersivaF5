@@ -52,4 +52,27 @@ AFRAME.registerComponent('collider-check', {
   }
 });
 
+//click door
+AFRAME.registerComponent('click-listener', {
+  init: function () {
+    var el = this.el;
 
+    el.addEventListener('click', function () {
+      var currentPosition = el.getAttribute('position');
+      var originalPosition = el.getAttribute('original-position');
+
+      if (!originalPosition) {
+        originalPosition = currentPosition;
+        el.setAttribute('original-position', currentPosition);
+      }
+
+      if (AFRAME.utils.deepEqual(currentPosition, originalPosition)) {
+        // El modelo está en su posición original, mueve el modelo a la posición deseada
+        el.setAttribute('position', '33.35131 -97.92487 -225');
+      } else {
+        // El modelo no está en su posición original, restaura la posición original
+        el.setAttribute('position', originalPosition);
+      }
+    });
+  }
+});

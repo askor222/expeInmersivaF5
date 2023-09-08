@@ -16,16 +16,15 @@ function InmersiveExpe() {
 
 
   // DoorAnimation
-  
-  const openDoor = () => {
-    const door = document.querySelector('.blueDoor');
+  function openDoor() {
+    const door = document.querySelector('#blueDoor');
     door.emit('openDoor');
-  };
+  }
 
-  const closeDoor = () => {
-    const door = document.querySelector('.blueDoor');
+  function closeDoor() {
+    const door = document.querySelector('#blueDoor');
     door.emit('closeDoor');
-  };
+  }
 
   return (
 
@@ -35,33 +34,25 @@ function InmersiveExpe() {
       sortObjects: true;
       physicallyCorrectLights: true;
       maxCanvasWidth: 1920;
-      maxCanvasHeight: 1920;">
+      maxCanvasHeight: 1920;"
+        cursor="rayOrigin:mouse">
 
         {/* Default lighting injected by A-Frame.  */}
         <a-entity light="type: ambient; color: #BBB"></a-entity>
-        <a-entity light="type: directional; color: #FFF; intensity: 4.6" position="-0.5 1 1"></a-entity>
-        <a-entity light="type: directional; color: #FFF; intensity: 4.3" position="0.5 -1 -1"></a-entity>
-        {/* <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="0.5 3 -1"></a-entity> */}
+        <a-entity light="type: directional; color: #FFF; intensity: 4.3" position="-2 2 1"></a-entity>
+        <a-entity light="type: directional; color: #FFF; intensity: 4" position="2 -2 -2"></a-entity>
+        <a-entity light="type: directional; color: #FFF; intensity: 1" position="4 4 4"></a-entity>
 
         {/* camera & controls  */}
-        {/* <a-entity position="282 1 247"> */}
-    <a-entity position="-15 20 0">
-      <a-entity id="cameraRig" position="-15 20 0" scale="1 1 1" rotation="0 45 0">
-        <a-entity camera="" position="-15 20 0" look-controls wasd-controls="acceleration:100" rotation="-13.178 -2.063 0">
-          <a-cursor cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable; objects: .clickable"></a-cursor>
-        </a-entity>
-      </a-entity>
-      <a-entity oculus-touch-controls="hand: left" trigger-check thumbstick-logging raycaster="showLine: true"></a-entity>
-      <a-entity id="rtcontroller" oculus-touch-controls="hand: right" trigger-check thumbstick-logging raycaster="showLine: true"></a-entity>
-    </a-entity>
-        {/* <a-entity position="-15 20 0">
-          <a-entity id="rig" position="-15 30 0" scale="1 1 1" rotation="0 45 0">
-            <a-entity camera="" position="-15 30 0" wasd-controls="" rotation="" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" raycaster="objects: [data-raycastable]" thumbstick-logging>
-              <a-cursor cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable; objects: .clickable" thumbstick-logging></a-cursor></a-entity>
-            <a-entity oculus-touch-controls="hand: left" trigger-check thumbstick-logging raycaster="showLine: true"></a-entity>
-            <a-entity id="rtcontroller" oculus-touch-controls="hand: right" trigger-check thumbstick-logging raycaster="showLine: true"></a-entity>
+        {/* <a-entity position="282 25 247" id="cameraRig" scale="1 1 1" rotation="0 45 0"> */}
+          <a-entity position="-15 30 0" id="cameraRig"  scale="1 1 1" rotation="0 45 0">
+          <a-entity camera="" position="-15 30 0" wasd-controls="" rotation="-15.011 -145.646 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="">
+            <a-text value="o" position="0 0 -3"></a-text>
+            <a-cursor cursor="rayOrigin: mouse; fuse: true" raycaster="objects: .raycastable; objects: .clickable"></a-cursor>
           </a-entity>
-        </a-entity> */}
+          <a-entity oculus-touch-controls="hand: left" trigger-check thumbstick-logging raycaster="showLine: true"></a-entity>
+          <a-entity id="rtcontroller" oculus-touch-controls="hand: right" trigger-check thumbstick-logging raycaster="showLine: true"></a-entity>
+        </a-entity>
 
         {/* Asset management system  */}
         <a-asset-item id="walls" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/Oficina10.glb?v=1693579074653" crossorigin="anonymous"></a-asset-item>
@@ -88,7 +79,6 @@ function InmersiveExpe() {
         <img id="textwallKitchen" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/kitchen.JPG?v=1693943846102" alt="textoKitchen" />
         <img id="textwallTables" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/Captura%20de%20pantalla%202023-09-06%20073207.png?v=1693978342118" alt="textoTables" />
         <a-asset-item id="whiteDoor" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/whiteDoor.glb?v=1693982738385"></a-asset-item>
-        {/* --- */}
         <a-asset-item id="coffee" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/cafetiere.glb?v=1693908142500"></a-asset-item>
         <a-asset-item id="kettle" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/water_kettle.glb?v=1693908142058"></a-asset-item>
         <a-asset-item id="papertowel" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/paper_towel_roll.glb?v=1693908140474"></a-asset-item>
@@ -213,7 +203,7 @@ function InmersiveExpe() {
         <a-gltf-model src="#shelf" gltf-model="#shelf" position="-203.512 19.356 9.226" scale="2 2 2" rotation="0 90 0"></a-gltf-model>
         <a-gltf-model src="#counter" gltf-model="#counter" position="-22.266 70.266 -39.094" scale="1 0.500 1.050" repeat="3 3"></a-gltf-model>
         <a-gltf-model src="#fridge" gltf-model="#fridge" position="-110.742 19.695 -35.267" scale="0.025 0.025 0.025" rotation="0 90 0"></a-gltf-model>
-        <a-gltf-model src="#stairTables" position="-21.36272 94.10765 -7.430" rotation="" scale="1 1 1.3" static-body repeat="3 3"></a-gltf-model>
+        <a-gltf-model src="#stairTables" position="-21.6 94.10765 -7.430" rotation="" scale="1 1 1.3" static-body repeat="3 3"></a-gltf-model>
         <a-gltf-model src="#bin" gltf-model="#bin" position="-115.820 25.987 -24.783" scale="4 4 4" rotation="0 0 -45"></a-gltf-model>
         <a-gltf-model src="#bin" gltf-model="#bin" position="-115.585 25.783 -31.989" scale="4 4 4" rotation="0 0 -45"></a-gltf-model>
         <a-gltf-model src="#bin" gltf-model="#bin" position="-119.014 31.562 -31.989" scale="4 4 4" rotation="0 0 -45"></a-gltf-model>
@@ -223,14 +213,14 @@ function InmersiveExpe() {
         <a-gltf-model src="#kettle" gltf-model="#kettle" position="-111.362 46.540 -66.189" scale="0.800 0.800 0.800"></a-gltf-model>
         <a-gltf-model src="#papertowel" gltf-model="#papertowel" position="-96.215 45.201 -77.71994" scale="0.400 0.400 0.400"></a-gltf-model>
         <a-gltf-model src="#shelfcomplement" gltf-model="#shelfcomplement" position="-97.827 39.895 -90.713" scale="0.500 0.500 0.500" rotation="0 90 0"></a-gltf-model>
-        <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 36 -27.121" scale="40 40 40"></a-gltf-model>
-        <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 36 -6.756" scale="40 40 40"></a-gltf-model>
-        <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 36 14.597" scale="40 40 40"></a-gltf-model>
-        <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 36 34.940" scale="40 40 40"></a-gltf-model>
-        <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 36 59.133" scale="40 40 40"></a-gltf-model>
-        <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 36 74.636" scale="40 40 40"></a-gltf-model>
-        <a-gltf-model src="#ktable" gltf-model="#ktable" position="-18.05361 34 14.857" scale="0.020 0.020 0.100"></a-gltf-model>
-        {/* <a-gltf-model src="#ground" scale="21 180 27.5" gltf-model="#ground"></a-gltf-model> */}
+        <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 33 -27.121" scale="40 40 40"></a-gltf-model>
+        <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 33 -6.756" scale="40 40 40"></a-gltf-model>
+        <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 33 14.597" scale="40 40 40"></a-gltf-model>
+        <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 33 34.940" scale="40 40 40"></a-gltf-model>
+        <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 33 59.133" scale="40 40 40"></a-gltf-model>
+        <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 33 74.636" scale="40 40 40"></a-gltf-model>
+        <a-gltf-model src="#ktable" gltf-model="#ktable" position="-20.9704 34.87206 14.857" scale="0.020 0.020 0.100"></a-gltf-model>
+        <a-gltf-model src="#ground" scale="21 180 27.5" gltf-model="#ground"></a-gltf-model>
 
         {/* lobby */}
         <a-gltf-model src="#counter" gltf-model="#counter" position="40.011 227.093 115.608" scale="0.5 3.5 0.7" rotation="0 90 0" repeat="3 3"></a-gltf-model>
@@ -249,26 +239,28 @@ function InmersiveExpe() {
 
         {/* Others extra */}
         <a-gltf-model src="#robot" position="-82.52723 -0.68568 -80.70277" rotation="0 29.999999999999996 0" scale="4 4 4"></a-gltf-model>
-        <a-gltf-model src="#whiteDoor" position="-8.35728 18.7513 -99.35885" rotation="0 90 0" scale="25 31 3"></a-gltf-model>
-        <a-gltf-model src="#whiteDoor" position="-8.35728 18.7513 -98.037" rotation="0 90 0" scale="25 31 3"></a-gltf-model>
+        <a-gltf-model src="#whiteDoor" position="-10.57368 18.7513 -98.68865" rotation="0 90 0" scale="27 32 4"></a-gltf-model>
+        <a-gltf-model src="#whiteDoor" position="-12.87287 20.09653 97.20416" rotation="0 90 0" scale="27 32 4"></a-gltf-model>
+        <a-gltf-model src="#whiteDoor" position="-122.37783 22.09653 34.87024" rotation="0 0 0" scale="27 32 4"></a-gltf-model>
+
+
         <a-box id="modal-root" class="clickable" cursor-listener="true" position="-70.88825 63.88425 -60.95718" scale="4 4 4" material="" geometry=""
           animation="property: rotation; to: 0 360 0; loop: true; dur: 3000" color="darkblue"
           onClick={handleBoxClick}><a-text value="...Cursos-F5" text="color: #121111; side: double" scale="4 4 4" rotation="0 260 0"></a-text>
         </a-box>
-        <a-entity id="textOrange" position="43.83693 76.71028 136.80361" scale="50 40 0.00001" geometry="primitive: box" material="src: #textwallOrange"></a-entity>
-        <a-entity id="textwallKitchen" position="-107.69562 87.16169 -89.29855" scale="30 20 0.00001" rotation="0 270 0" geometry="primitive: box" material="src: #textwallKitchen"></a-entity>
-        <a-entity id="textwallTables" position="-59.43186 79.69786 -154.5751" scale="70 40 0.00001" rotation="0 180 0" geometry="primitive: box" material="src: #textwallTables"></a-entity>
 
-        <a-gltf-model id="DoorAnimation" src="#blueDoor" position="33.35131 -97.92487 -225" rotation="" scale="1 1 1.2"
-          dynamic-body>
+        <a-gltf-model id="DoorAnimation" class="clickable" src="#blueDoor" cursor-listener="true" position="33.35131 -97.92487 -200" rotation="" scale="1 1 1.2"
+          dynamic-body animation-mixer
+          event-set__click="_target: #DoorAnimation; _event: click; to: position: 33.35131 -97.92487 -225;"
+          animation="property: position; to: 33.35131 -97.92487 -225; dur: 1000; on: click;">
           <a-animation
             attribute="position"
-            begin="openDoor"
+            begin="openDoor, click"
             to="33.35131 -97.92487 -225"
             dur="1000"></a-animation>
           <a-animation
             attribute="position"
-            begin="closeDoor"
+            begin="closeDoor, click"
             to="33.35131 -97.92487 -200"
             dur="1000"
           ></a-animation>
@@ -280,7 +272,7 @@ function InmersiveExpe() {
           onClick={() => {
             this.el.emit('openDoor');
           }}
-          class="clickable"
+          class=".clickable"
         ></a-entity>
 
         <a-entity
@@ -288,7 +280,7 @@ function InmersiveExpe() {
           onClick={() => {
             this.el.emit('closeDoor');
           }}
-          class="clickable"
+          class=".clickable"
         ></a-entity>
 
         <a-sky material="src: https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/cieloazul.jpg?v=1694152531313"></a-sky>
@@ -296,7 +288,7 @@ function InmersiveExpe() {
 
       <Modal show={showModal} onHide={handleCloseModal} id="modal-content">
         <Modal.Header closeButton>
-          <Modal.Title>Bootcamps Tecnológicos</Modal.Title>
+          <Modal.Title>Nuestros Cursos Tecnológicos</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           link
