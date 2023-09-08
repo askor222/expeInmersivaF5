@@ -59,11 +59,11 @@ AFRAME.registerComponent('click-listener', {
 
     el.addEventListener('click', function () {
       var currentPosition = el.getAttribute('position');
-      var originalPosition = el.getAttribute('original-position');
+      var originalPosition = el.getAttribute('DoorAnimation');
 
       if (!originalPosition) {
         originalPosition = currentPosition;
-        el.setAttribute('original-position', currentPosition);
+        el.setAttribute('DoorAnimation', currentPosition);
       }
 
       if (AFRAME.utils.deepEqual(currentPosition, originalPosition)) {
