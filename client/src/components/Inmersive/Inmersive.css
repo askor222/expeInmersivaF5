@@ -1,0 +1,18 @@
+
+.modal-content {
+    background-color: white;
+}
+
+.modal-header {
+    background-color: #642fe0;
+
+}
+
+.modal-title {
+ font-family: "Poppins";
+ color: aliceblue;
+}
+
+.modal-footer {
+    background-color: #642fe0;
+}
