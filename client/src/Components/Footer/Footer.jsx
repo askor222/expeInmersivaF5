@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css';
+import './Footer.css'; // Asegúrate de tener el archivo CSS en la ruta correcta
 
 const Footer = () => {
   return (
@@ -7,23 +7,33 @@ const Footer = () => {
       <div className="container">
         <div className="column">
           <div className="logo">
-            <img src="../assets/logonegro.png" height="60px" alt="Factoria F5" />
+            <img
+              src="../assets/Imagenes/logonegro.png"
+              height="60px"
+              alt="Factoria F5"
+            />
           </div>
-          <p>Somos Fundación F5</p>
-          <p>Calle Fernando Poo 25</p>
-          <p>Madrid, 28045</p>
+          <p className='footer-p'>Somos Fundación F5</p>
+          <p className='footer-p'>Calle Fernando Poo 25</p>
+          <p className='footer-p'>Madrid, 28045</p>
         </div>
         <div className="column">
-          <p>Home</p>
-          <p>Somos F5</p>
-          <p>Contáctanos</p>
+          <p className='footer-p'>Home</p>
+          <p className='footer-p'>Somos F5</p>
+          <p className='footer-p'>Contáctanos</p>
         </div>
         <div className="column">
           <div className="logo">
-            <img src="../assets/logonaranja.png" height="60px" alt="Segundo Logo" />
+            <img
+              src="../assets/logonaranja.png"
+              height="60px"
+              alt="Segundo Logo"
+            />
           </div>
           <div className="redes-sociales">
-            <a href="/"><img src="../assets/union.png" alt="Facebook" /></a>
+            <a href="/">
+              <img src="../assets/union.png" alt="Facebook" />
+            </a>
           </div>
         </div>
       </div>
@@ -32,9 +42,3 @@ const Footer = () => {
 };
 
 export default Footer;
- 
-
-
-
-
-
