@@ -1,2 +1,30 @@
-
+.custom-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3A3280; /* Cambia el color de fondo aquí */
+    color: white;
+    padding: 20px; /* Aumenta el espacio interior */
+    border-radius: 10px; /* Aumenta el radio de borde para esquinas redondeadas */
+    font-size: 24px; /* Cambia el tamaño de la fuente */
+    text-align: center;
+    z-index: 9999;
+    opacity: 0.9;
+  }
+  
+  .cloud {
+    display: inline-block;
+    background: url('https://cdn.example.com/cloud.png') no-repeat;
+    width: 150px; /* Aumenta el tamaño de la nube */
+    height: 150px; /* Aumenta el tamaño de la nube */
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: 20px; /* Aumenta el espacio entre la nube y el texto */
+  }
+  
+  .message {
+    display: inline-block;
+    vertical-align: middle;
+  }
   
