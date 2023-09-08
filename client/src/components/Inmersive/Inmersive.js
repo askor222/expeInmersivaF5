@@ -14,18 +14,6 @@ function InmersiveExpe() {
     setShowModal(false);
   };
 
-
-  // DoorAnimation
-  function openDoor() {
-    const door = document.querySelector('#blueDoor');
-    door.emit('openDoor');
-  }
-
-  function closeDoor() {
-    const door = document.querySelector('#blueDoor');
-    door.emit('closeDoor');
-  }
-
   return (
 
     <div>
@@ -45,7 +33,7 @@ function InmersiveExpe() {
 
         {/* camera & controls  */}
         {/* <a-entity position="282 25 247" id="cameraRig" scale="1 1 1" rotation="0 45 0"> */}
-          <a-entity position="-15 30 0" id="cameraRig"  scale="1 1 1" rotation="0 45 0">
+        <a-entity position="-15 30 0" id="cameraRig" scale="1 1 1" rotation="0 45 0">
           <a-entity camera="" position="-15 30 0" wasd-controls="" rotation="-15.011 -145.646 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="">
             <a-text value="o" position="0 0 -3"></a-text>
             <a-cursor cursor="rayOrigin: mouse; fuse: true" raycaster="objects: .raycastable; objects: .clickable"></a-cursor>
@@ -243,7 +231,6 @@ function InmersiveExpe() {
         <a-gltf-model src="#whiteDoor" position="-12.87287 20.09653 97.20416" rotation="0 90 0" scale="27 32 4"></a-gltf-model>
         <a-gltf-model src="#whiteDoor" position="-122.37783 22.09653 34.87024" rotation="0 0 0" scale="27 32 4"></a-gltf-model>
 
-
         <a-box id="modal-root" class="clickable" cursor-listener="true" position="-70.88825 63.88425 -60.95718" scale="4 4 4" material="" geometry=""
           animation="property: rotation; to: 0 360 0; loop: true; dur: 3000" color="darkblue"
           onClick={handleBoxClick}><a-text value="...Cursos-F5" text="color: #121111; side: double" scale="4 4 4" rotation="0 260 0"></a-text>
@@ -251,37 +238,9 @@ function InmersiveExpe() {
 
         <a-gltf-model id="DoorAnimation" class="clickable" src="#blueDoor" cursor-listener="true" position="33.35131 -97.92487 -200" rotation="" scale="1 1 1.2"
           dynamic-body animation-mixer
-          event-set__click="_target: #DoorAnimation; _event: click; to: position: 33.35131 -97.92487 -225;"
-          animation="property: position; to: 33.35131 -97.92487 -225; dur: 1000; on: click;">
-          <a-animation
-            attribute="position"
-            begin="openDoor, click"
-            to="33.35131 -97.92487 -225"
-            dur="1000"></a-animation>
-          <a-animation
-            attribute="position"
-            begin="closeDoor, click"
-            to="33.35131 -97.92487 -200"
-            dur="1000"
-          ></a-animation>
+          animation="property: position; to: 33.35131 -97.92487 -225; dur: 1000; easing: linear; startEvents: click;"
+          animation__2="property: position; to: 33.35131 -97.92487 -200; dur: 1000; easing: linear; startEvents: click;">
         </a-gltf-model>
-
-        {/* ControladorAnimation*/}
-        <a-entity
-          position="33.35131 -97.92487 -225"
-          onClick={() => {
-            this.el.emit('openDoor');
-          }}
-          class=".clickable"
-        ></a-entity>
-
-        <a-entity
-          position="33.35131 -97.92487 -200"
-          onClick={() => {
-            this.el.emit('closeDoor');
-          }}
-          class=".clickable"
-        ></a-entity>
 
         <a-sky material="src: https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/cieloazul.jpg?v=1694152531313"></a-sky>
       </a-scene>
