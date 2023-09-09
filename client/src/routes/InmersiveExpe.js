@@ -1,5 +1,5 @@
 import React from 'react'
-import Inmersive from '../Components/Inmersive/Inmersive';
+import Inmersive from '../components/Inmersive/Inmersive';
 
 const InmersiveExpe = () => {
   
