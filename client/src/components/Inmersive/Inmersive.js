@@ -35,7 +35,7 @@ function InmersiveExpe() {
         {/* <a-entity position="282 25 247" id="cameraRig" scale="1 1 1" rotation="0 45 0"> */}
           <a-entity position="-15 30 0" id="cameraRig"  scale="1 1 1" rotation="0 45 0">
           <a-entity camera="" position="-15 30 0" wasd-controls="" rotation="-15.011 -145.646 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="">
-            <a-text value="o" position="0 0 -3"></a-text>
+            <a-text value="" position="0 0 -3"></a-text>
             <a-cursor cursor="rayOrigin: mouse; fuse: true" raycaster="objects: .raycastable; objects: .clickable"></a-cursor>
           </a-entity>
           <a-entity oculus-touch-controls="hand: left" trigger-check thumbstick-logging raycaster="showLine: true"></a-entity>
@@ -84,7 +84,9 @@ function InmersiveExpe() {
         <a-asset-item id="drawer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/file_folder_drawer.glb?v=1694275788482"></a-asset-item>
         <a-asset-item id="zero" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/4b75afd6a6094efd8e942093aef10de4.glb?v=1694287652663"></a-asset-item>
         <a-asset-item id="number1" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/95f1fc10d2394c6490a3ae7151027653.glb?v=1694287652282"></a-asset-item>
-
+        <a-asset-item id="curtain" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/curtains.glb?v=1694345440901"></a-asset-item>
+        <a-asset-item id="cabinet" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/Double%20Door%20Upper%20Cabin.glb?v=1694345537335"></a-asset-item>
+        
 
         {/* floor & walls & ceiling & sidewalk. */}
         <a-gltf-model src="#ground" position="-199.308 5.800 230.262" scale="21 180 27.500"></a-gltf-model>
@@ -204,7 +206,7 @@ function InmersiveExpe() {
         <a-gltf-model src="#bin" gltf-model="#bin" position="-119.014 31.562 -31.989" scale="4 4 4" rotation="0 0 -45"></a-gltf-model>
         <a-gltf-model src="#bin" gltf-model="#bin" position="-118.667 31.339 -24.513" scale="4 4 4" rotation="0 0 -45"></a-gltf-model>
         <a-gltf-model src="#shelf" gltf-model="#shelf" position="-208.966 19.356 -0.530" scale="2.5 2.5 2.5" rotation="0 90 0"></a-gltf-model>
-        <a-gltf-model src="#coffee" gltf-model="#coffee" position="-124.207 47.020 -66.715" scale="3 3 3"></a-gltf-model>
+        <a-gltf-model src="#coffee" gltf-model="#coffee" position="-123.020 45.943 -66.715" scale="3 3 3"></a-gltf-model>
         <a-gltf-model src="#kettle" gltf-model="#kettle" position="-111.362 46.540 -66.189" scale="0.800 0.800 0.800"></a-gltf-model>
         <a-gltf-model src="#papertowel" gltf-model="#papertowel" position="-96.215 45.201 -77.71994" scale="0.400 0.400 0.400"></a-gltf-model>
         <a-gltf-model src="#shelfcomplement" gltf-model="#shelfcomplement" position="-97.827 39.895 -90.713" scale="0.500 0.500 0.500" rotation="0 90 0"></a-gltf-model>
@@ -215,6 +217,7 @@ function InmersiveExpe() {
         <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 33 59.133" scale="40 40 40"></a-gltf-model>
         <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 33 74.636" scale="40 40 40"></a-gltf-model>
         <a-gltf-model src="#ktable" gltf-model="#ktable" position="-20.9704 34.87206 14.857" scale="0.020 0.020 0.100"></a-gltf-model>
+        <a-gltf-model src="#curtain" gltf-model="#curtain" position="-175.490 12.952 14.207" scale="20 28 15"></a-gltf-model>
         
 
         {/* lobby */}
@@ -237,7 +240,7 @@ function InmersiveExpe() {
         <a-gltf-model src="#wc" gltf-model="#wc" position="-196.521 23.500 48.047" scale="30 30 30"></a-gltf-model>
         <a-gltf-model src="#wc" gltf-model="#wc" position="-199.920 23.500 -31.82" scale="30 30 30" rotation="0 90 0"></a-gltf-model>
         <a-gltf-model src="#sink" gltf-model="#sink" position="-185.490 51.528 -73.125" scale="0.3 0.3 0.3"></a-gltf-model>
-        <a-gltf-model src="#sink" gltf-model="#sink" position="-158.865 51.528 90.406" scale="0.3 0.3 0.3" rotation="0 270 0"></a-gltf-model>
+        <a-gltf-model src="#sink" gltf-model="#sink" position="-155.294 51.528 90.406" scale="0.3 0.3 0.3" rotation="0 270 0"></a-gltf-model>
         <a-gltf-model src="#wfountain" gltf-model="#fountain" position="-155.604 45.135 73.014" scale="20 20 20" rotation="0 -90 0"></a-gltf-model>
         <a-gltf-model src="#bin2" gltf-model="#bin2" position="-161.243 21.511 100.002" scale="30 30 30 "></a-gltf-model>
         <a-gltf-model src="#bin2" gltf-model="#bin2" position="7.614 22.990 125.781" scale="30 30 30 "></a-gltf-model>
@@ -249,6 +252,8 @@ function InmersiveExpe() {
         <a-gltf-model src="#drawer" gltf-model="#drawer" position="-2.288 33.602 76.760" scale="2.990 4 5"></a-gltf-model>
         <a-gltf-model src="#board" gltf-model="#board" position="42.797 66.989 -257.801" scale="3 3 3" rotation="0 0 90"></a-gltf-model>
         <a-gltf-model src="#board" gltf-model="#board" position="32.334 63.073 -58.977" scale="3 3 3" rotation="0 0 90"></a-gltf-model>
+        <a-gltf-model src="#cabinet" gltf-model="#cabinet" position="126.309 40.042 -75.746" scale="40 50 40" rotation="0 180 0"></a-gltf-model>
+        
         
         {/* Others extra */}
         <a-gltf-model src="#robot" position="-82.52723 -0.68568 -80.70277" rotation="0 29.999999999999996 0" scale="4 4 4"></a-gltf-model>
@@ -282,7 +287,7 @@ function InmersiveExpe() {
           ></a-animation>
         </a-gltf-model>
 
-        {/* ControladorAnimation*/}
+        {/* controlanimation*/}
         <a-entity
           position="33.35131 -97.92487 -225"
           onClick={() => {
