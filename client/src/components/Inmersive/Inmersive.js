@@ -67,6 +67,7 @@ function InmersiveExpe() {
         <img id="textwallOrange" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/Captura%20de%20pantalla%202023-09-05%20212606.png?v=1693942112443" alt="textoOrange" />
         <img id="textwallKitchen" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/kitchen.JPG?v=1693943846102" alt="textoKitchen" />
         <img id="textwallTables" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/Captura%20de%20pantalla%202023-09-06%20073207.png?v=1693978342118" alt="textoTables" />
+        <img id="QRstreet" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/Street.png?v=1694356114293" alt="QR1" crossOrigin="anonymous"/>
         <a-asset-item id="whiteDoor" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/whiteDoor.glb?v=1693982738385"></a-asset-item>
         <a-asset-item id="coffee" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/cafetiere.glb?v=1693908142500"></a-asset-item>
         <a-asset-item id="kettle" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/water_kettle.glb?v=1693908142058"></a-asset-item>
@@ -264,6 +265,7 @@ function InmersiveExpe() {
         <a-gltf-model src="#livingwall" gltf-model="#livingwall" position="-17.263 76.848 -154.708" scale="3 12 5.010"></a-gltf-model>
         <a-gltf-model src="#zero" gltf-model="#zero" position="-143.207 49.267 65.677" scale="150 150 150" rotation="0 90 0"></a-gltf-model>
         <a-gltf-model src="#number1" gltf-model="#number1" position="-143.207 55.691 32.706" scale="150 150 150" rotation="0 90 0"></a-gltf-model>
+        <a-entity geometry="primitive: box" material="src: #QRstreet; side: double" position="193.5 62 196" rotation="0 50 0" scale="18 15 1"></a-entity>
 
         <a-box id="modal-root" class="clickable" cursor-listener="true" position="-70.88825 63.88425 -60.95718" scale="4 4 4" material="" geometry=""
           animation="property: rotation; to: 0 360 0; loop: true; dur: 3000" color="darkblue"
