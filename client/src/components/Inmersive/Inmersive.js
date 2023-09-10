@@ -81,7 +81,12 @@ function InmersiveExpe() {
         <a-asset-item id="sink" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/unseen_bathroom_sink.glb?v=1693942922359" crossOrigin="anonymous"></a-asset-item>
         <a-asset-item id="wfountain" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/drinking_fountain.glb?v=1693942923145" crossOrigin="anonymous"></a-asset-item>
         <a-asset-item id="board" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/stuff_in_my_room_whiteboard.glb?v=1693942924452" crossOrigin="anonymous"></a-asset-item>
-
+        <a-asset-item id="curtain" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/curtains.glb?v=1694345440901" crossOrigin="anonymous"></a-asset-item>
+        <a-asset-item id="cabinet" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/Double%20Door%20Upper%20Cabin.glb?v=1694345537335" crossOrigin="anonymous"></a-asset-item>
+        <a-asset-item id="drawer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/file_folder_drawer.glb?v=1694275788482" crossOrigin="anonymous"></a-asset-item>
+        <a-asset-item id="zero" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/4b75afd6a6094efd8e942093aef10de4.glb?v=1694287652663" crossOrigin="anonymous"></a-asset-item>
+        <a-asset-item id="number1" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/95f1fc10d2394c6490a3ae7151027653.glb?v=1694287652282" crossOrigin="anonymous"></a-asset-item>
+        
         {/* floor & walls & ceiling & sidewalk. */}
         <a-gltf-model src="#ground" position="-199.308 5.800 230.262" scale="21 180 27.500"></a-gltf-model>
         <a-gltf-model src="#walls" position="0 2.099 0"></a-gltf-model>
@@ -238,7 +243,6 @@ function InmersiveExpe() {
         <a-entity geometry="primitive: box" material="src: #textwallKitchen; side: double" position="-108 85 -89" rotation="0 90 0" scale="25 20 1"></a-entity>
 
 
-
         <a-box id="modal-root" class="clickable" cursor-listener="true" position="-70.88825 63.88425 -60.95718" scale="4 4 4" material="" geometry=""
           animation="property: rotation; to: 0 360 0; loop: true; dur: 3000" color="darkblue"
           onClick={handleBoxClick}><a-text value="...Cursos-F5" text="color: #121111; side: double" scale="4 4 4" rotation="0 260 0"></a-text>
@@ -254,7 +258,7 @@ function InmersiveExpe() {
 
       <Modal show={showModal} onHide={handleCloseModal} id="modal-content">
         <Modal.Header closeButton>
-          <Modal.Title> Nuestros Cursos Tecnológicos</Modal.Title>
+          <Modal.Title>Nuestros Cursos Tecnológicos</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <ul>
