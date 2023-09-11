@@ -35,3 +35,8 @@ div.fade.modal.show{
 justify-content:flex-start;
 }
 
+.btnscene {
+    position: absolute;
+    z-index: 1000;
+}
+

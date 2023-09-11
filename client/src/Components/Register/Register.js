@@ -6,8 +6,6 @@ import './Register.css';
 
 import Register1 from "../components/Register"
 
-
-
 const Register = () => {
   return (
     <div>

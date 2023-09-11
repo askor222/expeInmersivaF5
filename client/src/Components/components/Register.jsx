@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; // Importa useState
+import React, { useState } from 'react'; 
 
 import './css/register.css';
 

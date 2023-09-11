@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import './Navbar.css';
 
 const Navbar = () => {
@@ -25,6 +24,9 @@ const Navbar = () => {
         </div>
         <div className="column">
           <a className='a-header'  href="/login">Login</a>
+        </div>
+        <div className="column">
+          <a className='a-header'  href="/Inmersive">Experiencia Inmersiva</a>
         </div>
         <div className="column">
           <a className='a-header'  href="/contact">Contáctanos</a>

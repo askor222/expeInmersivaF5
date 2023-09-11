@@ -18,16 +18,14 @@ function Inmersive() {
   return (
 
     <div>
+
       <a-scene
         frustum-culling="true"
         renderer="antialias: true;
       sortObjects: true;
-      physicallyCorrectLights: true;
-      maxCanvasWidth: 1920;
-      maxCanvasHeight: 1920;"
-        cursor="rayOrigin:mouse"
+      "
       >
-
+        <button id="btnscene" type="button" class="btn btn-light">Light</button>
         {/* Default lighting injected by A-Frame.  */}
         <a-entity light="type: ambient; color: #BBB"></a-entity>
         <a-entity light="type: directional; color: #FFF; intensity: 4.3" position="-2 2 1"></a-entity>
@@ -254,8 +252,8 @@ function Inmersive() {
         <a-gltf-model src="#board" gltf-model="#board" position="32.334 63.073 -58.977" scale="3 3 3" rotation="0 0 90"></a-gltf-model>
         <a-gltf-model src="#cabinet" gltf-model="#cabinet" position="126.309 40.042 -75.746" scale="40 50 40" rotation="0 180 0"></a-gltf-model>
 
-    {/* toilets */}
-    <a-gltf-model src="#wc" gltf-model="#wc" position="-196.521 23.500 48.047" scale="30 30 30"></a-gltf-model>
+        {/* toilets */}
+        <a-gltf-model src="#wc" gltf-model="#wc" position="-196.521 23.500 48.047" scale="30 30 30"></a-gltf-model>
         <a-gltf-model src="#wc" gltf-model="#wc" position="-199.920 23.500 -31.82" scale="30 30 30" rotation="0 90 0"></a-gltf-model>
         <a-gltf-model src="#sink" gltf-model="#sink" position="-185.490 51.528 -73.125" scale="0.3 0.3 0.3"></a-gltf-model>
         <a-gltf-model src="#sink" gltf-model="#sink" position="-155.294 51.528 90.406" scale="0.3 0.3 0.3" rotation="0 270 0"></a-gltf-model>
@@ -270,7 +268,7 @@ function Inmersive() {
         <a-gltf-model src="#board" gltf-model="#board" position="42.797 66.989 -257.801" scale="3 3 3" rotation="0 0 90"></a-gltf-model>
         <a-gltf-model src="#board" gltf-model="#board" position="32.334 63.073 -58.977" scale="3 3 3" rotation="0 0 90"></a-gltf-model>
         <a-gltf-model src="#cabinet" gltf-model="#cabinet" position="126.309 40.042 -75.746" scale="40 50 40" rotation="0 180 0"></a-gltf-model>
-        
+
         {/* Others extra */}
         <a-gltf-model src="#robot" position="-82.52723 -0.68568 -80.70277" rotation="0 29.999999999999996 0" scale="4 4 4"></a-gltf-model>
         <a-gltf-model src="#whiteDoor" position="-9.22466 19.29432 -72.57483" rotation="0 210 0" scale="27 32 4"></a-gltf-model>
