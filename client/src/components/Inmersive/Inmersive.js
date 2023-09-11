@@ -243,7 +243,6 @@ function InmersiveExpe() {
         <a-gltf-model src="#whiteDoor" position="-12.87287 20.09653 97.20416" rotation="0 90 0" scale="27 32 4"></a-gltf-model>
         <a-gltf-model src="#whiteDoor" position="-122.37783 22.09653 34.87024" rotation="0 0 0" scale="27 32 4"></a-gltf-model>
 
-
         <a-box id="modal-root" class="clickable" cursor-listener="true" position="-70.88825 63.88425 -60.95718" scale="4 4 4" material="" geometry=""
           animation="property: rotation; to: 0 360 0; loop: true; dur: 3000" color="darkblue"
           onClick={handleBoxClick}><a-text value="...Cursos-F5" text="color: #121111; side: double" scale="4 4 4" rotation="0 260 0"></a-text>
