@@ -30,7 +30,6 @@ function Inmersive() {
         <a-entity light="type: ambient; color: #BBB"></a-entity>
         <a-entity light="type: directional; color: #FFF; intensity: 4.3" position="-2 2 1"></a-entity>
         <a-entity light="type: directional; color: #FFF; intensity: 4" position="2 -2 -2"></a-entity>
-        <a-entity light="type: directional; color: #FFF; intensity: 1" position="4 4 4"></a-entity>
 
         {/* camera & controls  */}
         {/* <a-entity position="282 25 247" id="cameraRig" scale="1 1 1" rotation="0 45 0"> */}
