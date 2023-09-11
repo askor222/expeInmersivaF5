@@ -4,7 +4,7 @@ import { Button, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Inmersive.css'
 
-function InmersiveExpe() {
+function Inmersive() {
   const [showModal, setShowModal] = useState(false);
 
   const handleBoxClick = () => {
@@ -381,4 +381,4 @@ function InmersiveExpe() {
   );
 }
 
-export default InmersiveExpe;
+export default Inmersive;
