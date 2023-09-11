@@ -29,19 +29,6 @@ AFRAME.registerComponent('play-all-model-animations', {
 });
 
 
-AFRAME.registerComponent('thumbstick-logging',{
-  init: function () {
-    this.el.addEventListener('thumbstickmoved', this.logThumbstick);
-  },
-  logThumbstick: function (evt) {
-    if (evt.detail.y > 0.95) { console.log("DOWN"); }
-    if (evt.detail.y < -0.95) { console.log("UP"); }
-    if (evt.detail.x < -0.95) { console.log("LEFT"); }
-    if (evt.detail.x > 0.95) { console.log("RIGHT"); }
-  }
-});
-
-
 AFRAME.registerComponent('collider-check', {
   dependencies: ['raycaster'],
 
@@ -76,3 +63,63 @@ AFRAME.registerComponent('click-listener', {
     });
   }
 });
+
+
+JSON.stringifyWithCircularRefs = (function() {
+  const refs = new Map();
+  const parents = [];
+  const path = ["this"];
+
+  function clear() {
+    refs.clear();
+    parents.length = 0;
+    path.length = 1;
+  }
+
+  function updateParents(key, value) {
+    var idx = parents.length - 1;
+    var prev = parents[idx];
+    if (prev[key] === value || idx === 0) {
+      path.push(key);
+      parents.push(value);
+    } else {
+      while (idx-- >= 0) {
+        prev = parents[idx];
+        if (prev[key] === value) {
+          idx += 2;
+          parents.length = idx;
+          path.length = idx;
+          --idx;
+          parents[idx] = value;
+          path[idx] = key;
+          break;
+        }
+      }
+    }
+  }
+
+  function checkCircular(key, value) {
+    if (value != null) {
+      if (typeof value === "object") {
+        if (key) { updateParents(key, value); }
+
+        let other = refs.get(value);
+        if (other) {
+          return '[Circular Reference]' + other;
+        } else {
+          refs.set(value, path.join('.'));
+        }
+      }
+    }
+    return value;
+  }
+
+  return function stringifyWithCircularRefs(obj, space) {
+    try {
+      parents.push(obj);
+      return JSON.stringify(obj, checkCircular, space);
+    } finally {
+      clear();
+    }
+  }
+})();
