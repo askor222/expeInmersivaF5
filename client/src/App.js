@@ -1,16 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import InmersiveExpe from './routes/InmersiveExpe';
+import { Route, Routes } from 'react-router-dom';
+import InmersiveExpe from '../src/routes/InmersiveExpe.js';
 
 
 function App() {
   return (
     <>
-    <BrowserRouter>
      <Routes>
         <Route path='/' element={<InmersiveExpe />} > </Route>
      </Routes>
-    </BrowserRouter>
     </>
   );
 }
