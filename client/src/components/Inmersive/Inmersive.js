@@ -42,6 +42,7 @@ function InmersiveExpe() {
           <a-entity id="rtcontroller" oculus-touch-controls="hand: right" trigger-check thumbstick-logging raycaster="showLine: true"></a-entity>
         </a-entity>
 
+        
         {/* Asset management system  */}
         <a-asset-item id="walls" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/Oficina10.glb?v=1693579074653" crossorigin="anonymous"></a-asset-item>
         <a-asset-item id="cabins" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/Cabinas1.glb?v=1693982095823" crossorigin="anonymous"></a-asset-item>
@@ -67,7 +68,7 @@ function InmersiveExpe() {
         <img id="textwallOrange" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/Captura%20de%20pantalla%202023-09-05%20212606.png?v=1693942112443" alt="textoOrange" />
         <img id="textwallKitchen" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/kitchen.JPG?v=1693943846102" alt="textoKitchen" />
         <img id="textwallTables" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/Captura%20de%20pantalla%202023-09-06%20073207.png?v=1693978342118" alt="textoTables" />
-        <img id="QRstreet" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/Street.png?v=1694356114293" alt="QR1" crossOrigin="anonymous"/>
+        <img id="qrstreet" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/Street.png?v=1694356114293" alt="QR1" crossOrigin="anonymous"/>
         <a-asset-item id="whiteDoor" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/whiteDoor.glb?v=1693982738385"></a-asset-item>
         <a-asset-item id="coffee" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/cafetiere.glb?v=1693908142500"></a-asset-item>
         <a-asset-item id="kettle" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/water_kettle.glb?v=1693908142058"></a-asset-item>
@@ -87,7 +88,6 @@ function InmersiveExpe() {
         <a-asset-item id="number1" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/95f1fc10d2394c6490a3ae7151027653.glb?v=1694287652282"></a-asset-item>
         <a-asset-item id="curtain" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/curtains.glb?v=1694345440901"></a-asset-item>
         <a-asset-item id="cabinet" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/Double%20Door%20Upper%20Cabin.glb?v=1694345537335"></a-asset-item>
-        
 
         {/* floor & walls & ceiling & sidewalk. */}
         <a-gltf-model src="#ground" position="-199.308 5.800 230.262" scale="21 180 27.500"></a-gltf-model>
@@ -265,7 +265,7 @@ function InmersiveExpe() {
         <a-gltf-model src="#livingwall" gltf-model="#livingwall" position="-17.263 76.848 -154.708" scale="3 12 5.010"></a-gltf-model>
         <a-gltf-model src="#zero" gltf-model="#zero" position="-143.207 49.267 65.677" scale="150 150 150" rotation="0 90 0"></a-gltf-model>
         <a-gltf-model src="#number1" gltf-model="#number1" position="-143.207 55.691 32.706" scale="150 150 150" rotation="0 90 0"></a-gltf-model>
-        <a-entity geometry="primitive: box" material="src: #QRstreet; side: double" position="193.5 62 196" rotation="0 50 0" scale="18 15 1"></a-entity>
+        <a-entity geometry="primitive: box" material="src: #qrstreet; side: double" position="193.5 62 196" rotation="0 50 0" scale="18 15 1"></a-entity>
 
         <a-box id="modal-root" class="clickable" cursor-listener="true" position="-70.88825 63.88425 -60.95718" scale="4 4 4" material="" geometry=""
           animation="property: rotation; to: 0 360 0; loop: true; dur: 3000" color="darkblue"
