@@ -81,11 +81,13 @@ function InmersiveExpe() {
         <a-asset-item id="sink" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/unseen_bathroom_sink.glb?v=1693942922359" crossOrigin="anonymous"></a-asset-item>
         <a-asset-item id="wfountain" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/drinking_fountain.glb?v=1693942923145" crossOrigin="anonymous"></a-asset-item>
         <a-asset-item id="board" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/stuff_in_my_room_whiteboard.glb?v=1693942924452" crossOrigin="anonymous"></a-asset-item>
-        <a-asset-item id="curtain" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/curtains.glb?v=1694345440901" crossOrigin="anonymous"></a-asset-item>
-        <a-asset-item id="cabinet" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/Double%20Door%20Upper%20Cabin.glb?v=1694345537335" crossOrigin="anonymous"></a-asset-item>
-        <a-asset-item id="drawer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/file_folder_drawer.glb?v=1694275788482" crossOrigin="anonymous"></a-asset-item>
-        <a-asset-item id="zero" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/4b75afd6a6094efd8e942093aef10de4.glb?v=1694287652663" crossOrigin="anonymous"></a-asset-item>
-        <a-asset-item id="number1" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/95f1fc10d2394c6490a3ae7151027653.glb?v=1694287652282" crossOrigin="anonymous"></a-asset-item>
+        <a-asset-item id="cubicle" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/office_cubicle.glb?v=1694082621594"></a-asset-item>
+        <a-asset-item id="livingwall" src="https://cdn.glitch.me/078ce1a5-734a-4824-8ef5-cf5a78251ea1/landscape_living_wall_university_of_greenwich.glb?v=1694084082833"></a-asset-item>
+        <a-asset-item id="drawer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/file_folder_drawer.glb?v=1694275788482"></a-asset-item>
+        <a-asset-item id="zero" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/4b75afd6a6094efd8e942093aef10de4.glb?v=1694287652663"></a-asset-item>
+        <a-asset-item id="number1" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/95f1fc10d2394c6490a3ae7151027653.glb?v=1694287652282"></a-asset-item>
+        <a-asset-item id="curtain" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/curtains.glb?v=1694345440901"></a-asset-item>
+        <a-asset-item id="cabinet" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/Double%20Door%20Upper%20Cabin.glb?v=1694345537335"></a-asset-item>
         <img id="qrstreet" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/Street.png?v=1694356114293" alt="QR1" crossOrigin="anonymous" />
         <img id="qrentrada" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/entrada.png?v=1694356117961" alt="QR2" crossOrigin="anonymous" />
         <img id="qroficina" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/oficina.png?v=1694356134179" alt="QR3" crossOrigin="anonymous" />
@@ -225,6 +227,7 @@ function InmersiveExpe() {
         <a-gltf-model src="#stool" gltf-model="#stool" position="-40.208 33 74.636" scale="40 40 40"></a-gltf-model>
         <a-gltf-model src="#ktable" gltf-model="#ktable" position="-20.9704 34.87206 14.857" scale="0.020 0.020 0.100"></a-gltf-model>
         <a-gltf-model src="#ground" scale="21 180 27.5" gltf-model="#ground"></a-gltf-model>
+        <a-gltf-model src="#curtain" gltf-model="#curtain" position="-175.490 12.952 14.207" scale="20 28 15"></a-gltf-model>
 
         {/* lobby */}
         <a-gltf-model src="#counter" gltf-model="#counter" position="40.011 227.093 115.608" scale="0.5 3.5 0.7" rotation="0 90 0" repeat="3 3"></a-gltf-model>
@@ -237,10 +240,37 @@ function InmersiveExpe() {
         <a-gltf-model src="#stool" gltf-model="#stool" position="0.031 37.339 227" scale="40 40 40"></a-gltf-model>
         <a-gltf-model src="#stool" gltf-model="#stool" position="-23.797 37.339 227" scale="40 40 40"></a-gltf-model>
 
+
         {/* office */}
         <a-gltf-model src="#OfficeDoor" position="-85.21431 19.00612 251.69945" rotation="0 90 0" scale="38 38 27.5"></a-gltf-model>
-        <a-gltf-model src="#table" gltf-model="#table" position="" scale="0.300 0.300 0.300" rotation=""></a-gltf-model>
+        <a-gltf-model src="#table" gltf-model="#table" position="-78.502 38.534 206.041" scale="0.300 0.300 0.300"></a-gltf-model>
+        <a-gltf-model src="#table" gltf-model="#table" position="-78.502 38.534 183.144" scale="0.300 0.300 0.300"></a-gltf-model>
 
+
+        {/* classrooms */}
+        <a-gltf-model src="#drawer" gltf-model="#drawer" position="-2.288 33.602 87.767" scale="2.990 4 5"></a-gltf-model>
+        <a-gltf-model src="#drawer" gltf-model="#drawer" position="-2.288 33.602 76.760" scale="2.990 4 5"></a-gltf-model>
+        <a-gltf-model src="#board" gltf-model="#board" position="42.797 66.989 -257.801" scale="3 3 3" rotation="0 0 90"></a-gltf-model>
+        <a-gltf-model src="#board" gltf-model="#board" position="32.334 63.073 -58.977" scale="3 3 3" rotation="0 0 90"></a-gltf-model>
+        <a-gltf-model src="#cabinet" gltf-model="#cabinet" position="126.309 40.042 -75.746" scale="40 50 40" rotation="0 180 0"></a-gltf-model>
+
+    {/* toilets */}
+    <a-gltf-model src="#wc" gltf-model="#wc" position="-196.521 23.500 48.047" scale="30 30 30"></a-gltf-model>
+        <a-gltf-model src="#wc" gltf-model="#wc" position="-199.920 23.500 -31.82" scale="30 30 30" rotation="0 90 0"></a-gltf-model>
+        <a-gltf-model src="#sink" gltf-model="#sink" position="-185.490 51.528 -73.125" scale="0.3 0.3 0.3"></a-gltf-model>
+        <a-gltf-model src="#sink" gltf-model="#sink" position="-155.294 51.528 90.406" scale="0.3 0.3 0.3" rotation="0 270 0"></a-gltf-model>
+        <a-gltf-model src="#wfountain" gltf-model="#fountain" position="-155.604 45.135 73.014" scale="20 20 20" rotation="0 -90 0"></a-gltf-model>
+        <a-gltf-model src="#bin2" gltf-model="#bin2" position="-161.243 21.511 100.002" scale="30 30 30 "></a-gltf-model>
+        <a-gltf-model src="#bin2" gltf-model="#bin2" position="7.614 22.990 125.781" scale="30 30 30 "></a-gltf-model>
+        <a-gltf-model src="#cubicle" gltf-model="#cubicle" position="-121.531 35.397 145.865" scale="4 4 4" rotation="0 180 0"></a-gltf-model>
+        <a-gltf-model src="#cubicle" gltf-model="#cubicle" position="-195.464 35.397 232.403" scale="4 4 4"></a-gltf-model>
+        {/* classrooms */}
+        <a-gltf-model src="#drawer" gltf-model="#drawer" position="-2.288 33.602 87.767" scale="2.990 4 5"></a-gltf-model>
+        <a-gltf-model src="#drawer" gltf-model="#drawer" position="-2.288 33.602 76.760" scale="2.990 4 5"></a-gltf-model>
+        <a-gltf-model src="#board" gltf-model="#board" position="42.797 66.989 -257.801" scale="3 3 3" rotation="0 0 90"></a-gltf-model>
+        <a-gltf-model src="#board" gltf-model="#board" position="32.334 63.073 -58.977" scale="3 3 3" rotation="0 0 90"></a-gltf-model>
+        <a-gltf-model src="#cabinet" gltf-model="#cabinet" position="126.309 40.042 -75.746" scale="40 50 40" rotation="0 180 0"></a-gltf-model>
+        
         {/* Others extra */}
         <a-gltf-model src="#robot" position="-82.52723 -0.68568 -80.70277" rotation="0 29.999999999999996 0" scale="4 4 4"></a-gltf-model>
         <a-gltf-model src="#whiteDoor" position="-9.22466 19.29432 -72.57483" rotation="0 210 0" scale="27 32 4"></a-gltf-model>
@@ -262,6 +292,10 @@ function InmersiveExpe() {
         <a-gltf-model src="#firstdoor" position="209 90 217.41414" rotation="10 50 0" scale="38 38 27.5"
           animation="property: position; to: 210 90 206.41414; dur: 3000; on: click;">
         </a-gltf-model>
+        <a-gltf-model src="#livingwall" gltf-model="#livingwall" position="-96.011 76.848 -148.708" scale="3 12 5.010"></a-gltf-model>
+        <a-gltf-model src="#livingwall" gltf-model="#livingwall" position="-17.263 76.848 -148.708" scale="3 12 5.010"></a-gltf-model>
+        <a-gltf-model src="#zero" gltf-model="#zero" position="-143.207 49.267 65.677" scale="150 150 150" rotation="0 90 0"></a-gltf-model>
+        <a-gltf-model src="#number1" gltf-model="#number1" position="-143.207 55.691 32.706" scale="150 150 150" rotation="0 90 0"></a-gltf-model>
 
         <a-box id="modal-root" class="clickable" cursor-listener="true" position="-70.88825 63.88425 -60.95718" scale="4 4 4" material="" geometry=""
           animation="property: rotation; to: 0 360 0; loop: true; dur: 3000" color="darkblue"
