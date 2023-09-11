@@ -46,21 +46,17 @@ AFRAME.registerComponent('log', {
       var thunksound = document.querySelector('#thunk');
       
       this.el.addEventListener('raycaster-intersection', function (e) {
-        //-- get selected object
         this.selectedObj = e.detail.els[0];
         debugtxt.setAttribute('value', 'Cargate a los coders!');
       });
       
       this.el.addEventListener('raycaster-intersection-cleared', function (e) {
-        //-- get selected object
         this.selectedObj = null;
         
       });
       
         
-      //-- trigger button pressed
       this.el.addEventListener('triggerdown', function (e) {
-          //debugtxt.setAttribute('value', 'Trigger button pressed');
         
           if(!this.selectedObj) return;
         

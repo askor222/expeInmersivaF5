@@ -18,15 +18,15 @@ function InmersiveExpe() {
   return (
 
     <div>
-      <a-scene 
-      frustum-culling="true"
-      renderer="antialias: true;
+      <a-scene
+        frustum-culling="true"
+        renderer="antialias: true;
       sortObjects: true;
       physicallyCorrectLights: true;
       maxCanvasWidth: 1920;
       maxCanvasHeight: 1920;"
         cursor="rayOrigin:mouse"
-        physics>
+      >
 
         {/* Default lighting injected by A-Frame.  */}
         <a-entity light="type: ambient; color: #BBB"></a-entity>
@@ -36,10 +36,10 @@ function InmersiveExpe() {
 
         {/* camera & controls  */}
         {/* <a-entity position="282 25 247" id="cameraRig" scale="1 1 1" rotation="0 45 0"> */}
-        <a-entity position="-15 30 0" id="cameraRig" scale="1 1 1" rotation="0 45 0">
+          <a-entity position="-15 30 0" id="cameraRig" scale="1 1 1" rotation="0 45 0">
           <a-entity camera="" position="-15 30 0" wasd-controls="" rotation="-15.011 -145.646 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="">
-            <a-text value="o" position="0 0 -3"></a-text>
-            <a-cursor cursor="rayOrigin: mouse; fuse: true" raycaster="objects: [data-raycastable]; objects: .clickable"></a-cursor>
+            <a-text value="" position="0 0 -3"></a-text>
+            <a-cursor cursor="rayOrigin: mouse; fuse: true" raycaster="objects: data-raycastable; objects: .clickable"></a-cursor>
           </a-entity>
           <a-entity oculus-touch-controls="hand: left" trigger-check thumbstick-logging raycaster="showLine: true"></a-entity>
           <a-entity id="rtcontroller" oculus-touch-controls="hand: right" trigger-check thumbstick-logging raycaster="showLine: true"></a-entity>
@@ -66,9 +66,9 @@ function InmersiveExpe() {
         <a-asset-item id="stairTables" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/escalerasCocho.glb?v=1693550218142" crossOrigin="anonymous"></a-asset-item>
         <a-asset-item id="robot" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/robot.glb?v=1693812662910" crossOrigin="anonymous"></a-asset-item>
         <a-asset-item id="blueDoor" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/puertaAzulFlores.glb?v=1693570610262" crossOrigin="anonymous"></a-asset-item>
-        <img id="textwallOrange" src="https://cdn.glitch.global/5e54b684-756b-413c-8816-13237484939c/Captura%20de%20pantalla%202023-09-09%20212745.png?v=1694288160748" alt="textoOrange" crossOrigin="anonymous"/>
-        <img id="textwallKitchen" src="https://cdn.glitch.global/5e54b684-756b-413c-8816-13237484939c/11.png?v=1694288796358" alt="textoKitchen" crossOrigin="anonymous"/>
-        <img id="textwallTables" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/Captura%20de%20pantalla%202023-09-06%20073207.png?v=1693978342118" alt="textoTables" crossOrigin="anonymous"/>
+        <img id="textwallOrange" src="https://cdn.glitch.global/5e54b684-756b-413c-8816-13237484939c/Captura%20de%20pantalla%202023-09-09%20212745.png?v=1694288160748" alt="textoOrange" crossOrigin="anonymous" />
+        <img id="textwallKitchen" src="https://cdn.glitch.global/5e54b684-756b-413c-8816-13237484939c/11.png?v=1694288796358" alt="textoKitchen" crossOrigin="anonymous" />
+        <img id="textwallTables" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/Captura%20de%20pantalla%202023-09-06%20073207.png?v=1693978342118" alt="textoTables" crossOrigin="anonymous" />
         <a-asset-item id="whiteDoor" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/whiteDoor.glb?v=1693982738385" crossOrigin="anonymous"></a-asset-item>
         <a-asset-item id="coffee" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/cafetiere.glb?v=1693908142500" crossOrigin="anonymous"></a-asset-item>
         <a-asset-item id="kettle" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/water_kettle.glb?v=1693908142058" crossOrigin="anonymous"></a-asset-item>
@@ -86,7 +86,15 @@ function InmersiveExpe() {
         <a-asset-item id="drawer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/file_folder_drawer.glb?v=1694275788482" crossOrigin="anonymous"></a-asset-item>
         <a-asset-item id="zero" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/4b75afd6a6094efd8e942093aef10de4.glb?v=1694287652663" crossOrigin="anonymous"></a-asset-item>
         <a-asset-item id="number1" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/95f1fc10d2394c6490a3ae7151027653.glb?v=1694287652282" crossOrigin="anonymous"></a-asset-item>
-        
+        <img id="qrstreet" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/Street.png?v=1694356114293" alt="QR1" crossOrigin="anonymous" />
+        <img id="qrentrada" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/entrada.png?v=1694356117961" alt="QR2" crossOrigin="anonymous" />
+        <img id="qroficina" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/oficina.png?v=1694356134179" alt="QR3" crossOrigin="anonymous" />
+        <img id="qrcocina" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/EstanciaCocina.png?v=1694356130232" alt="QR4" crossOrigin="anonymous" />
+        <img id="qrsalon1" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/salon1.png?v=1694356137654" alt="QR5" crossOrigin="anonymous" />
+        <img id="qrsalon2" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/salon2.png?v=1694356142182" alt="QR6" crossOrigin="anonymous" />
+        <a-asset-item id="firstdoor" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/DoorCristalentrada.only.glb?v=1694414908394" crossOrigin="anonymous"></a-asset-item>
+
+
         {/* floor & walls & ceiling & sidewalk. */}
         <a-gltf-model src="#ground" position="-199.308 5.800 230.262" scale="21 180 27.500"></a-gltf-model>
         <a-gltf-model src="#walls" position="0 2.099 0"></a-gltf-model>
@@ -235,13 +243,25 @@ function InmersiveExpe() {
 
         {/* Others extra */}
         <a-gltf-model src="#robot" position="-82.52723 -0.68568 -80.70277" rotation="0 29.999999999999996 0" scale="4 4 4"></a-gltf-model>
-        <a-gltf-model src="#whiteDoor" position="-10.57368 18.7513 -98.68865" rotation="0 90 0" scale="27 32 4"></a-gltf-model>
-        <a-gltf-model src="#whiteDoor" position="-12.87287 20.09653 97.20416" rotation="0 90 0" scale="27 32 4"></a-gltf-model>
+        <a-gltf-model src="#whiteDoor" position="-9.22466 19.29432 -72.57483" rotation="0 210 0" scale="27 32 4"></a-gltf-model>
         <a-gltf-model src="#whiteDoor" position="-122.37783 22.09653 34.87024" rotation="0 0 0" scale="27 32 4"></a-gltf-model>
+        <a-gltf-model src="#whiteDoor" position="-12.22746 21.03736 122.72313" rotation="0 200 0" scale="27 30 4" gltf-model="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/whiteDoor.glb?v=1693982738385"></a-gltf-model>
         <a-entity geometry="primitive: box" material="src: #textwallTables; side: double" position="-58 78 -150.5337" scale="90 40 1"></a-entity>
         <a-entity geometry="primitive: box" material="src: #textwallOrange; side: front" position="45 75 136" scale="50 40 1"></a-entity>
-        <a-entity geometry="primitive: box" material="src: #textwallKitchen; side: double" position="-108 85 -89" rotation="0 90 0" scale="25 20 1"></a-entity>
-
+        <a-entity geometry="primitive: box" material="src: #textwallKitchen; side: double" position="-108 82 -97" rotation="0 90 0" scale="45 25 1"></a-entity>
+        <a-entity geometry="primitive: box" material="src: #qrstreet; side: double" position="197 60 199" rotation="0 50 0" scale="18 15 1"></a-entity>
+        <a-entity geometry="primitive: box" material="src: #qrentrada; side: double" position="-3 80 144" rotation="0 0 0" scale="12 12 1"></a-entity>
+        <a-entity geometry="primitive: box" material="src: #qroficina; side: double" position="-60 50 200.69945" rotation="0 90 0" scale="25 20 1"></a-entity>
+        <a-entity geometry="primitive: box" material="src: #qrcocina; side: double" position="-13 70 79" rotation="0 90 0" scale="30 25 1"></a-entity>
+        <a-entity geometry="primitive: box" material="src: #qrsalon1; side: double" position="100 70 -64" rotation="0 0 0" scale="20 22 1"></a-entity>
+        <a-entity geometry="primitive: box" material="src: #qrsalon2; side: double" position="120.701 80 -275" rotation="0 0 0" scale="45 25 1"></a-entity>
+        <a-gltf-model src="#firstdoor" position="181.49966 87.71111 254.39745" rotation="10 50 0" scale="38 38 27.5"></a-gltf-model>
+        <a-gltf-model src="#firstdoor" position="219.05842 90 207.48084" rotation="10 50 0" scale="38 38 27.5"></a-gltf-model>
+        <a-gltf-model src="#firstdoor" position="188.71141 62.111 247" rotation="10 50 0" scale="38 38 27.5"
+          animation="property: position; to: 180.71141 62.111 252; dur: 3000; on: click;"></a-gltf-model>
+        <a-gltf-model src="#firstdoor" position="209 90 217.41414" rotation="10 50 0" scale="38 38 27.5"
+          animation="property: position; to: 210 90 206.41414; dur: 3000; on: click;">
+        </a-gltf-model>
 
         <a-box id="modal-root" class="clickable" cursor-listener="true" position="-70.88825 63.88425 -60.95718" scale="4 4 4" material="" geometry=""
           animation="property: rotation; to: 0 360 0; loop: true; dur: 3000" color="darkblue"
@@ -249,8 +269,8 @@ function InmersiveExpe() {
         </a-box>
 
         <a-gltf-model id="DoorAnimation" class="clickable" src="#blueDoor" cursor-listener="true" position="33.35131 -97.92487 -225" rotation="" scale="1 1 1.2"
-          dynamic-body animation-mixer="action" play-all-model-animations 
-          >
+          dynamic-body animation-mixer="action" play-all-model-animations
+        >
         </a-gltf-model>
 
         <a-sky material="src: https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/cieloazul.jpg?v=1694152531313"></a-sky>
@@ -262,69 +282,69 @@ function InmersiveExpe() {
         </Modal.Header>
         <Modal.Body>
           <ul>
-              <p><strong>MADRID</strong></p>
-              <li>
-                <p>Desarrollo Web Full stack 👉<Link to="https://talentomadrid.factoriaf5.org/?utm_source=rompemosclic
+            <p><strong>MADRID</strong></p>
+            <li>
+              <p>Desarrollo Web Full stack 👉<Link to="https://talentomadrid.factoriaf5.org/?utm_source=rompemosclic
 " target="_blank">pincha aquí</Link></p>
-              </li><li>
-                <p>Desarrollo Web Full Stack y Tecnologías Inmersivas 👉<Link to="https://talentomadrid.factoriaf5.org/?utm_source=rompemosclic
+            </li><li>
+              <p>Desarrollo Web Full Stack y Tecnologías Inmersivas 👉<Link to="https://talentomadrid.factoriaf5.org/?utm_source=rompemosclic
 " target="_blank">pincha aquí</Link></p>
-              </li><li>
-                <p>Desarrollo Web Full stack (Formación exclusiva para mujeres)-  Financiador: Google.org 👉<Link to="https://femcoders.factoriaf5.org/?utm_source=rompemosclic
+            </li><li>
+              <p>Desarrollo Web Full stack (Formación exclusiva para mujeres)-  Financiador: Google.org 👉<Link to="https://femcoders.factoriaf5.org/?utm_source=rompemosclic
 " target="_blank">pincha aquí</Link></p>
-              </li><li>
-                <p>Desarrollo Web Full Stack y Ciberseguridad 👉<Link to="https://talentomadrid.factoriaf5.org/?utm_source=rompemosclic
+            </li><li>
+              <p>Desarrollo Web Full Stack y Ciberseguridad 👉<Link to="https://talentomadrid.factoriaf5.org/?utm_source=rompemosclic
 " target="_blank">pincha aquí</Link></p>
-              </li>
-                <p><strong>BARCELONA</strong></p>
-                <li>
-                 <p>Desarrollo Web Frontend 👉<Link to="https://rompemosloscodigos.typeform.com/frontend-300h?utm_source=rompemosclic&typeform-source=www.somosf5.org
+            </li>
+            <p><strong>BARCELONA</strong></p>
+            <li>
+              <p>Desarrollo Web Frontend 👉<Link to="https://rompemosloscodigos.typeform.com/frontend-300h?utm_source=rompemosclic&typeform-source=www.somosf5.org
 " target="_blank">pincha aquí</Link></p>
-                </li><li>
-                <p>Ciberseguridad en entornos híbridos 👉<Link to="https://rompemosloscodigos.typeform.com/to/sWEbgc7r?utm_source=rompemosclic&typeform-source=www.somosf5.org
+            </li><li>
+              <p>Ciberseguridad en entornos híbridos 👉<Link to="https://rompemosloscodigos.typeform.com/to/sWEbgc7r?utm_source=rompemosclic&typeform-source=www.somosf5.org
 " target="_blank">pincha aquí</Link></p>
-                </li><li>
-                <p>Formación en Cloud AWS re/Start 👉<Link to="https://awsrestartbootcamp.cloud.factoriaf5.org/#formulario?utm_source=rompemosclic
+            </li><li>
+              <p>Formación en Cloud AWS re/Start 👉<Link to="https://awsrestartbootcamp.cloud.factoriaf5.org/#formulario?utm_source=rompemosclic
 " target="_blank">pincha aquí</Link></p>
-                </li><li>
-                <p>Desarrollo Web Full stack - Financiador: Fundació La Caixa y Aigües de Barcelona 👉<Link to="https://rompemosloscodigos.typeform.com/full-stack-bcn?utm_source=rompemosclic&typeform-source=www.somosf5.org	
+            </li><li>
+              <p>Desarrollo Web Full stack - Financiador: Fundació La Caixa y Aigües de Barcelona 👉<Link to="https://rompemosloscodigos.typeform.com/full-stack-bcn?utm_source=rompemosclic&typeform-source=www.somosf5.org	
 " target="_blank">pincha aquí</Link></p>
-                </li><li>
-                <p>Desarrollo Web Full stack (Formación exclusiva para mujeres)-  Financiador: Google.org 👉<Link to="https://femcoders.factoriaf5.org/?utm_source=rompemosclic
+            </li><li>
+              <p>Desarrollo Web Full stack (Formación exclusiva para mujeres)-  Financiador: Google.org 👉<Link to="https://femcoders.factoriaf5.org/?utm_source=rompemosclic
 " target="_blank">pincha aquí</Link></p>
-                </li>
-                <p><strong>GIJÓN</strong></p>
-                <li>
-                <p>Desarrollo Web Full stack 👉<Link to="https://rompemosloscodigos.typeform.com/to/Phmkxuwj?utm_source=rompemosclic&typeform-source=www.somosf5.org
+            </li>
+            <p><strong>GIJÓN</strong></p>
+            <li>
+              <p>Desarrollo Web Full stack 👉<Link to="https://rompemosloscodigos.typeform.com/to/Phmkxuwj?utm_source=rompemosclic&typeform-source=www.somosf5.org
 " target="_blank">pincha aquí</Link></p>
-                </li>
-                <p><strong>ASTURIAS / CANTABRIA / CASTILLA Y LEÓN / GALICIA</strong></p>
-                <li>
-                <p>Desarrollo Web Full stack - (Formación exclusiva para mujeres)-  Financiador: Google.org 👉<Link to="https://femcoders.factoriaf5.org/?utm_source=rompemosclic
+            </li>
+            <p><strong>ASTURIAS / CANTABRIA / CASTILLA Y LEÓN / GALICIA</strong></p>
+            <li>
+              <p>Desarrollo Web Full stack - (Formación exclusiva para mujeres)-  Financiador: Google.org 👉<Link to="https://femcoders.factoriaf5.org/?utm_source=rompemosclic
 " target="_blank">pincha aquí</Link></p>
-                </li>
-                <p><strong>ASTURIAS </strong></p>
-                <li>
-                <p>Desarrollo Web Full stack 👉<Link to="https://rompemosloscodigos.typeform.com/factoria-f5-ast?utm_source=rompemosclic&typeform-source=www.somosf5.org
+            </li>
+            <p><strong>ASTURIAS </strong></p>
+            <li>
+              <p>Desarrollo Web Full stack 👉<Link to="https://rompemosloscodigos.typeform.com/factoria-f5-ast?utm_source=rompemosclic&typeform-source=www.somosf5.org
 " target="_blank">pincha aquí</Link></p>
-                </li>
-                <p><strong>COMUNIDAD VALENCIANA</strong></p>
-                <li>
-                <p>Formación en Cloud AWS re/start 👉<Link to="https://awsrestartbootcamp.cloud.factoriaf5.org/#formulario?utm_source=rompemosclic
+            </li>
+            <p><strong>COMUNIDAD VALENCIANA</strong></p>
+            <li>
+              <p>Formación en Cloud AWS re/start 👉<Link to="https://awsrestartbootcamp.cloud.factoriaf5.org/#formulario?utm_source=rompemosclic
 " target="_blank">pincha aquí</Link></p>
-                </li>
-              </ul>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="light" onClick={handleCloseModal}>
-                <strong>Cerrar</strong>
-              </Button>
-            </Modal.Footer>
-          </Modal>
+            </li>
+          </ul>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="light" onClick={handleCloseModal}>
+            <strong>Cerrar</strong>
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
-        </div>
+    </div>
 
-        );
+  );
 }
 
-        export default InmersiveExpe;
+export default InmersiveExpe;
