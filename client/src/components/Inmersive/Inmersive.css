@@ -35,7 +35,7 @@ div.fade.modal.show{
 justify-content:flex-start;
 }
 
-.btnscene {
+.botonhome {
     position: absolute;
     z-index: 1000;
 }

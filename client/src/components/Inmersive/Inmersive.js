@@ -18,25 +18,22 @@ function Inmersive() {
   return (
 
     <div>
-
       <a-scene
         frustum-culling="true"
-        renderer="antialias: true;
-      sortObjects: true;
-      "
+        renderer="antialias: true;"
+        cursor="rayOrigin:mouse"
       >
-        <button id="btnscene" type="button" class="btn btn-light">Light</button>
         {/* Default lighting injected by A-Frame.  */}
         <a-entity light="type: ambient; color: #BBB"></a-entity>
-        <a-entity light="type: directional; color: #FFF; intensity: 4.3" position="-2 2 1"></a-entity>
-        <a-entity light="type: directional; color: #FFF; intensity: 4" position="2 -2 -2"></a-entity>
+        <a-entity light="type: directional; color: #FFF; intensity: 0.1" position="2 -2 -2"></a-entity>
+        <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="4 4 4"></a-entity>
 
         {/* camera & controls  */}
         {/* <a-entity position="282 25 247" id="cameraRig" scale="1 1 1" rotation="0 45 0"> */}
         <a-entity position="-15 30 0" id="cameraRig" scale="1 1 1" rotation="0 45 0">
           <a-entity camera="" position="-15 30 0" wasd-controls="" rotation="-15.011 -145.646 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="">
             <a-text value="" position="0 0 -3"></a-text>
-            <a-cursor cursor="rayOrigin: mouse; fuse: true" raycaster="objects: data-raycastable; objects: .clickable"></a-cursor>
+            <a-cursor cursor="rayOrigin: mouse;" raycaster="objects: data-raycastable; objects: .clickable"></a-cursor>
           </a-entity>
           <a-entity oculus-touch-controls="hand: left" trigger-check thumbstick-logging raycaster="showLine: true"></a-entity>
           <a-entity id="rtcontroller" oculus-touch-controls="hand: right" trigger-check thumbstick-logging raycaster="showLine: true"></a-entity>
@@ -78,21 +75,20 @@ function Inmersive() {
         <a-asset-item id="sink" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/unseen_bathroom_sink.glb?v=1693942922359" crossOrigin="anonymous"></a-asset-item>
         <a-asset-item id="wfountain" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/drinking_fountain.glb?v=1693942923145" crossOrigin="anonymous"></a-asset-item>
         <a-asset-item id="board" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/stuff_in_my_room_whiteboard.glb?v=1693942924452" crossOrigin="anonymous"></a-asset-item>
-        <a-asset-item id="cubicle" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/office_cubicle.glb?v=1694082621594"></a-asset-item>
-        <a-asset-item id="livingwall" src="https://cdn.glitch.me/078ce1a5-734a-4824-8ef5-cf5a78251ea1/landscape_living_wall_university_of_greenwich.glb?v=1694084082833"></a-asset-item>
-        <a-asset-item id="drawer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/file_folder_drawer.glb?v=1694275788482"></a-asset-item>
-        <a-asset-item id="zero" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/4b75afd6a6094efd8e942093aef10de4.glb?v=1694287652663"></a-asset-item>
-        <a-asset-item id="number1" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/95f1fc10d2394c6490a3ae7151027653.glb?v=1694287652282"></a-asset-item>
-        <a-asset-item id="curtain" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/curtains.glb?v=1694345440901"></a-asset-item>
+        <a-asset-item id="cubicle" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/office_cubicle.glb?v=1694082621594"crossOrigin="anonymous"></a-asset-item>
+        <a-asset-item id="livingwall" src="https://cdn.glitch.me/078ce1a5-734a-4824-8ef5-cf5a78251ea1/landscape_living_wall_university_of_greenwich.glb?v=1694084082833"crossOrigin="anonymous"></a-asset-item>
+        <a-asset-item id="drawer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/file_folder_drawer.glb?v=1694275788482"crossOrigin="anonymous"></a-asset-item>
+        <a-asset-item id="zero" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/4b75afd6a6094efd8e942093aef10de4.glb?v=1694287652663"crossOrigin="anonymous"></a-asset-item>
+        <a-asset-item id="number1" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/95f1fc10d2394c6490a3ae7151027653.glb?v=1694287652282"crossOrigin="anonymous"></a-asset-item>
+        <a-asset-item id="curtain" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/curtains.glb?v=1694345440901"crossOrigin="anonymous"></a-asset-item>
         <a-asset-item id="cabinet" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/Double%20Door%20Upper%20Cabin.glb?v=1694345537335"></a-asset-item>
-        <img id="qrstreet" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/Street.png?v=1694356114293" alt="QR1" crossOrigin="anonymous" />
-        <img id="qrentrada" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/entrada.png?v=1694356117961" alt="QR2" crossOrigin="anonymous" />
-        <img id="qroficina" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/oficina.png?v=1694356134179" alt="QR3" crossOrigin="anonymous" />
-        <img id="qrcocina" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/EstanciaCocina.png?v=1694356130232" alt="QR4" crossOrigin="anonymous" />
-        <img id="qrsalon1" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/salon1.png?v=1694356137654" alt="QR5" crossOrigin="anonymous" />
-        <img id="qrsalon2" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/salon2.png?v=1694356142182" alt="QR6" crossOrigin="anonymous" />
+        <img id="qrstreet" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/Street.png?v=1694356114293" alt="qr1" crossOrigin="anonymous"/>
+        <img id="qrentrada" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/entrada.png?v=1694356117961" alt="qr2" crossOrigin="anonymous"/>
+        <img id="qroficina" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/oficina.png?v=1694356134179" alt="qr3" crossOrigin="anonymous"/>
+        <img id="qrcocina" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/EstanciaCocina.png?v=1694356130232" alt="qr4" crossOrigin="anonymous"/>
+        <img id="qrsalon1" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/salon1.png?v=1694356137654" alt="qr5" crossOrigin="anonymous"/>
+        <img id="qrsalon2" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/salon2.png?v=1694356142182" alt="qr6" crossOrigin="anonymous"/>
         <a-asset-item id="firstdoor" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/DoorCristalentrada.only.glb?v=1694414908394" crossOrigin="anonymous"></a-asset-item>
-
 
         {/* floor & walls & ceiling & sidewalk. */}
         <a-gltf-model src="#ground" position="-199.308 5.800 230.262" scale="21 180 27.500"></a-gltf-model>
@@ -251,8 +247,8 @@ function Inmersive() {
         <a-gltf-model src="#board" gltf-model="#board" position="32.334 63.073 -58.977" scale="3 3 3" rotation="0 0 90"></a-gltf-model>
         <a-gltf-model src="#cabinet" gltf-model="#cabinet" position="126.309 40.042 -75.746" scale="40 50 40" rotation="0 180 0"></a-gltf-model>
 
-        {/* toilets */}
-        <a-gltf-model src="#wc" gltf-model="#wc" position="-196.521 23.500 48.047" scale="30 30 30"></a-gltf-model>
+    {/* toilets */}
+    <a-gltf-model src="#wc" gltf-model="#wc" position="-196.521 23.500 48.047" scale="30 30 30"></a-gltf-model>
         <a-gltf-model src="#wc" gltf-model="#wc" position="-199.920 23.500 -31.82" scale="30 30 30" rotation="0 90 0"></a-gltf-model>
         <a-gltf-model src="#sink" gltf-model="#sink" position="-185.490 51.528 -73.125" scale="0.3 0.3 0.3"></a-gltf-model>
         <a-gltf-model src="#sink" gltf-model="#sink" position="-155.294 51.528 90.406" scale="0.3 0.3 0.3" rotation="0 270 0"></a-gltf-model>
@@ -267,7 +263,7 @@ function Inmersive() {
         <a-gltf-model src="#board" gltf-model="#board" position="42.797 66.989 -257.801" scale="3 3 3" rotation="0 0 90"></a-gltf-model>
         <a-gltf-model src="#board" gltf-model="#board" position="32.334 63.073 -58.977" scale="3 3 3" rotation="0 0 90"></a-gltf-model>
         <a-gltf-model src="#cabinet" gltf-model="#cabinet" position="126.309 40.042 -75.746" scale="40 50 40" rotation="0 180 0"></a-gltf-model>
-
+        
         {/* Others extra */}
         <a-gltf-model src="#robot" position="-82.52723 -0.68568 -80.70277" rotation="0 29.999999999999996 0" scale="4 4 4"></a-gltf-model>
         <a-gltf-model src="#whiteDoor" position="-9.22466 19.29432 -72.57483" rotation="0 210 0" scale="27 32 4"></a-gltf-model>
@@ -372,6 +368,7 @@ function Inmersive() {
           </Button>
         </Modal.Footer>
       </Modal>
+      <button id="botonhome" type="button" className="btn btn-light">Light</button>
 
     </div>
 
