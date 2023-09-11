@@ -28,7 +28,6 @@ AFRAME.registerComponent('play-all-model-animations', {
   }
 });
 
-
 AFRAME.registerComponent('collider-check', {
   dependencies: ['raycaster'],
 
