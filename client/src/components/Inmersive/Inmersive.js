@@ -290,8 +290,7 @@ function InmersiveExpe() {
         <a-gltf-model src="#firstdoor" position="188.71141 62.111 247" rotation="10 50 0" scale="38 38 27.5"
           animation="property: position; to: 180.71141 62.111 252; dur: 3000; on: click;"></a-gltf-model>
         <a-gltf-model src="#firstdoor" position="209 90 217.41414" rotation="10 50 0" scale="38 38 27.5"
-          animation="property: position; to: 210 90 206.41414; dur: 3000; on: click;">
-        </a-gltf-model>
+          animation="property: position; to: 210 90 206.41414; dur: 3000; on: click;"></a-gltf-model>
         <a-gltf-model src="#livingwall" gltf-model="#livingwall" position="-96.011 76.848 -148.708" scale="3 12 5.010"></a-gltf-model>
         <a-gltf-model src="#livingwall" gltf-model="#livingwall" position="-17.263 76.848 -148.708" scale="3 12 5.010"></a-gltf-model>
         <a-gltf-model src="#zero" gltf-model="#zero" position="-143.207 49.267 65.677" scale="150 150 150" rotation="0 90 0"></a-gltf-model>
