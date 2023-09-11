@@ -36,7 +36,7 @@ function InmersiveExpe() {
 
         {/* camera & controls  */}
         {/* <a-entity position="282 25 247" id="cameraRig" scale="1 1 1" rotation="0 45 0"> */}
-          <a-entity position="-15 30 0" id="cameraRig" scale="1 1 1" rotation="0 45 0">
+        <a-entity position="-15 30 0" id="cameraRig" scale="1 1 1" rotation="0 45 0">
           <a-entity camera="" position="-15 30 0" wasd-controls="" rotation="-15.011 -145.646 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="">
             <a-text value="" position="0 0 -3"></a-text>
             <a-cursor cursor="rayOrigin: mouse; fuse: true" raycaster="objects: data-raycastable; objects: .clickable"></a-cursor>
