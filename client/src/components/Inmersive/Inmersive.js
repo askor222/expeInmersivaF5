@@ -21,12 +21,12 @@ function Inmersive() {
   return (
 
     <div>
-      <a-scene 
+      <a-scene
         frustum-culling="true;"
-        sortObjects="false;"
+        // sortObjects="false;"
         renderer="antialias: true;"
-        cursor="rayOrigin:mouse;"
-        physics="debug: true;"
+        // cursor="rayOrigin:mouse;"
+        // physics="debug: true;"
       >
         {/* Default lighting injected by A-Frame.  */}
         <a-entity light="type: ambient; color: #BBB"></a-entity>
@@ -36,7 +36,7 @@ function Inmersive() {
         {/* camera & controls  */}
         {/* <a-entity position="282 25 247" id="cameraRig" scale="1 1 1" rotation="0 45 0"> */}
         <a-entity position="-15 30 0" id="cameraRig" scale="1 1 1" rotation="0 45 0">
-          <a-entity camera="" position="-15 30 0" wasd-controls="" rotation="-15.011 -145.646 0" look-controls="" universal-controls kinematic-body>
+          <a-entity camera="" position="-15 30 0" wasd-controls="acceleration:100" rotation="-15.011 -145.646 0" look-controls="" universal-controls kinematic-body>
             <a-text value="" position="0 0 -3"></a-text>
             <a-cursor cursor="rayOrigin: mouse;" raycaster="objects: data-raycastable; objects: .clickable"></a-cursor>
           </a-entity>
@@ -95,7 +95,9 @@ function Inmersive() {
         <img id="qrsalon2" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/salon2.png?v=1694356142182" alt="qr6" crossOrigin="anonymous"/>
         <a-asset-item id="firstdoor" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/DoorCristalentrada.only.glb?v=1694414908394" crossOrigin="anonymous"></a-asset-item>
         <video id="class" src="https://cdn.glitch.me/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/video1813949760.mp4?v=1694513871851" crossOrigin="anonymous"></video>
-        <img id="ar" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/Street.png?v=1694356114293" alt="qr1" crossOrigin="anonymous"/>
+        <img id="ar1" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/IMG_20230908_094322.jpg?v=1694458745402" alt="ar1" crossOrigin="anonymous"/>
+        <img id="ar2" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/door1.jpg?v=1694458748471" alt="ar2" crossOrigin="anonymous"/>
+        <img id="ar3" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/IMG_20230908_094344(1).jpg?v=1694458759027" alt="ar3" crossOrigin="anonymous"/>
 
 
         {/* floor & walls & ceiling & sidewalk. */}
@@ -299,12 +301,10 @@ function Inmersive() {
         <a-gltf-model src="#livingwall" gltf-model="#livingwall" position="-17.263 76.848 -148.708" scale="3 12 5.010"></a-gltf-model>
         <a-gltf-model src="#zero" gltf-model="#zero" position="-143.207 49.267 65.677" scale="150 150 150" rotation="0 90 0"></a-gltf-model>
         <a-gltf-model src="#number1" gltf-model="#number1" position="-143.207 55.691 32.706" scale="150 150 150" rotation="0 90 0"></a-gltf-model>
-        <a-entity geometry="primitive: box" material="src: #ar; side: double" position="32.334 60 -55.977" scale="10 10 10"></a-entity>
-
+        <a-image  geometry="primitive: box" material="src: #ar1; side: double" position="32.334 60 -55.977" scale="10 10 1"></a-image >
+        <a-image  geometry="primitive: box" material="src: #ar2; side: double" position="32.334 60 -55.977" scale="10 10 1"></a-image >
+        <a-image  geometry="primitive: box" material="src: #ar3; side: double" position="-175.490 12.952 14.207" scale="10 10 1"></a-image >
         
-        
-        
-        {/* <a-video src="#class" autoplay muted loop="true" width="50" height="50" position="32.334 60 -55.977"></a-video> */}
 
         <a-box id="modal-root" class="clickable" cursor-listener="true" position="-70.88825 63.88425 -60.95718" scale="4 4 4" material="" geometry=""
           animation="property: rotation; to: 0 360 0; loop: true; dur: 3000" color="darkblue"
@@ -314,7 +314,6 @@ function Inmersive() {
         <a-gltf-model id="DoorAnimation" class="clickable" src="#blueDoor" cursor-listener="true" position="33.35131 -97.92487 -225" rotation="" scale="1 1 1.2"
           dynamic-body animation-mixer="action" play-all-model-animations animation="property: position; to: 33.35131 -97.92487 -220; dur: 3000; click;"
         ></a-gltf-model>
-
 
 
         <a-sky material="src: https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/cieloazul.jpg?v=1694152531313"></a-sky>
