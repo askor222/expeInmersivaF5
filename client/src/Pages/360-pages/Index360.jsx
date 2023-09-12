@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import './index360.css'
+import '../360-pages/index360.css';
+import '../SobreF5';
 
 const Index360 = () => {
   const [clicked, setClicked] = useState(false)
@@ -35,7 +36,7 @@ const Index360 = () => {
               <a
                 className="nav-link active"
                 aria-current="page"
-                href="https://factoriaei.coderf5.es/Inmersiva"
+                href="/"
               >
                 <strong>Experiencia Inmersiva</strong>
               </a>

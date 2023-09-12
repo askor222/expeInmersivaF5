@@ -1,28 +1,134 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  overflow: hidden; /* Evita el desplazamiento vertical */
-}
-
-.background-image {
-  width: 100%;
-  height: 100vh; /* Establece la altura al 100% de la ventana del navegador */
-  background-size: cover;
-  background-position: center center;
-}
-
-.login-box-container {
+.contenedor-contact {
+  object-fit: contain;
   display: flex;
+  position: absolute;
+  height: 620px;
+  width: auto;
+  background-color: #453c98d1;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 100vh; /* Esto asegura que todo el contenedor esté centrado verticalmente */
+  text-align: center;
+  margin-top: 15rem;
+  margin-left: 30%;
+  padding: 20px auto;
 }
 
-.login-box {
-  width: 500px;
-  height: 380px;  /* Otros estilos para el cuadro de inicio de sesión */
+.h2-contact {
+  font-size: 3rem;
+  color: white;
+  margin: 0 0 30px 0;
+align-items: center;
+}
+
+.input-contenedor-contact {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.label-text-contact {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.input-contact {
+  width: 70%;
+  padding: 10px;
+  color: white;
+  border-radius: 40px;
+  border: 3px solid #ccc;
+  background-color: #d9d9d917;
+  outline: none;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.input-contact::placeholder {
+  color: #FFFFFF94;
+  text-align: center;
+}
+
+.input-contact:focus {
+  border-color: #F6D3C1;
+}
+
+.message-input-contact {
+  width: 70%;
+  height: 100px;
+  text-align: center;
+  border: 3px solid #ccc;
+  background-color: #d9d9d917;
+  color: white;
+  resize: none;
+}
+
+.message-input-contact::placeholder {
+  color: #FFFFFF94;
+  text-align: center;
+}
+
+.message-input-contact:focus {
+  border-color: #F6D3C1;
+}
+
+.button-contact {
+  background-color: #4a2fa3ed;
+  color: #fff;
+  border: none;
   border-radius: 10px;
-  padding: 20px;
-  /* Agrega cualquier otro estilo que necesites */
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s;
+ }
+ .button-contact:hover {
+  background-color: #7e84c2;
+}
+
+.button-contact:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+
+@media screen and (max-width: 750px) {
+  .contenedor-contact {
+    padding: 40px 0px;
+  }
+
+  .label-text-contact {
+    font-size: 2rem;
+  }
+
+  .button-contact {
+    font-size: 1.5rem;
+    margin: 10px 0px;
+  }
+
+  .h2-contact {
+    margin: 15px 0px;
+    font-size: 40px;
+  }
+
+  .input-contenedor-contact {
+    width: 100%;
+  }
+
+  .input-contact {
+    width: 80%;
+  }
+
+  .message-input-contact {
+    width: 80%;
+  }
+
+  .label-text-contact {
+    font-size: 1.5rem;
+  }
+
+  .logo img {
+    height: 80px;
+    padding: 20px;
+  }
 }

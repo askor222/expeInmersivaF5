@@ -7,6 +7,30 @@ import Contact from './components/Contact/Contact';
 import ContactConfirmation from './components/components/ContactConfirmation';
 import Home from './components/Home/Home';
 import Index360 from '../src/Pages/360-pages/Index360';
+import '../src/Pages/360-pages/StreetPage';
+import './components/Boton360/Boton';
+
+
+// import Home from './Pages/Home';
+// import SobreF5 from './Pages/SobreF5';
+// import Logo from './components/Logo/Logo';
+// import Contactanos from './Pages/contactanos/Contactanos';
+
+import Recepcion from './Pages/360-pages/Pages-aframe/Recepcion';
+import Oficina from './Pages/360-pages/Pages-aframe/Oficina';
+import Salon1 from './Pages/360-pages/Pages-aframe/Salon1';
+import Salon2 from './Pages/360-pages/Pages-aframe/Salon2';
+import EstanciaCocina from './Pages/360-pages/Pages-aframe/EstanciaCocina';
+import Street from './Pages/360-pages/Pages-aframe/Street';
+
+import IndexPage from './Pages/360-pages/IndexPage';
+import EstanciaCocinaPage from './Pages/360-pages/EstanciaCocinaPage';
+import Salon1Page from './Pages/360-pages/Salon1Page';
+import Salon2Page from './Pages/360-pages/Salon2Page';
+import StreetPage from './Pages/360-pages/StreetPage';
+import OficinaPage from './Pages/360-pages/OficinaPage';
+
+
 
 function App() {
   return (
@@ -20,6 +44,23 @@ function App() {
         <Route path='/Inmersive' element={<Inmersive />} ></Route>
         <Route path='/Index360' element={<Index360 />} ></Route>
         <Route path='/Contact' element={<Contact />} > </Route>
+        {/* <Route path='/SobreF5' element={<SobreF5 />} > </Route>
+        <Route path='/Logo' element={<Logo />} > </Route>
+        <Route path='/Contactanos' element={<Contactanos />} > </Route> */}
+
+        <Route path='/Recepcion' element={<Recepcion />} > </Route>
+        <Route path='/Oficina' element={<Oficina />} > </Route>
+        <Route path='/Salon1' element={<Salon1 />} > </Route>
+        <Route path='/Salon2' element={<Salon2 />} > </Route>
+        <Route path='/EstanciaCocina' element={<EstanciaCocina />} > </Route>
+        <Route path='/Street' element={<Street />} > </Route>
+        <Route path='/IndexPage' element={<IndexPage />} > </Route>
+        <Route path='/EstanciaCocinaPage' element={<EstanciaCocinaPage />} > </Route>
+        <Route path='/Salon1Page' element={<Salon1Page />} > </Route>
+        <Route path='/Salon2Page' element={<Salon2Page />} > </Route>
+        <Route path='/StreetPage' element={<StreetPage />} > </Route>
+        <Route path='/OficinaPage' element={<OficinaPage />} > </Route>
+
      </Routes>
     </>
   );

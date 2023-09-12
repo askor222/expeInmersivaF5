@@ -7,10 +7,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; /* Necesario para posicionar elementos absolutos dentro de él */
+  position: relative; 
 }
 
 .title-sobre-f5 {
   padding: 20px;
-  text-align: center; /* Alinea el texto en el centro horizontalmente */
+  text-align: center;
+  
 }

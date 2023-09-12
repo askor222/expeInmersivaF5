@@ -389,8 +389,7 @@ function Inmersive() {
           </Button>
         </Modal.Footer>
       </Modal>
-      <button id="botonhome" type="button" className="btn btn-light" href='/register'><strong>Home</strong></button>
-
+      <button id="botonhome" type="button" className="btn btn-light" href="/Home"><strong>Home</strong></button>
     </div>
 
   );

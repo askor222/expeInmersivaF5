@@ -16,7 +16,6 @@ const Experience360 = () => {
       <a-scene frustum-culling="true">
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container>
-            <div className="logo"></div>
             <Navbar.Brand href="/Home">Home</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -32,7 +31,6 @@ const Experience360 = () => {
           </Container>
         </Navbar>
 
-        {/* Renderizar el iframe correspondiente según la opción seleccionada */}
          <a-sky
           id="entrada"
           rotation="0 -160 0"

@@ -1,15 +1,14 @@
 import React from "react";
 
 const Logo = () => {
-  const usuarioLogeado = true; // Cambia esto a true o false según la lógica de tu aplicación
+  const usuarioLogeado = true;
 
   const handleLogoClick = () => {
     if (!usuarioLogeado) {
-      // Si el usuario no está logeado, muestra una alerta
+
       alert("Haz login para disfrutar de la experiencia inmersiva");
     } else {
-      // Si el usuario está logeado, redirige a la experiencia inmersiva
-      window.location.href = "https://mighty-superb-turn.glitch.me/"; // Reemplaza con la ruta correcta
+      window.location.href = "https://mighty-superb-turn.glitch.me/"; 
     }
   };
 
@@ -27,7 +26,7 @@ const Logo = () => {
         position="-0.762 1.697 -1.816"
         rotation="20 -30 -40"
         scale="50 50 50"
-        animation-mixer="clip: *; loop: true" // Establece loop en true para reproducir en bucle
+        animation-mixer="clip: *; loop: true" 
         play-all-model-animations=""
         gltf-model="https://cdn.glitch.global/32e0a0b5-d4a0-44fd-8422-65f2983beb08/peludo4.glb?v=1694434088289"
         onClick={handleLogoClick}

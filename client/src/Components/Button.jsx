@@ -1,47 +1,25 @@
-// BurguerButton.js
 import React from 'react';
 import styled from 'styled-components';
 
-
 const StyledButton = styled.button`
-  background-color: transparent;
+  background-color: #4a2fa3ed;
+  color: #fff;
   border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
   cursor: pointer;
-  font-size: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 24px;
-`;
+  font-size: 1.5rem;
+  transition: background-color 0.3s;
 
-const Line = styled.div`
-  width: 24px;
-  height: 4px;
-  background-color: #000;
-  transition: transform 0.3s, opacity 0.3s;
-
-  &:first-child {
-    transform: ${({ clicked }) => (clicked ? 'rotate(-45deg) translate(-5px, 6px)' : 'translate(0, 0)')};
-  }
-
-  &:nth-child(2) {
-    opacity: ${({ clicked }) => (clicked ? 0 : 1)};
-  }
-
-  &:last-child {
-    transform: ${({ clicked }) => (clicked ? 'rotate(45deg) translate(-5px, -6px)' : 'translate(0, 0)')};
+  &:hover {
+    background-color: #4F59CF;
   }
 `;
 
-const BurguerButton = ({ clicked, handleClick }) => {
+const Button = () => {
   return (
-    <StyledButton onClick={handleClick}>
-      <Line clicked={clicked} />
-      <Line clicked={clicked} />
-      <Line clicked={clicked} />
-    </StyledButton>
+    <StyledButton type="submit">Login</StyledButton>
   );
 }
 
-export default BurguerButton;
-
+export default Button;

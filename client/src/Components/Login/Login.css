@@ -16,13 +16,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Esto asegura que todo el contenedor esté centrado verticalmente */
+  height: 100vh; 
 }
 
 .login-box {
   width: 500px;
-  height: 380px;  /* Otros estilos para el cuadro de inicio de sesión */
+  height: 380px;  
   border-radius: 10px;
   padding: 20px;
-  /* Agrega cualquier otro estilo que necesites */
+ 
 }
