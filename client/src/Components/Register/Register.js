@@ -6,7 +6,6 @@ import './Register.css';
 import Login1 from "../components/Login";
 import Register1 from "../components/Register"
 
-
 const Register = () => {
   return (
     <div>
@@ -14,8 +13,6 @@ const Register = () => {
             <div className='login-box-container'>
                     <Register1 />
             </div>
-
-
       <Footer />
     </div>
   )

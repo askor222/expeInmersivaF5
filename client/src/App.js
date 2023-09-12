@@ -6,12 +6,7 @@ import RegisterConfirmation from './components/components/RegisterConfirmation';
 import Contact from './components/Contact/Contact';
 import ContactConfirmation from './components/components/ContactConfirmation';
 import Home from './components/Home/Home';
-
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Pages/Home';
-import SobreF5 from './Pages/SobreF5';
-
+import Index360 from '../src/Pages/360-pages/Index360';
 
 function App() {
   return (
@@ -22,19 +17,10 @@ function App() {
         <Route path='/register' element={<Register />} > </Route>
         <Route path='/RegisterConfirmation' element={<RegisterConfirmation />} > </Route>
         <Route path='/ContactConfirmation' element={<ContactConfirmation />} > </Route>
-        <Route path='/Contact' element={<Contact />} > </Route>
         <Route path='/Inmersive' element={<Inmersive />} ></Route>
+        <Route path='/Index360' element={<Index360 />} ></Route>
+        <Route path='/Contact' element={<Contact />} > </Route>
      </Routes>
-    <BrowserRouter>
-     <Routes>
-        <Route path='/' element={<Home />} > </Route>
-        <Route path='/SobreF5' element={<SobreF5 />} > </Route>
-        
-
-
-        
-     </Routes>
-    </BrowserRouter>
     </>
   );
 }

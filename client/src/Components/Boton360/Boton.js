@@ -1,16 +1,16 @@
 import React from "react";
 import './Boton.css';
+import Button from 'react-bootstrap/Button';
+
+
 const Boton = () => {
+    
     return (
         <div>
-       
-        <button type="button" id="login" class="btn btn-light">Login</button>
-        <button type="button" id="register" class="btn btn-light">Register</button>
-
-
+        <Button  variant="light" type="button" id="btnlogin" class="btn btn-light" href="/Login"><strong>Inicia Sesión</strong></Button >
+        <Button  on variant="light" type="button" id="btnregister" class="btn btn-light" href="/Register"><strong>¡Registrate!</strong></Button >
         </div>
-      
     );
   };
-  
+
   export default Boton;

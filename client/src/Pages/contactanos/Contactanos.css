@@ -1,0 +1,12 @@
+.papa{
+    display: flex;
+    align-items: center;
+    background-color: #453c98fe;
+
+}
+
+@media (max-width: 950px) {
+    .logo-grande {
+        display: none;
+    }
+}

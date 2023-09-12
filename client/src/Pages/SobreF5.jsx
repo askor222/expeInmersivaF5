@@ -1,7 +1,7 @@
 import React from 'react';
 import './Sobre-f5.css';
-import Footer from '../Components/Footer/Footer';
-import Header from '../Components/header/Header';
+import Footer from '../components/Footer/Footer';
+import Header from '../components/header/Header';
 
 const SobreF5 = () => {
   return (

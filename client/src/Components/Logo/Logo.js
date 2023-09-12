@@ -33,11 +33,11 @@ const Logo = () => {
         onClick={handleLogoClick}
       ></a-entity>
 
-<a-image src="" 
+{/* <a-image src="" 
         position="0 2 -5"           
         scale="1 1 1">
                      
-      </a-image>
+      </a-image> */}
 
 
 
