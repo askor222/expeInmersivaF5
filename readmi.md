@@ -44,13 +44,11 @@ Imagina adentrarte en una experiencia única que fusiona la tecnología y la ped
   <img src="https://cdn.glitch.global/075570ba-a0bd-49a0-a4fd-e003f0933441/bootstrap.svg?v=1694538687237" width="150" height="150">
   <img src="https://cdn.glitch.global/075570ba-a0bd-49a0-a4fd-e003f0933441/twigLogo%201.svg?v=1694538683585" width="150" height="150">
   <img src="https://cdn.glitch.global/075570ba-a0bd-49a0-a4fd-e003f0933441/blender.svg?v=1694538685176" width="150" height="150">
-  <img src="" width="150" height="150">
-  <img src="" width="150" height="150">
-  <img src="" width="150" height="150">
-  <img src="" width="150" height="150">
-  <img src="" width="150" height="150">
-  <img src="" width="150" height="150">
-  <img src="" width="150" height="150">
+  <img src="https://cdn.glitch.global/075570ba-a0bd-49a0-a4fd-e003f0933441/b69f081bf20dceb8564f47d2a633dbe4f7fffe92.png?v=1694554210950" width="150" height="150">
+  <img src="https://cdn.glitch.global/58932ba0-437c-499b-8b2d-346e8fe9a7f2/glitch-icon.svg?v=1694554530476" width="150" height="150">
+  <img src="https://cdn.glitch.global/58932ba0-437c-499b-8b2d-346e8fe9a7f2/figma.svg?v=1694554660388" width="150" height="150">
+  <img src="https://cdn.glitch.global/58932ba0-437c-499b-8b2d-346e8fe9a7f2/github-icon%20(1).svg?v=1694554673996" width="150" height="150">
+  <img src="https://cdn.glitch.global/58932ba0-437c-499b-8b2d-346e8fe9a7f2/visual-studio-code.svg?v=1694554687276" width="150" height="150">
 </p>
 
 
