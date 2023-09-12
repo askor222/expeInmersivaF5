@@ -3,11 +3,47 @@
 {% block title %}Edit Contact{% endblock %}
 
 {% block body %}
-    <h1>Edit Contact</h1>
+    <div class="container mt-5">
+        <h1 class="mb-4">Edit Contact</h1>
 
-    {{ include('contact/_form.html.twig', {'button_label': 'Update'}) }}
+        <div class="row">
+            <div class="col-md-6">
+                {{ include('contact/_form.html.twig', {'button_label': 'Update'}) }}
+            </div>
+        </div>
 
-    <a href="{{ path('app_contact_index') }}">back to list</a>
+        <div class="mt-3">
+            <a href="{{ path('app_contact_index') }}" class="btn btn-secondary">Back to List</a>
+        </div>
 
-    {{ include('contact/_delete_form.html.twig') }}
+        <div class="mt-3">
+            {{ include('contact/_delete_form.html.twig') }}
+        </div>
+    </div>
+
+    <style>
+        /* Estilos personalizados */
+        .container {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .btn-secondary {
+            background-color: #555;
+            color: #fff;
+            border: none;
+        }
+
+        .btn-secondary:hover {
+            background-color: #333;
+        }
+    </style>
 {% endblock %}

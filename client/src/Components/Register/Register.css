@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Esto asegura que todo el contenedor esté centrado verticalmente */
+    height: 100vh;
   }
   
   .login-box-register {
@@ -37,3 +37,14 @@ body {
     background-color: transparent; /* Cambia 'none' a 'transparent' */
   }
   
+
+  .contenedor-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    text-align: center; /* Centra el texto horizontalmente */
+    background-color: #fff; /* Agrega un fondo si es necesario */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agrega sombra si es necesario */
+  }

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './Inmersive.css'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-
+import FetchLink from './FetchLink';
 
 function Inmersive() {
   const [showModal, setShowModal] = useState(false);
@@ -17,6 +17,25 @@ function Inmersive() {
   const handleCloseModal = () => {
     setShowModal(false);
   };
+
+  const link1 = FetchLink({ pageNumber: 1 });
+  const link2 = FetchLink({ pageNumber: 2 });
+  const link3 = FetchLink({ pageNumber: 3 });
+  const link4 = FetchLink({ pageNumber: 4 });
+  const link5 = FetchLink({ pageNumber: 5 });
+  const link6 = FetchLink({ pageNumber: 6 });
+  const link7 = FetchLink({ pageNumber: 7 });
+  const link8 = FetchLink({ pageNumber: 8 });
+  const link9 = FetchLink({ pageNumber: 9 });
+  const link10 = FetchLink({ pageNumber: 10 });
+  const link11 = FetchLink({ pageNumber: 11 });
+  const link12 = FetchLink({ pageNumber: 12 });
+  const link13 = FetchLink({ pageNumber: 13 });
+
+
+
+
+
 
   return (
 
@@ -323,57 +342,44 @@ function Inmersive() {
           <Modal.Title>Nuestros Cursos Tecnológicos</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <ul>
+        <ul>
             <p><strong>MADRID</strong></p>
             <li>
-              <p>Desarrollo Web Full stack 👉<Link to="https://talentomadrid.factoriaf5.org/?utm_source=rompemosclic
-" target="_blank">pincha aquí</Link></p>
+              <p>Desarrollo Web Full stack 👉<a href={link1} target="_blank" rel="noopener noreferrer">pincha aquí</a></p>
             </li><li>
-              <p>Desarrollo Web Full Stack y Tecnologías Inmersivas 👉<Link to="https://talentomadrid.factoriaf5.org/?utm_source=rompemosclic
-" target="_blank">pincha aquí</Link></p>
+              <p>Desarrollo Web Full Stack y Tecnologías Inmersivas 👉<a href={link2} target="_blank" rel="noopener noreferrer">pincha aquí</a></p>
             </li><li>
-              <p>Desarrollo Web Full stack (Formación exclusiva para mujeres)-  Financiador: Google.org 👉<Link to="https://femcoders.factoriaf5.org/?utm_source=rompemosclic
-" target="_blank">pincha aquí</Link></p>
+              <p>Desarrollo Web Full stack (Formación exclusiva para mujeres)-  Financiador: Google.org 👉<a href={link3} target="_blank" rel="noopener noreferrer">pincha aquí</a></p>
             </li><li>
-              <p>Desarrollo Web Full Stack y Ciberseguridad 👉<Link to="https://talentomadrid.factoriaf5.org/?utm_source=rompemosclic
-" target="_blank">pincha aquí</Link></p>
+              <p>Desarrollo Web Full Stack y Ciberseguridad 👉<a href={link4} target="_blank" rel="noopener noreferrer">pincha aquí</a></p>
             </li>
             <p><strong>BARCELONA</strong></p>
             <li>
-              <p>Desarrollo Web Frontend 👉<Link to="https://rompemosloscodigos.typeform.com/frontend-300h?utm_source=rompemosclic&typeform-source=www.somosf5.org
-" target="_blank">pincha aquí</Link></p>
+              <p>Desarrollo Web Frontend 👉<a href={link5} target="_blank" rel="noopener noreferrer">pincha aquí</a></p>
             </li><li>
-              <p>Ciberseguridad en entornos híbridos 👉<Link to="https://rompemosloscodigos.typeform.com/to/sWEbgc7r?utm_source=rompemosclic&typeform-source=www.somosf5.org
-" target="_blank">pincha aquí</Link></p>
+              <p>Ciberseguridad en entornos híbridos 👉<a href={link6} target="_blank" rel="noopener noreferrer">pincha aquí</a></p>
             </li><li>
-              <p>Formación en Cloud AWS re/Start 👉<Link to="https://awsrestartbootcamp.cloud.factoriaf5.org/#formulario?utm_source=rompemosclic
-" target="_blank">pincha aquí</Link></p>
+              <p>Formación en Cloud AWS re/Start 👉<a href={link7} target="_blank" rel="noopener noreferrer">pincha aquí</a></p>
             </li><li>
-              <p>Desarrollo Web Full stack - Financiador: Fundació La Caixa y Aigües de Barcelona 👉<Link to="https://rompemosloscodigos.typeform.com/full-stack-bcn?utm_source=rompemosclic&typeform-source=www.somosf5.org	
-" target="_blank">pincha aquí</Link></p>
+              <p>Desarrollo Web Full stack - Financiador: Fundació La Caixa y Aigües de Barcelona 👉<a href={link8} target="_blank" rel="noopener noreferrer">pincha aquí</a></p>
             </li><li>
-              <p>Desarrollo Web Full stack (Formación exclusiva para mujeres)-  Financiador: Google.org 👉<Link to="https://femcoders.factoriaf5.org/?utm_source=rompemosclic
-" target="_blank">pincha aquí</Link></p>
+              <p>Desarrollo Web Full stack (Formación exclusiva para mujeres)-  Financiador: Google.org 👉<a href={link9} target="_blank" rel="noopener noreferrer">pincha aquí</a></p>
             </li>
             <p><strong>GIJÓN</strong></p>
             <li>
-              <p>Desarrollo Web Full stack 👉<Link to="https://rompemosloscodigos.typeform.com/to/Phmkxuwj?utm_source=rompemosclic&typeform-source=www.somosf5.org
-" target="_blank">pincha aquí</Link></p>
+              <p>Desarrollo Web Full stack 👉<a href={link10} target="_blank" rel="noopener noreferrer">pincha aquí</a></p>
             </li>
             <p><strong>ASTURIAS / CANTABRIA / CASTILLA Y LEÓN / GALICIA</strong></p>
             <li>
-              <p>Desarrollo Web Full stack - (Formación exclusiva para mujeres)-  Financiador: Google.org 👉<Link to="https://femcoders.factoriaf5.org/?utm_source=rompemosclic
-" target="_blank">pincha aquí</Link></p>
+              <p>Desarrollo Web Full stack - (Formación exclusiva para mujeres)-  Financiador: Google.org 👉<a href={link11} target="_blank" rel="noopener noreferrer">pincha aquí</a></p>
             </li>
             <p><strong>ASTURIAS </strong></p>
             <li>
-              <p>Desarrollo Web Full stack 👉<Link to="https://rompemosloscodigos.typeform.com/factoria-f5-ast?utm_source=rompemosclic&typeform-source=www.somosf5.org
-" target="_blank">pincha aquí</Link></p>
+              <p>Desarrollo Web Full stack 👉<a href={link12} target="_blank" rel="noopener noreferrer">pincha aquí</a></p>
             </li>
             <p><strong>COMUNIDAD VALENCIANA</strong></p>
             <li>
-              <p>Formación en Cloud AWS re/start 👉<Link to="https://awsrestartbootcamp.cloud.factoriaf5.org/#formulario?utm_source=rompemosclic
-" target="_blank">pincha aquí</Link></p>
+              <p>Formación en Cloud AWS re/start 👉<a href={link13} target="_blank" rel="noopener noreferrer">pincha aquí</a></p>
             </li>
           </ul>
         </Modal.Body>

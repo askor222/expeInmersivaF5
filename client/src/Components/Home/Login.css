@@ -2,12 +2,12 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  overflow: hidden; /* Evita el desplazamiento vertical */
+  overflow: hidden;
 }
 
 .background-image {
   width: 100%;
-  height: 100vh; /* Establece la altura al 100% de la ventana del navegador */
+  height: 100vh;
   background-size: cover;
   background-position: center center;
 }
@@ -16,13 +16,45 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Esto asegura que todo el contenedor esté centrado verticalmente */
+  height: 100vh;
 }
 
 .login-box {
   width: 500px;
-  height: 380px;  /* Otros estilos para el cuadro de inicio de sesión */
+  height: 380px;
   border-radius: 10px;
   padding: 20px;
-  /* Agrega cualquier otro estilo que necesites */
 }
+
+
+#btnlogin {
+  position: absolute;
+  color: rgb(232, 229, 229);
+  background-color: hsl(275, 51%, 41%);
+  margin-top: 850px;
+  margin-left: 700px;
+  width: 110px;
+  font-size: small;
+
+}
+
+#btnlogin:hover {
+  background-color: rgb(203, 198, 186);
+  color: black;
+}
+
+#btnregister {
+  position: absolute;
+  color: rgb(232, 229, 229);
+  background-color: hsl(275, 51%, 41%);
+  margin-top: 850px;
+  margin-left: 600px;
+  width: 110px;
+  font-size: small;
+}
+
+#btnregister:hover {
+  background-color: rgb(203, 198, 186);
+  color: black;
+}
+
