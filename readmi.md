@@ -22,4 +22,35 @@ Imagina adentrarte en una experiencia única que fusiona la tecnología y la ped
 
 ## Proyecto. Requisitos Stakeholder
 
+* El backend debe ser hecho en Symfony (CRUD y API).
+* Se debe de hacer un modelado de datos óptimo (esquema de la DDBB).
+* El front debe ser hecho en React (Atomic design, componentes, estados).
+* El acceso a determinadas zonas debe ser segura a través de roles, usuarios y/o token.
+* Se debe hacer Testing del front y el back.
+* Se debe integrar una experiencia inmersiva (A-Frame u otras plataformas). Aplicación web inmersiva del local de Somos F5 y Factoría F5 de Madrid / desplazarse e interactuar. La experiencia debe representar la realidad del espacio.
+* Se debe tener en cuenta las Green Skills y auditar mediante el TEST.
+* Debe de tener un formulario de contacto con validaciones en tiempo real.
+* Registro de usuario y login para entrar a la experiencia inmersiva.
+* Usar los colores corporativos de Somos F5.
+
+## Stacks Tecnológicos usados
+
+<p align="center"> 
+  <img src="https://cdn.glitch.global/075570ba-a0bd-49a0-a4fd-e003f0933441/symfony.svg?v=1694538686513" width="150" height="150">
+  <img src="https://cdn.glitch.global/075570ba-a0bd-49a0-a4fd-e003f0933441/react.svg?v=1694538686887" width="150" height="150">
+  <img src="https://cdn.glitch.global/075570ba-a0bd-49a0-a4fd-e003f0933441/javascript.svg?v=1694538686175" width="150" height="150">
+  <img src="https://cdn.glitch.global/075570ba-a0bd-49a0-a4fd-e003f0933441/aframe.jpg?v=1694553661094" width="150" height="150">
+  <img src="https://cdn.glitch.global/075570ba-a0bd-49a0-a4fd-e003f0933441/mysql.svg?v=1694538685831" width="150" height="150">
+  <img src="https://cdn.glitch.global/075570ba-a0bd-49a0-a4fd-e003f0933441/bootstrap.svg?v=1694538687237" width="150" height="150">
+  <img src="https://cdn.glitch.global/075570ba-a0bd-49a0-a4fd-e003f0933441/twigLogo%201.svg?v=1694538683585" width="150" height="150">
+  <img src="https://cdn.glitch.global/075570ba-a0bd-49a0-a4fd-e003f0933441/blender.svg?v=1694538685176" width="150" height="150">
+  <img src="" width="150" height="150">
+  <img src="" width="150" height="150">
+  <img src="" width="150" height="150">
+  <img src="" width="150" height="150">
+  <img src="" width="150" height="150">
+  <img src="" width="150" height="150">
+  <img src="" width="150" height="150">
+</p>
+
 
