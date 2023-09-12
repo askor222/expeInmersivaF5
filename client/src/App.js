@@ -7,6 +7,12 @@ import Contact from './components/Contact/Contact';
 import ContactConfirmation from './components/components/ContactConfirmation';
 import Home from './components/Home/Home';
 
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import SobreF5 from './Pages/SobreF5';
+
+
 function App() {
   return (
     <>
@@ -19,6 +25,16 @@ function App() {
         <Route path='/Contact' element={<Contact />} > </Route>
         <Route path='/Inmersive' element={<Inmersive />} ></Route>
      </Routes>
+    <BrowserRouter>
+     <Routes>
+        <Route path='/' element={<Home />} > </Route>
+        <Route path='/SobreF5' element={<SobreF5 />} > </Route>
+        
+
+
+        
+     </Routes>
+    </BrowserRouter>
     </>
   );
 }

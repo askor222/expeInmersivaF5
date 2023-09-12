@@ -9621,16 +9621,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v6.3.4",
+            "version": "v5.4.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "0b5c29118f2e980d455d2e34a5659f4579847c54"
+                "reference": "45261e1fccad1b5447a8d7a8e67aa7b4a9798b7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/0b5c29118f2e980d455d2e34a5659f4579847c54",
-                "reference": "0b5c29118f2e980d455d2e34a5659f4579847c54",
+                "url": "https://api.github.com/repos/symfony/process/zipball/45261e1fccad1b5447a8d7a8e67aa7b4a9798b7b",
+                "reference": "45261e1fccad1b5447a8d7a8e67aa7b4a9798b7b",
                 "shasum": ""
             },
             "require": {
