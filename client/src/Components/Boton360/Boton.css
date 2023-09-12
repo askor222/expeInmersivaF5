@@ -4,7 +4,7 @@
     color: rgb(232, 229, 229);
     background-color: hsl(275, 51%, 41%);
     margin-top: 850px;
-    margin-left: 700px; 
+    margin-left: 10px; 
     width:110px;
     font-size: small;
     
@@ -20,7 +20,7 @@
     color: rgb(232, 229, 229);
     background-color:  hsl(275, 51%, 41%);
     margin-top: 850px;
-    margin-left: 600px; 
+    margin-left: 10px; 
     width: 110px;
     font-size: small;
   }
@@ -28,35 +28,4 @@
     background-color: rgb(203, 198, 186);
     color: black;
   }
-
-  
-
-  #btnlogin{
-    position: absolute;
-    color: rgb(232, 229, 229);
-    background-color: hsl(275, 51%, 41%);
-    margin-top: 850px;
-    margin-left: 700px; 
-    width:110px;
-    font-size: small;
-  }
-
-  #btnlogin:hover {
-    background-color: rgb(203, 198, 186);
-    color: black;
-  }
-  
-   
-  #btnregister{
-    position: absolute;
-    color: rgb(232, 229, 229);
-    background-color:  hsl(275, 51%, 41%);
-    margin-top: 850px;
-    margin-left: 600px; 
-    width: 110px;
-    font-size: small;
-  }
-  #btnregister:hover {
-    background-color: rgb(203, 198, 186);
-    color: black;
-  }
+ 
