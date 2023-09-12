@@ -18,5 +18,8 @@
 
 ## Introducción
 
-Imagina adentrarte en una experiencia única que fusiona la tecnología y la pedagogía activa. Hemos diseñado y desarrollado el primer prototipo de experiencia inmersiva de Somos F5 y Factoría F5, desarrollada usando Symfony, React y A-Frame, esta propuesta inicial invita a explorar la sede de la organización en Madrid en primera persona. Explorar e interactuar con los espacios. Diseñada con la posibilidad de ampliar a petición integrando nuevos 
-A través de la realidad virtual y aumentada, te sumergirás en un mundo tridimensional donde los muros cobran vida, las historias se despliegan a tu alrededor y la misión de nuestra fundación cobra un nuevo sentido. Desde la comodidad de tu hogar o en cualquier lugar del mundo, podrás experimentar la esencia de nuestra causa de una manera impactante y emotiva, creando un vínculo más profundo con nuestra labor y valores.
+Imagina adentrarte en una experiencia única que fusiona la tecnología y la pedagogía activa. Hemos diseñado y desarrollado el primer prototipo de experiencia inmersiva de Somos F5 y Factoría F5, desarrollada usando Symfony, React y A-Frame, esta propuesta inicial invita a explorar la sede de la organización en Madrid en primera persona, explorando e interactuando con los espacios. Ha sido pensada para que pueda ser ampliada o modificada a petición, con experiencias interactivas, espacios de formación, información o como ejercicio para otros paricipantes de los próximos bootcamps.
+
+## Proyecto. Requisitos Stakeholder
+
+
