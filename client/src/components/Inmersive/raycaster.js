@@ -1,3 +1,4 @@
+
 AFRAME.registerComponent('log', {
   
     init: function () {
@@ -5,7 +6,6 @@ AFRAME.registerComponent('log', {
       debugtxt.setAttribute('value', '');
     }
   });
-  
   
   AFRAME.registerComponent("log", {
     init: function () {

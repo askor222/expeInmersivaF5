@@ -8,7 +8,7 @@ const Logo = () => {
 
       alert("Haz login para disfrutar de la experiencia inmersiva");
     } else {
-      window.location.href = "https://mighty-superb-turn.glitch.me/"; 
+      window.location.href = "/Inmersive"; 
     }
   };
 

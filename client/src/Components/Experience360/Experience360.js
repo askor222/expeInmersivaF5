@@ -16,7 +16,7 @@ const Experience360 = () => {
       <a-scene frustum-culling="true">
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container>
-            <Navbar.Brand href="/Home">Home</Navbar.Brand>
+            <Navbar.Brand href="/">Home</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
@@ -69,10 +69,9 @@ const Experience360 = () => {
         ></a-sky>
 
     <div>
-          {/* Renderizar el iframe seleccionado */}
-          <iframe src={`#${selectedSkyId}`} height="1000" width="100%"></iframe>
+    <iframe src={`#${selectedSkyId}`} height="1000" width="100%"></iframe>
 
-      {/* <iframe src={`#${street}`} height="1000" width="100%"></iframe>
+     <iframe src={`#${street}`} height="1000" width="100%"></iframe>
       
       <iframe src={`#${entrada}`} height="1000" width="100%"></iframe>
 
@@ -82,8 +81,8 @@ const Experience360 = () => {
 
       <iframe src={`#${salon1}`} height="1000" width="100%"></iframe>
 
-      <iframe src={`#${salon2}`} height="1000" width="100%"></iframe> */}
-      </div>
+      <iframe src={`#${salon2}`} height="1000" width="100%"></iframe>
+      </div> 
       </a-scene>
 
     </div>

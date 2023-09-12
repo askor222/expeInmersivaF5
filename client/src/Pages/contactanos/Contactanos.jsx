@@ -1,19 +1,22 @@
-import React from 'react';
-import './Contactanos.css';
-import Contact from '../components/Contact/Contact';
+// import React from 'react';
+// import './Contactanos.css';
+// import '../Header';
+// import '../Footer';
+// import Contact from './components/Contact/Contact';
 
-const Contactanos = () => {
+// const Contactanos = () => {
 
-    return (
-        <>
-            <Header/>
-            <div className='papa'>
-                <img className='logo-grande' src="./assets/SomosF5.svg" alt="Logo" />
-                <Contact />
-            </div>
-            <Footer />
-        </>
-    );
-}
+//     return (
+//         <>
+            
+//             <div className='papa'>
+//                 <img className='logo-grande' src="../assets/SomosF5.svg" alt="Logo" />
+//                 <Contact />
+//             </div>
+           
 
-export default Contactanos
+//         </>
+//     );
+// }
+
+// export default Contactanos

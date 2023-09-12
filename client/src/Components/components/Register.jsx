@@ -41,14 +41,14 @@ const Register1 = () => {
       "password": password
     });
 
-    if (!isValidPassword(password)) { // Verifica la contraseña
+    if (!isValidPassword(password)) { 
       alert("La contraseña debe contener al menos 8 caracteres, una mayúscula, una minúscula y un carácter especial.");
-      return; // Detener el registro si la contraseña no cumple con los requisitos.
+      return;
     }
 
-    if (password !== confirmPassword) { // Verifica la confirmación de contraseña
+    if (password !== confirmPassword) { 
       alert("Las contraseñas no coinciden. Por favor, verifica tu contraseña.");
-      return; // Detener el registro si las contraseñas no coinciden.
+      return; 
     }
 
     const requestOptions = {
@@ -74,14 +74,14 @@ const Register1 = () => {
 
   return (
     <div className='contenedor-register'>
-      <h2 className='h2-register'>Register</h2>
+      <h2 className='h2-register'>¡Registrate!</h2>
       <p className='p-register'> ¡Crea tu cuenta en <strong>F5</strong>! </p>
       <div className='input-contenedor-register'>
         <label className='label-text-register'>Nombre:</label><br></br>
         <input className='input-register' placeholder="Escribe tu nombre" type="text" value={name} onChange={handleNameChange} />
       </div>
       <div className='input-contenedor-register'>
-        <label className='label-text-register'>Email:</label><br></br>
+        <label className='label-text-register'>Correo Electrónico:</label><br></br>
         <input className='input-register' placeholder="Escribe tu correo electrónico" type="email" value={email} onChange={handleEmailChange} />
       </div>
       <div className='input-contenedor-register'>
@@ -99,7 +99,7 @@ const Register1 = () => {
         />
       </div>
       <div>
-        <button className='button-register' onClick={handleRegister}>Register</button>
+        <button className='button-register' onClick={handleRegister}>Registrar</button>
       </div>
       <div>
         <p  style={{ display: 'inline-block', marginRight: '20px' }} className='p-register'> ¿Ya tienes cuenta? </p>

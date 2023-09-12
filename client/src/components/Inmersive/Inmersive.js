@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Modal } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import './Inmersive.css'
-import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import FetchLink from './FetchLink';
+
 
 function Inmersive() {
   const [showModal, setShowModal] = useState(false);
@@ -31,9 +29,6 @@ function Inmersive() {
   const link11 = FetchLink({ pageNumber: 11 });
   const link12 = FetchLink({ pageNumber: 12 });
   const link13 = FetchLink({ pageNumber: 13 });
-
-
-
 
 
 
@@ -389,7 +384,7 @@ function Inmersive() {
           </Button>
         </Modal.Footer>
       </Modal>
-      <button id="botonhome" type="button" className="btn btn-light" href="/Home"><strong>Home</strong></button>
+      <button id="botonhome" type="button" className="btn btn-light" href="/"><strong>Volver</strong></button>
     </div>
 
   );

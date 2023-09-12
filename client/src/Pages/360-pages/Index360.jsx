@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import '../360-pages/index360.css';
-import '../SobreF5';
 
 const Index360 = () => {
   const [clicked, setClicked] = useState(false)
   const handleClick = () => {
-    //cuando esta true lo pasa a false y vice versa
+
     setClicked(!clicked)
   }
   return (

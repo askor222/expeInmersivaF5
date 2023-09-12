@@ -10,11 +10,8 @@ import Index360 from '../src/Pages/360-pages/Index360';
 import '../src/Pages/360-pages/StreetPage';
 import './components/Boton360/Boton';
 
-
-// import Home from './Pages/Home';
-// import SobreF5 from './Pages/SobreF5';
-// import Logo from './components/Logo/Logo';
-// import Contactanos from './Pages/contactanos/Contactanos';
+import Home1 from './Pages/Home';
+import Contactanos from './Pages/contactanos/Contactanos';
 
 import Recepcion from './Pages/360-pages/Pages-aframe/Recepcion';
 import Oficina from './Pages/360-pages/Pages-aframe/Oficina';
@@ -30,8 +27,6 @@ import Salon2Page from './Pages/360-pages/Salon2Page';
 import StreetPage from './Pages/360-pages/StreetPage';
 import OficinaPage from './Pages/360-pages/OficinaPage';
 
-
-
 function App() {
   return (
     <>
@@ -44,9 +39,8 @@ function App() {
         <Route path='/Inmersive' element={<Inmersive />} ></Route>
         <Route path='/Index360' element={<Index360 />} ></Route>
         <Route path='/Contact' element={<Contact />} > </Route>
-        {/* <Route path='/SobreF5' element={<SobreF5 />} > </Route>
-        <Route path='/Logo' element={<Logo />} > </Route>
-        <Route path='/Contactanos' element={<Contactanos />} > </Route> */}
+        {/* <Route path='/Logo' element={<Logo />} > </Route> */}
+        <Route path='/Contactanos' element={<Contactanos />} > </Route> 
 
         <Route path='/Recepcion' element={<Recepcion />} > </Route>
         <Route path='/Oficina' element={<Oficina />} > </Route>
@@ -60,6 +54,7 @@ function App() {
         <Route path='/Salon2Page' element={<Salon2Page />} > </Route>
         <Route path='/StreetPage' element={<StreetPage />} > </Route>
         <Route path='/OficinaPage' element={<OficinaPage />} > </Route>
+        <Route path='/Home' element={<Home1 />} > </Route>
 
      </Routes>
     </>

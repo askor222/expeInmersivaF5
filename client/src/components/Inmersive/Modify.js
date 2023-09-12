@@ -39,7 +39,8 @@ AFRAME.registerComponent('collider-check', {
   }
 });
 
-//click door
+
+
 AFRAME.registerComponent('click-listener', {
   init: function () {
     var el = this.el;

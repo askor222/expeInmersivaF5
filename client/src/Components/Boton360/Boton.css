@@ -1,31 +1,31 @@
+#login{
+  position: absolute;
+  color: rgb(232, 229, 229);
+  background-color: hsl(275, 51%, 41%);
+  margin-top: 380px;
+  margin-left: 700px; 
+  width: 110px;
+  font-size: small;
+  padding: 10; 
 
-  #btnlogin{
-    position: absolute;
-    color: rgb(232, 229, 229);
-    background-color: hsl(275, 51%, 41%);
-    margin-top: 850px;
-    margin-left: 10px; 
-    width:110px;
-    font-size: small;
-    
-  }
+}
 
-  #btnlogin:hover {
-    background-color: rgb(203, 198, 186);
-    color: black;
-  }
-     
-  #btnregister{
-    position: absolute;
-    color: rgb(232, 229, 229);
-    background-color:  hsl(275, 51%, 41%);
-    margin-top: 850px;
-    margin-left: 10px; 
-    width: 110px;
-    font-size: small;
-  }
-  #btnregister:hover {
-    background-color: rgb(203, 198, 186);
-    color: black;
-  }
- 
+#login:hover {
+  background-color: rgb(203, 198, 186);
+  color: black;
+}
+
+#register{
+  position: absolute;
+  color: rgb(232, 229, 229);
+  background-color:  hsl(275, 51%, 41%);
+  margin-top: 380px;
+  margin-left: 600px;
+  padding: 10; 
+  width: 110px;
+  font-size: small;
+}
+#register:hover {
+  background-color: rgb(203, 198, 186);
+  color: black;
+}

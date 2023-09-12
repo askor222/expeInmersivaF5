@@ -7,8 +7,8 @@ const Boton = () => {
     
     return (
         <div>
-        <Button  variant="light" type="button" id="btnlogin" class="btn btn-light" href="/Login"><strong>Inicia Sesión</strong></Button >
-        <Button  on variant="light" type="button" id="btnregister" class="btn btn-light" href="/Register"><strong>¡Registrate!</strong></Button >
+        <Button variant="light" type="button" id="login" class="btn btn-light" href="/Login"><strong>Inicia Sesión</strong></Button >
+        <Button variant="light" type="button" id="register" class="btn btn-light" href="/Register"><strong>¡Registrate!</strong></Button >
         </div>
     );
   };
