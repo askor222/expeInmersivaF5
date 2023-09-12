@@ -29,7 +29,7 @@ const Navbar = () => {
           <a className='a-header'  href="/Inmersive">Experiencia Inmersiva</a>
         </div>
         <div className="column">
-          <a className='a-header'  href="/Experience360" target="_blank">Experiencia 360</a>
+          <a className='a-header'  href="/Experience360" target='_blank'>Experiencia 360</a>
         </div>
         <div className="column">
           <a className='a-header'  href="/contact">Contáctanos</a>
