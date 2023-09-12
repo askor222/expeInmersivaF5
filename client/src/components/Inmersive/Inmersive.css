@@ -35,8 +35,9 @@ div.fade.modal.show{
 justify-content:flex-start;
 }
 
-.botonhome {
+#botonhome {
     position: absolute;
-    z-index: 1000;
+  margin-top: 30px;
+  margin-left: 10px;
 }
 

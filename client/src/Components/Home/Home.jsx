@@ -9,10 +9,11 @@ const Home = () => {
         <div>
           <Navbar />
           <div>
-            
+      
           </div>
           <Footer />
         </div>
+        
       );
 }
 

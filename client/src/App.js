@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Inmersive from './components/Inmersive/Inmersive';
 import Login from './components/Login/Login';
-import Register from './components/Register/Register'
+import Register from './components/Register/Register';
 import RegisterConfirmation from './components/components/RegisterConfirmation';
 import Contact from './components/Contact/Contact';
 import ContactConfirmation from './components/components/ContactConfirmation';

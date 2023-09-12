@@ -3,6 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Inmersive.css'
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
 
 function Inmersive() {
   const [showModal, setShowModal] = useState(false);
@@ -18,10 +21,12 @@ function Inmersive() {
   return (
 
     <div>
-      <a-scene
-        frustum-culling="true"
+      <a-scene 
+        frustum-culling="true;"
+        sortObjects="false;"
         renderer="antialias: true;"
-        cursor="rayOrigin:mouse"
+        cursor="rayOrigin:mouse;"
+        physics="debug: true;"
       >
         {/* Default lighting injected by A-Frame.  */}
         <a-entity light="type: ambient; color: #BBB"></a-entity>
@@ -31,7 +36,7 @@ function Inmersive() {
         {/* camera & controls  */}
         {/* <a-entity position="282 25 247" id="cameraRig" scale="1 1 1" rotation="0 45 0"> */}
         <a-entity position="-15 30 0" id="cameraRig" scale="1 1 1" rotation="0 45 0">
-          <a-entity camera="" position="-15 30 0" wasd-controls="" rotation="-15.011 -145.646 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="">
+          <a-entity camera="" position="-15 30 0" wasd-controls="" rotation="-15.011 -145.646 0" look-controls="" universal-controls kinematic-body>
             <a-text value="" position="0 0 -3"></a-text>
             <a-cursor cursor="rayOrigin: mouse;" raycaster="objects: data-raycastable; objects: .clickable"></a-cursor>
           </a-entity>
@@ -89,11 +94,14 @@ function Inmersive() {
         <img id="qrsalon1" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/salon1.png?v=1694356137654" alt="qr5" crossOrigin="anonymous"/>
         <img id="qrsalon2" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/salon2.png?v=1694356142182" alt="qr6" crossOrigin="anonymous"/>
         <a-asset-item id="firstdoor" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/DoorCristalentrada.only.glb?v=1694414908394" crossOrigin="anonymous"></a-asset-item>
+        <video id="class" src="https://cdn.glitch.me/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/video1813949760.mp4?v=1694513871851" crossOrigin="anonymous"></video>
+        <img id="ar" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/Street.png?v=1694356114293" alt="qr1" crossOrigin="anonymous"/>
+
 
         {/* floor & walls & ceiling & sidewalk. */}
-        <a-gltf-model src="#ground" position="-199.308 5.800 230.262" scale="21 180 27.500"></a-gltf-model>
-        <a-gltf-model src="#walls" position="0 2.099 0"></a-gltf-model>
-        <a-gltf-model src="#cabins" position="32.5898 14.307 -6.7067"></a-gltf-model>
+        <a-gltf-model src="#ground"  position="-199.308 5.800 230.262" scale="21 180 27.500"></a-gltf-model>
+        <a-gltf-model dynamic-body="shape: glb; mass: 2" src="#walls" className=".objects" position="0 2.099 0"></a-gltf-model>
+        <a-gltf-model src="#cabins" position="32.5898 10 -6.7067"></a-gltf-model>
         {/* <a-gltf-model src="#ceiling" position="-199.928 106.298 233.193" scale="21 180 27.500"></a-gltf-model> */}
 
 
@@ -261,7 +269,9 @@ function Inmersive() {
         <a-gltf-model src="#drawer" gltf-model="#drawer" position="-2.288 33.602 87.767" scale="2.990 4 5"></a-gltf-model>
         <a-gltf-model src="#drawer" gltf-model="#drawer" position="-2.288 33.602 76.760" scale="2.990 4 5"></a-gltf-model>
         <a-gltf-model src="#board" gltf-model="#board" position="42.797 66.989 -257.801" scale="3 3 3" rotation="0 0 90"></a-gltf-model>
-        <a-gltf-model src="#board" gltf-model="#board" position="32.334 63.073 -58.977" scale="3 3 3" rotation="0 0 90"></a-gltf-model>
+        <a-gltf-model src="#board" gltf-model="#board" position="32.334 63.073 -58.977" scale="3 3 3" rotation="0 0 90">
+
+        </a-gltf-model>
         <a-gltf-model src="#cabinet" gltf-model="#cabinet" position="126.309 40.042 -75.746" scale="40 50 40" rotation="0 180 0"></a-gltf-model>
         
         {/* Others extra */}
@@ -281,14 +291,20 @@ function Inmersive() {
         <a-gltf-model src="#firstdoor" position="181.49966 87.71111 254.39745" rotation="10 50 0" scale="38 38 27.5"></a-gltf-model>
         <a-gltf-model src="#firstdoor" position="219.05842 90 207.48084" rotation="10 50 0" scale="38 38 27.5"></a-gltf-model>
         <a-gltf-model src="#firstdoor" position="188.71141 62.111 247" rotation="10 50 0" scale="38 38 27.5"
-          animation="property: position; to: 180.71141 62.111 252; dur: 3000; on: click;"></a-gltf-model>
+          animation="property: position; to: 180.71141 62.111 252; dur: 3000; click;"></a-gltf-model>
         <a-gltf-model src="#firstdoor" position="209 90 217.41414" rotation="10 50 0" scale="38 38 27.5"
-          animation="property: position; to: 210 90 206.41414; dur: 3000; on: click;">
+          animation="property: position; to: 210 90 206.41414; dur: 3000; click;">
         </a-gltf-model>
         <a-gltf-model src="#livingwall" gltf-model="#livingwall" position="-96.011 76.848 -148.708" scale="3 12 5.010"></a-gltf-model>
         <a-gltf-model src="#livingwall" gltf-model="#livingwall" position="-17.263 76.848 -148.708" scale="3 12 5.010"></a-gltf-model>
         <a-gltf-model src="#zero" gltf-model="#zero" position="-143.207 49.267 65.677" scale="150 150 150" rotation="0 90 0"></a-gltf-model>
         <a-gltf-model src="#number1" gltf-model="#number1" position="-143.207 55.691 32.706" scale="150 150 150" rotation="0 90 0"></a-gltf-model>
+        <a-entity geometry="primitive: box" material="src: #ar; side: double" position="32.334 60 -55.977" scale="10 10 10"></a-entity>
+
+        
+        
+        
+        {/* <a-video src="#class" autoplay muted loop="true" width="50" height="50" position="32.334 60 -55.977"></a-video> */}
 
         <a-box id="modal-root" class="clickable" cursor-listener="true" position="-70.88825 63.88425 -60.95718" scale="4 4 4" material="" geometry=""
           animation="property: rotation; to: 0 360 0; loop: true; dur: 3000" color="darkblue"
@@ -296,9 +312,10 @@ function Inmersive() {
         </a-box>
 
         <a-gltf-model id="DoorAnimation" class="clickable" src="#blueDoor" cursor-listener="true" position="33.35131 -97.92487 -225" rotation="" scale="1 1 1.2"
-          dynamic-body animation-mixer="action" play-all-model-animations
-        >
-        </a-gltf-model>
+          dynamic-body animation-mixer="action" play-all-model-animations animation="property: position; to: 33.35131 -97.92487 -220; dur: 3000; click;"
+        ></a-gltf-model>
+
+
 
         <a-sky material="src: https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/cieloazul.jpg?v=1694152531313"></a-sky>
       </a-scene>
@@ -368,7 +385,7 @@ function Inmersive() {
           </Button>
         </Modal.Footer>
       </Modal>
-      <button id="botonhome" type="button" className="btn btn-light">Light</button>
+      <button id="botonhome" type="button" className="btn btn-light" href='/register'><strong>Home</strong></button>
 
     </div>
 
