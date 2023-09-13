@@ -1,20 +1,15 @@
 // import React from 'react';
 // import './Contactanos.css';
-// import '../Header';
-// import '../Footer';
-// import Contact from './components/Contact/Contact';
+// import ContactForm from '../../components/ContactForm/ContactForm';
 
 // const Contactanos = () => {
 
 //     return (
 //         <>
-            
 //             <div className='papa'>
-//                 <img className='logo-grande' src="../assets/SomosF5.svg" alt="Logo" />
-//                 <Contact />
+//                 <img className='logo-grande' src="../client/public/SomosF5.svg" alt="Logo" />
+//                 <ContactForm />
 //             </div>
-           
-
 //         </>
 //     );
 // }

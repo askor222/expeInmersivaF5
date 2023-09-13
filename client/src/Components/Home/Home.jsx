@@ -21,6 +21,7 @@ const Home = () => {
     return (
         <>
           <Header />
+         
           <Logo/>
           <div><Boton/></div>
           <Footer />

@@ -25,9 +25,9 @@ function Navbar() {
         </div>
         <div className={`links-right ${clicked ? 'active' : ''}`}>
           <a href="/">Home</a>
-          <a href="/Inmersive">Experiencia Inmersiva</a>
-          <a href="https://www.somosf5.org/about" target="_blank">Somos F5</a>
-          <a href="https:///www.factoriaf5.org/somos" target="_blank">Factoria F5</a>
+          <a href="/Inmersive">Inmersiva</a>
+          <a href="https://www.somosf5.org/about" target="_blank">SomosF5</a>
+          <a href="https:///www.factoriaf5.org/somos" target="_blank">FactoriaF5</a>
           <a href="/Index360">Experiencia360</a>
           <a href="/Contact">Contáctanos</a>
         </div>

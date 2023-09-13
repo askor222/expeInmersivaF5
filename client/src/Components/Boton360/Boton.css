@@ -1,13 +1,12 @@
 #login{
   position: absolute;
   color: rgb(232, 229, 229);
-  background-color: hsl(275, 51%, 41%);
-  margin-top: 380px;
+  background-color: #3A3280;
+  margin-top: 580px;
   margin-left: 700px; 
   width: 110px;
   font-size: small;
   padding: 10; 
-
 }
 
 #login:hover {
@@ -18,8 +17,8 @@
 #register{
   position: absolute;
   color: rgb(232, 229, 229);
-  background-color:  hsl(275, 51%, 41%);
-  margin-top: 380px;
+  background-color:  #3A3280;   
+  margin-top: 580px;
   margin-left: 600px;
   padding: 10; 
   width: 110px;
@@ -28,4 +27,12 @@
 #register:hover {
   background-color: rgb(203, 198, 186);
   color: black;
+}
+
+.log {
+  margin-left: 2rem;
+}
+
+.reg {
+
 }

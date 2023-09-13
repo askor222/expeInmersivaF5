@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
-import './Contact.css';
+import './ContactForm.css';
 
-const Contact = () => {
+const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -19,7 +19,7 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        // Aquí puedes realizar la solicitud POST a tu servidor con los datos del formulario
         const requestOptions = {
             method: 'POST',
             headers: {
@@ -33,19 +33,13 @@ const Contact = () => {
             .then((result) => console.log(result))
             .catch((error) => console.error('Error:', error));
     };
+
     return (
-        <div className='bodyForm'>
-            {/* <a-scene>
-
-                <a-sky src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/cieloazul.jpg?v=1694541519964"></a-sky>
-            </a-scene> */}
-            <div className='contenedor-contact' >
-
-                <h2 className='h2-contact'>
-                    <img src="../..//assets/SomosF5_naranja.svg" height="50px" width="50px" alt="Logo" />
-                    Contacta con nosotros:</h2>
+        <>
+            <div className='contenedor-contact'>
+                <h2 className='h2-contact'>Contacta con nosotros:</h2>
                 <form className='input-contenedor-contact' onSubmit={handleSubmit}>
-                    <label className='label-text-contact' htmlFor="name">Nombre:</label><br></br>
+                    <label className='label-text-contact' htmlFor="name">Name:</label><br></br>
                     <input
                         type="text"
                         id="name"
@@ -57,7 +51,7 @@ const Contact = () => {
                         placeholder="Escribe tu nombre y apellido"
 
                     /><br></br>
-                    <label className='label-text-contact' htmlFor="email">Correo Electrónico:</label><br></br>
+                    <label className='label-text-contact' htmlFor="email">Email:</label><br></br>
                     <input
                         type="email"
                         id="email"
@@ -69,7 +63,7 @@ const Contact = () => {
                         placeholder="Escribe tu correo"
 
                     /><br></br>
-                    <label className='label-text-contact' htmlFor="message">Mensaje:</label>  <br></br>
+                    <label className='label-text-contact' htmlFor="message">Message:</label>  <br></br>
                     <textarea
                         id="message"
                         name="message"
@@ -78,12 +72,13 @@ const Contact = () => {
                         required
                         className='message-input-contact'
                         placeholder="Escribe el mensaje"
+
                     /><br></br>
-                    <button className='button-contact' type="submit">Enviar</button>
+                    <button className='button-contact' type="submit">Submit</button>
                 </form>
             </div>
-        </div>
+        </>
     );
 }
 
-export default Contact;
+export default ContactForm
