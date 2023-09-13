@@ -2,7 +2,7 @@
   object-fit: contain;
   display: flex;
   position: absolute;
-  height: 620px;
+  height: 40rem;
   width: auto;
   background-color: #453c98d1;
   flex-direction: column;

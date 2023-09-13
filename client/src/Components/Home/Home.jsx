@@ -1,21 +1,34 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from '../Footer/Footer';
 import './Login.css';
 import Header from '../header/Header';
+import Footer from '../Footer/Footer';
 import Logo from "../Logo/Logo";
-
+import Botones from '../Botones/Botones';
+import Boton2 from '../Botones/Boton2';
 
 const Home = () => {
- 
-  return (
-    <>
-    <Logo />
-      <Header />
+  const [showModal, setShowModal] = useState(false);
 
-      <Footer />
-    </>
-  );
+  const handleBoxClick = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+    return (
+        <>
+          <Header />
+         
+          <Logo/>
+          <div id="botones" style={{ display: 'flex', justifyContent: 'center', width: '100%', height: '100vh' }}>
+            <Botones/>
+            <Boton2 />
+          </div>
+          <Footer />
+        </>
+      );
 }
 
 export default Home;

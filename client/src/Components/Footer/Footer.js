@@ -14,13 +14,14 @@ const Footer = () => {
           <p>Madrid, 28045</p>
         </div>
         <div className="column">
-          <p>Home</p>
+          <p href="#">Home</p>
           <p>Somos F5</p>
+          <p>Factoria F5</p>
           <p>Contáctanos</p>
         </div>
         <div className="column">
           <div className="logo">
-            <img src="../assets/logonaranja.png" height="60px" alt="Segundo Logo" />
+            <img src="../assets/logonaranja.png" href="#" height="60px" alt="Segundo Logo" />
           </div>
           <div className="redes-sociales">
             <a href="/"><img src="../assets/union.png" alt="Facebook" /></a>

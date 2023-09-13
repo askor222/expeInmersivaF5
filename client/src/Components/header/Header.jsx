@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import BurguerButton from './BurguerButton';
 import '../header/Header.css';
 
-function Navbar() {
+function Header() {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
@@ -40,7 +40,7 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Header;
 
 
 

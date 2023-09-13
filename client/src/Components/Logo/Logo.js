@@ -8,25 +8,25 @@ const Logo = () => {
 
       alert("Haz login para disfrutar de la experiencia inmersiva");
     } else {
-      window.location.href = "/Inmersive"; 
+      window.location.href = "/Inmersive";
     }
   };
 
   return (
     <a-scene cursor="rayOrigin: mouse">
-       <a-light type="ambient" intensity="0.9"></a-light>
+      <a-light type="ambient" intensity="0.9"></a-light>
       <a-cursor
         id="cursor"
         raycaster="objects: a-entity"
         cursor="fuse: false; rayOrigin: mouse"
       ></a-cursor>
 
-<a-entity
+      <a-entity
         id="logo"
         position="-0.3 1.3 -1.5"
         rotation="20 -50 -60"
         scale="50 50 50"
-        animation-mixer="clip: *; loop: true" 
+        animation-mixer="clip: *; loop: true"
         play-all-model-animations=""
         gltf-model="https://cdn.glitch.global/32e0a0b5-d4a0-44fd-8422-65f2983beb08/peludo4.glb?v=1694434088289"
         onClick={handleLogoClick}
