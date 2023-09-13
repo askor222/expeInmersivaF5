@@ -74,8 +74,8 @@ El repositorio está hecho usando Symfony y REACT, en ambos casos es necesario s
   <img src="https://cdn.glitch.global/58932ba0-437c-499b-8b2d-346e8fe9a7f2/IMG_6635.jpg?v=1694585388857" width="550" height="350">
 </p>
 
-* Greiskel Sánchez. Product Owner.
-* Franci Sánchez. Scrum.
-* Marcela Romero. Developer.
-* Kibria Ali Askor. Developer.
+* Greiskel Sánchez. Product Owner. (https://github.com/GreiskelS)
+* Franci Sánchez. Scrum. (https://github.com/FranSSZZ)
+* Marcela Romero. Developer. (https://github.com/Marcela3290)
+* Kibria Ali Askor. Developer. (https://github.com/askor222)
 * Chantell Gebauer. Stakeholder.
