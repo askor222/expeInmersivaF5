@@ -1,10 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
 import "./css/login.css"
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Login1 = () => {
+
+  
     const [formData, setFormData] = useState({
         email: '',
         password: '',
@@ -93,6 +95,8 @@ const Login1 = () => {
             {error && <div style={{ color: 'red' }}>{error}</div>}
     
           </form>
+
+
         </div>
       );
 }

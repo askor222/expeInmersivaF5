@@ -1,8 +1,9 @@
 import React, { useState } from 'react'; 
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/register.css';
 
 const Register1 = () => {
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -21,7 +22,7 @@ const Register1 = () => {
     setPassword(event.target.value);
   };
 
-  const handleConfirmPasswordChange = (event) => { // Agrega el manejador de cambio para la confirmación de contraseña
+  const handleConfirmPasswordChange = (event) => { 
     setConfirmPassword(event.target.value);
   };
 
@@ -106,6 +107,7 @@ const Register1 = () => {
 
         <a href="/Login" className='p-register'>Iniciar Sesión</a>
         </div>
+
 
     </div>
   );

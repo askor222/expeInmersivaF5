@@ -48,8 +48,8 @@ function Inmersive() {
         <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="4 4 4"></a-entity>
 
         {/* camera & controls  */}
-        {/* <a-entity position="282 25 247" id="cameraRig" scale="1 1 1" rotation="0 45 0"> */}
-        <a-entity position="-15 30 0" id="cameraRig" scale="1 1 1" rotation="0 45 0">
+        <a-entity position="282 25 247" id="cameraRig" scale="1 1 1" rotation="0 45 0">
+        {/* <a-entity position="-15 30 0" id="cameraRig" scale="1 1 1" rotation="0 45 0"> */}
           <a-entity camera="" position="-15 30 0" wasd-controls="acceleration:100" rotation="-15.011 -145.646 0" look-controls="" universal-controls kinematic-body>
             <a-text value="" position="0 0 -3"></a-text>
             <a-cursor cursor="rayOrigin: mouse;" raycaster="objects: data-raycastable; objects: .clickable"></a-cursor>
@@ -119,7 +119,6 @@ function Inmersive() {
         <a-gltf-model dynamic-body="shape: glb; mass: 2" src="#walls" className=".objects" position="0 2.099 0"></a-gltf-model>
         <a-gltf-model src="#cabins" position="32.5898 10 -6.7067"></a-gltf-model>
         {/* <a-gltf-model src="#ceiling" position="-199.928 106.298 233.193" scale="21 180 27.500"></a-gltf-model> */}
-
 
         {/* sidewalk & flowers */}
         <a-gltf-model src="#sidewalk" gltf-model="#sidewalk" position="237.867 14.805 -15.488" scale="0.285 2.5 0.200" rotation="0 90 0"></a-gltf-model>
@@ -263,7 +262,6 @@ function Inmersive() {
         <a-gltf-model src="#table" gltf-model="#table" position="-78.502 38.534 206.041" scale="0.300 0.300 0.300"></a-gltf-model>
         <a-gltf-model src="#table" gltf-model="#table" position="-78.502 38.534 183.144" scale="0.300 0.300 0.300"></a-gltf-model>
 
-
         {/* classrooms */}
         <a-gltf-model src="#drawer" gltf-model="#drawer" position="-2.288 33.602 87.767" scale="2.990 4 5"></a-gltf-model>
         <a-gltf-model src="#drawer" gltf-model="#drawer" position="-2.288 33.602 76.760" scale="2.990 4 5"></a-gltf-model>
@@ -318,7 +316,6 @@ function Inmersive() {
         <a-image  geometry="primitive: box" material="src: #ar1; side: double" position="32.334 60 -55.977" scale="10 10 1"></a-image >
         <a-image  geometry="primitive: box" material="src: #ar2; side: double" position="32.334 60 -55.977" scale="10 10 1"></a-image >
         <a-image  geometry="primitive: box" material="src: #ar3; side: double" position="-175.490 12.952 14.207" scale="10 10 1"></a-image >
-        
 
         <a-box id="modal-root" class="clickable" cursor-listener="true" position="-70.88825 63.88425 -60.95718" scale="4 4 4" material="" geometry=""
           animation="property: rotation; to: 0 360 0; loop: true; dur: 3000" color="darkblue"
@@ -384,7 +381,11 @@ function Inmersive() {
           </Button>
         </Modal.Footer>
       </Modal>
-      <button id="botonhome" type="button" className="btn btn-light" href="/"><strong>Volver</strong></button>
+
+<div>
+<button id="botonhome" type="button" className="btn btn-light" href="/"><strong>Volver</strong></button>
+</div>
+
     </div>
 
   );

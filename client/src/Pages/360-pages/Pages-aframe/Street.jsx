@@ -11,7 +11,6 @@ const Street = () => {
                 alt="street" crossOrigin="anonymous" />
         </a-assets>
 
-
             <a-sky rotation="0 -160 0" position="100 0 200" id="street" src="#street"></a-sky>
     </a-scene>
 

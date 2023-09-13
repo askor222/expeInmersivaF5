@@ -1,12 +1,14 @@
-#login{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900');
+
+#login {
   position: absolute;
   color: rgb(232, 229, 229);
   background-color: #3A3280;
   margin-top: 580px;
-  margin-left: 700px; 
   width: 110px;
   font-size: small;
-  padding: 10; 
+  font-family: "Poppins";
+  padding: 10;
 }
 
 #login:hover {
@@ -14,16 +16,18 @@
   color: black;
 }
 
-#register{
+#register {
   position: absolute;
   color: rgb(232, 229, 229);
-  background-color:  #3A3280;   
+  background-color: #3A3280;
   margin-top: 580px;
   margin-left: 600px;
-  padding: 10; 
+  padding: 10;
   width: 110px;
+  font-family: "Poppins";
   font-size: small;
 }
+
 #register:hover {
   background-color: rgb(203, 198, 186);
   color: black;
@@ -31,8 +35,4 @@
 
 .log {
   margin-left: 2rem;
-}
-
-.reg {
-
 }

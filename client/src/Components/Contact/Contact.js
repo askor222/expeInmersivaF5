@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import './Contact.css';
+import Header from '../header/Header'
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -35,14 +36,14 @@ const Contact = () => {
     };
     return (
         <div className='bodyForm'>
-            {/* <a-scene>
+            <Header />
 
+            <a-scene>
+            <img src="../..//assets/SomosF5_naranja.svg" height="50px" width="50px" alt="Logo" />
                 <a-sky src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/cieloazul.jpg?v=1694541519964"></a-sky>
-            </a-scene> */}
+            </a-scene>
             <div className='contenedor-contact' >
-
                 <h2 className='h2-contact'>
-                    <img src="../..//assets/SomosF5_naranja.svg" height="50px" width="50px" alt="Logo" />
                     Contacta con nosotros:</h2>
                 <form className='input-contenedor-contact' onSubmit={handleSubmit}>
                     <label className='label-text-contact' htmlFor="name">Nombre:</label><br></br>
@@ -81,7 +82,9 @@ const Contact = () => {
                     /><br></br>
                     <button className='button-contact' type="submit">Enviar</button>
                 </form>
+           
             </div>
+         
         </div>
     );
 }

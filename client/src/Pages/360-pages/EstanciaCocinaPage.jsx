@@ -6,8 +6,6 @@ const EstanciaCocinaPage = () => {
         <>
           <Index360 />
           <iframe className='aframe-360' src="/EstanciaCocina" width="500" height="400" >…</iframe>
-    
-    
         </>
       )
 }

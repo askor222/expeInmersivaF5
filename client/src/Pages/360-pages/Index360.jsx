@@ -37,7 +37,7 @@ const Index360 = () => {
                 aria-current="page"
                 href="/"
               >
-                <strong>Experiencia Inmersiva</strong>
+                <strong>Home</strong>
               </a>
             </li>
             <li className="nav-item">
