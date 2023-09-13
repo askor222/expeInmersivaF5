@@ -1,14 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
-import Inmersive from './components/Inmersive/Inmersive';
-import Login from './components/Login/Login';
-import Register from './components/Register/Register';
-import RegisterConfirmation from './components/components/RegisterConfirmation';
-import Contact from './components/Contact/Contact';
-import ContactConfirmation from './components/components/ContactConfirmation';
-import Home from './components/Home/Home';
+import Inmersive from '../src/Components/Inmersive/Inmersive';
+import Login from '../src/Components/Login/Login';
+import Register from '../src/Components/Register/Register';
+import RegisterConfirmation from '../src/Components/components/RegisterConfirmation';
+import Contact from '../src/Components/Contact/Contact';
+import ContactConfirmation from './Components/components/ContactConfirmation';
+import Home from '../src/Components/Home/Home';
 import Index360 from '../src/Pages/360-pages/Index360';
 import '../src/Pages/360-pages/StreetPage';
-import './components/Boton360/Boton';
+import '../src/Components/Boton360/Boton.js';
 
 import Home1 from './Pages/Home';
 import Contactanos from './Pages/contactanos/Contactanos';
