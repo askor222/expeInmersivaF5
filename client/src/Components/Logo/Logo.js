@@ -27,7 +27,7 @@ const Logo = () => {
         rotation="20 -50 -60"
         scale="50 50 50"
         animation-mixer="clip: *; loop: true"
-        play-all-model-animations=""
+        play-all-model-animations 
         gltf-model="https://cdn.glitch.global/32e0a0b5-d4a0-44fd-8422-65f2983beb08/peludo4.glb?v=1694434088289"
         onClick={handleLogoClick}
       ></a-entity>

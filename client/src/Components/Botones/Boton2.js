@@ -22,7 +22,7 @@ const StyledButton2 = styled.button`
   position: relative;
   height: 60px;
   margin: 20px;
-  margin-top: 19%;
+  margin-top: 90%;
 
   &:hover {
     background-color: #4F59CF;

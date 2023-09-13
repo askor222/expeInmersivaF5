@@ -4,36 +4,42 @@ import './Contact.css';
 import Header from '../header/Header'
 
 const Contact = () => {
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: '',
-    });
-
-    const handleChange = (e) => {
+      });
+    
+      const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
-            ...formData,
-            [name]: value,
+          ...formData,
+          [name]: value,
         });
-    };
-
-    const handleSubmit = (e) => {
+      };
+    
+      const handleSubmit = (e) => {
         e.preventDefault();
-
         const requestOptions = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
         };
-
-        fetch('https://factoriaei.coderf5.es//api/message', requestOptions)
-            .then((response) => response.text())
-            .then((result) => console.log(result))
-            .catch((error) => console.error('Error:', error));
-    };
+      
+        fetch('https://factoriaei.coderf5.es/api/contact', requestOptions)
+        .then((response) => response.json()) 
+        .then((result) => {
+          console.log(result);
+      
+          if (result.success) {
+            window.location.href = '/ContactConfirmation';
+          }
+        })
+        .catch((error) => console.error('Error:', error));
+      };
     return (
         <div className='bodyForm'>
             <Header />
@@ -82,7 +88,7 @@ const Contact = () => {
                     /><br></br>
                     <button className='button-contact' type="submit">Enviar</button>
                 </form>
-           
+
             </div>
          
         </div>

@@ -58,7 +58,6 @@ const LoginPage = () => {
         }
       }
     } catch (error) {
-      // Maneja errores de red o del servidor aquí
       setError('Hubo un error al conectarse al servidor. Por favor, inténtalo de nuevo más tarde.');
       console.error('Error:', error);
     }
@@ -68,7 +67,7 @@ const LoginPage = () => {
         <Header />
         <Logo />
         <div className='contenedor-login'>
-          <h2 className='h2-login'>Login</h2>
+          <h2 className='h2-login'>Iniciar Sesión</h2>
           <form className='input-contenedor-login' onSubmit={handleSubmit}>
               <label className='label-text-login' htmlFor="email">Email:</label> <br></br>
               <input

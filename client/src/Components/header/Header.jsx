@@ -17,7 +17,7 @@ function Header() {
         </div>
         <div className={`links ${clicked ? 'active' : ''}`} style={{ width: clicked ? '100%' : '0' }}>
           <a onClick={handleClick} href="/">Home</a>
-          <a onClick={handleClick} href="/Inmersive">Experiencia Inmersiva</a>
+          <a onClick={handleClick} href="/Inmersive"><strong>Inmersiva</strong></a>
           <a href="https:///www.somosf5.org/about" target="_blank">Somos F5</a>
           <a href="https:///www.factoriaf5.org/somos" target="_blank">Factoria F5</a>
           <a onClick={handleClick} href="/Contact">Contáctanos</a>
@@ -25,7 +25,7 @@ function Header() {
         </div>
         <div className={`links-right ${clicked ? 'active' : ''}`}>
           <a href="/">Home</a>
-          <a href="/Inmersive">Inmersiva</a>
+          <a href="/Inmersive"><strong>Inmersiva</strong></a>
           <a href="https://www.somosf5.org/about" target="_blank">SomosF5</a>
           <a href="https:///www.factoriaf5.org/somos" target="_blank">FactoriaF5</a>
           <a href="/Index360">Experiencia360</a>

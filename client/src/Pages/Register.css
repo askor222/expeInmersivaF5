@@ -79,7 +79,6 @@
     cursor: not-allowed;
 }
   
-/* Aquí puedes aplicar tus estilos específicos para dispositivos móviles */
 @media (max-width: 768px) {
     .input-contenedor{
         width: 90%;
