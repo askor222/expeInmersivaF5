@@ -44,8 +44,8 @@ function Inmersive() {
         <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="4 4 4"></a-entity>
 
         {/* camera & controls  */}
-        <a-entity position="282 25 247" id="cameraRig" scale="1 1 1" rotation="0 45 0">
-          {/* <a-entity position="-15 30 0" id="cameraRig" scale="1 1 1" rotation="0 45 0"> */}
+        {/* <a-entity position="282 25 247" id="cameraRig" scale="1 1 1" rotation="0 45 0"> */}
+          <a-entity position="-15 30 0" id="cameraRig" scale="1 1 1" rotation="0 45 0">
           <a-entity camera="" position="-15 30 0" wasd-controls="acceleration:100" rotation="-15.011 -145.646 0" look-controls="" universal-controls kinematic-body>
             <a-text value="" position="0 0 -3"></a-text>
             <a-cursor cursor="rayOrigin: mouse;" raycaster="objects: data-raycastable; objects: .clickable"></a-cursor>
@@ -122,7 +122,7 @@ function Inmersive() {
         <a-gltf-model src="#ground" position="-199.308 5.800 230.262" scale="21 180 27.500"></a-gltf-model>
         <a-gltf-model dynamic-body="shape: glb; mass: 2" src="#walls" className=".objects" position="0 2.099 0"></a-gltf-model>
         <a-gltf-model src="#cabins" position="32.5898 10 -6.7067"></a-gltf-model>
-        <a-gltf-model src="#ceiling" position="-199.928 115.298 233.193" scale="21 180 27.500"></a-gltf-model>
+        {/* <a-gltf-model src="#ceiling" position="-199.928 110.298 233.193" scale="21 180 27.500"></a-gltf-model> */}
 
         {/* sidewalk & flowers */}
         <a-gltf-model src="#sidewalk" gltf-model="#sidewalk" position="237.867 14.805 -15.488" scale="0.285 2.5 0.200" rotation="0 90 0"></a-gltf-model>
@@ -317,8 +317,8 @@ function Inmersive() {
         <a-gltf-model src="#livingwall" gltf-model="#livingwall" position="-17.263 76.848 -148.708" scale="3 12 5.010"></a-gltf-model>
         <a-gltf-model src="#zero" gltf-model="#zero" position="-143.207 49.267 65.677" scale="150 150 150" rotation="0 90 0"></a-gltf-model>
         <a-gltf-model src="#number1" gltf-model="#number1" position="-143.207 55.691 32.706" scale="150 150 150" rotation="0 90 0"></a-gltf-model>
-        <a-image geometry="primitive: box" material="src: #ar1; side: double" position="-3.22466 62.691 -80.57483" rotation="0 30 0" scale="15 15 1"></a-image >
-        <a-image geometry="primitive: box" material="src: #ar2; side: double" position="- 62.691 118" rotation="0 20 0" scale="15 15 1"></a-image >
+        <a-image geometry="primitive: box" material="src: #ar1; side: double" position="3.22466 62.691 -80.57483" rotation="0 30 0" scale="15 15 1"></a-image >
+        <a-image geometry="primitive: box" material="src: #ar2; side: double" position="2 62 116.87024" rotation="0 20 0" scale="15 15 1"></a-image >
 
         <a-box id="modal-root" class="clickable" cursor-listener="true" position="-70.88825 63.88425 -60.95718" scale="4 4 4" material="" geometry=""
           animation="property: rotation; to: 0 360 0; loop: true; dur: 3000" color="darkblue"
