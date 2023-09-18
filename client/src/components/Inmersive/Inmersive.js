@@ -49,8 +49,8 @@ function Inmersive() {
         <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="4 4 4"></a-entity>
 
         {/* camera & controls  */}
-        {/* <a-entity position="282 25 247" id="cameraRig" scale="1 1 1" rotation="0 45 0"> */}
-          <a-entity position="-15 30 0" id="cameraRig" scale="1 1 1" rotation="0 45 0">
+        <a-entity position="282 25 247" id="cameraRig" scale="1 1 1" rotation="0 45 0">
+          {/* <a-entity position="-15 30 0" id="cameraRig" scale="1 1 1" rotation="0 45 0"> */}
           <a-entity camera="" position="-15 30 0" wasd-controls="acceleration:100" rotation="-15.011 -145.646 0" look-controls="" universal-controls kinematic-body>
             <a-text value="" position="0 0 -3"></a-text>
             <a-cursor cursor="rayOrigin: mouse;" raycaster="objects: data-raycastable; objects: .clickable, raycaster.objects"></a-cursor>
@@ -109,7 +109,6 @@ function Inmersive() {
         <img id="qrsalon1" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/salon1.png?v=1694356137654" alt="qr5" crossOrigin="anonymous"/>
         <img id="qrsalon2" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/salon2.png?v=1694356142182" alt="qr6" crossOrigin="anonymous"/>
         <a-asset-item id="firstdoor" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/DoorCristalentrada.only.glb?v=1694414908394" crossOrigin="anonymous"></a-asset-item>
-        {/* <video id="class" src="https://cdn.glitch.me/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/video1813949760.mp4?v=1694513871851" crossOrigin="anonymous"></video> */}
         <img id="ar1" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/IMG_20230908_094322.jpg?v=1694458745402" alt="ar1" crossOrigin="anonymous"/>
         <img id="ar2" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/door1.jpg?v=1694458748471" alt="ar2" crossOrigin="anonymous"/>
         <img id="ar3" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/IMG_20230908_094344(1).jpg?v=1694458759027" alt="ar3" crossOrigin="anonymous"/>
