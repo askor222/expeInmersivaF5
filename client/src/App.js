@@ -1,4 +1,5 @@
-import { Route, Routes, Redirect } from 'react-router-dom';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Inmersive from '../src/Components/Inmersive/Inmersive';
 import Login from '../src/Components/Login/Login';
 import Register from '../src/Components/Register/Register';
@@ -9,17 +10,13 @@ import Home from '../src/Components/Home/Home';
 import Index360 from '../src/Pages/360-pages/Index360';
 import '../src/Pages/360-pages/StreetPage';
 import '../src/Components/Boton360/Boton.js';
-
-import Home1 from './Pages/Home';
 import Contactanos from './Pages/contactanos/Contactanos';
-
 import Recepcion from './Pages/360-pages/Pages-aframe/Recepcion';
 import Oficina from './Pages/360-pages/Pages-aframe/Oficina';
 import Salon1 from './Pages/360-pages/Pages-aframe/Salon1';
 import Salon2 from './Pages/360-pages/Pages-aframe/Salon2';
 import EstanciaCocina from './Pages/360-pages/Pages-aframe/EstanciaCocina';
 import Street from './Pages/360-pages/Pages-aframe/Street';
-
 import IndexPage from './Pages/360-pages/IndexPage';
 import EstanciaCocinaPage from './Pages/360-pages/EstanciaCocinaPage';
 import Salon1Page from './Pages/360-pages/Salon1Page';
@@ -42,7 +39,6 @@ function App() {
         
         <Route path='/Index360' element={<Index360 />} ></Route>
         <Route path='/Contact' element={<Contact />} > </Route>
-        {/* <Route path='/Logo' element={<Logo />} > </Route> */}
         <Route path='/Contactanos' element={<Contactanos />} > </Route> 
         <Route path='/login' element={<Login />} > </Route> 
 
@@ -58,7 +54,6 @@ function App() {
         <Route path='/Salon2Page' element={<Salon2Page />} > </Route>
         <Route path='/StreetPage' element={<StreetPage />} > </Route>
         <Route path='/OficinaPage' element={<OficinaPage />} > </Route>
-        <Route path='/Home' element={<Home1 />} > </Route>
         <Route path='/LoginPage' element={<LoginPage />} > </Route>
         <Route path='/RegisterPage' element={<RegisterPage />} > </Route>
 

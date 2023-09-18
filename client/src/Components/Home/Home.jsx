@@ -23,9 +23,11 @@ const Home = () => {
          
           <Logo/>
           <div id="botones" style={{ display: 'flex', justifyContent: 'center', width: '100%', height: '100vh' }}>
+       
             <Botones/>
             <Boton2 />
           </div>
+          
           <Footer />
         </>
       );

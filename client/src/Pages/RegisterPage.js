@@ -1,8 +1,7 @@
-import React from 'react'
+import { useState } from 'react';
 import Header from '../Components/header/Header'
 import Footer from '../Components/Footer/Footer'
 import Logo from '../Components/Logo/Logo'
-import { useState } from 'react';
 import "./Register.css"
 
 const RegisterPage = () => {
@@ -29,7 +28,6 @@ const RegisterPage = () => {
   };
 
   const isValidPassword = (password) => {
-    // Verifica si la contraseña contiene al menos 8 caracteres, una mayúscula, una minúscula y un carácter especial.
     const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])(?=.{8,})/;
     return passwordRegex.test(password);
   };
@@ -44,14 +42,14 @@ const RegisterPage = () => {
       "password": password
     });
 
-    if (!isValidPassword(password)) { // Verifica la contraseña
+    if (!isValidPassword(password)) { 
       alert("La contraseña debe contener al menos 8 caracteres, una mayúscula, una minúscula y un carácter especial ( !, @, #, $, %, ^, &).");
-      return; // Detener el registro si la contraseña no cumple con los requisitos.
+      return; 
     }
 
-    if (password !== confirmPassword) { // Verifica la confirmación de contraseña
+    if (password !== confirmPassword) { 
       alert("Las contraseñas no coinciden. Por favor, verifica tu contraseña.");
-      return; // Detener el registro si las contraseñas no coinciden.
+      return; 
     }
 
     const requestOptions = {

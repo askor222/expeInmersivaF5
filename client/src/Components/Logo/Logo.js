@@ -13,6 +13,7 @@ const Logo = () => {
   };
 
   return (
+    <div>
     <a-scene cursor="rayOrigin: mouse">
       <a-light type="ambient" intensity="0.9"></a-light>
       <a-cursor
@@ -26,6 +27,7 @@ const Logo = () => {
         position="-0.3 1.3 -1.5"
         rotation="20 -50 -60"
         scale="50 50 50"
+        modify-materials
         animation-mixer="clip: *; loop: true"
         play-all-model-animations 
         gltf-model="https://cdn.glitch.global/32e0a0b5-d4a0-44fd-8422-65f2983beb08/peludo4.glb?v=1694434088289"
@@ -34,6 +36,7 @@ const Logo = () => {
 
       <a-sky src="https://cdn.glitch.global/32e0a0b5-d4a0-44fd-8422-65f2983beb08/FONDOFINAL.JPG?v=1694435785858" rotation="0 -80 0" position="0 -10 -70" material="" geometry=""></a-sky>
     </a-scene>
+    </div>
   );
 };
 

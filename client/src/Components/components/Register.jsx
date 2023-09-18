@@ -27,7 +27,6 @@ const Register1 = () => {
   };
 
   const isValidPassword = (password) => {
-    // Verifica si la contraseña contiene al menos 8 caracteres, una mayúscula, una minúscula y un carácter especial.
     const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])(?=.{8,})/;
     return passwordRegex.test(password);
   };
@@ -73,6 +72,7 @@ const Register1 = () => {
     }
   };
 
+
   return (
     <div className='contenedor-register'>
       <h2 className='h2-register'>¡Registrate!</h2>
@@ -100,14 +100,13 @@ const Register1 = () => {
         />
       </div>
       <div>
-        <button className='button-register' onClick={handleRegister}>Registrar</button>
+        <button className='button-register' onClick={handleRegister}>Registrarse</button>
       </div>
       <div>
         <p  style={{ display: 'inline-block', marginRight: '20px' }} className='p-register'> ¿Ya tienes cuenta? </p>
 
         <a href="/Login" className='p-register'>Iniciar Sesión</a>
         </div>
-
 
     </div>
   );

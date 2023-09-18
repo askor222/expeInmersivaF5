@@ -1,46 +1,45 @@
 .contenedor-register {
     width: 700px;
-    width: 100%;
-    font-family: Arial, sans-serif;
+    width: 90%;
     background-color: #453c98d1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-  }
+}
 
-.h2-register{
+.h2-register {
     font-size: 2rem;
     color: white;
     margin: 0 0 5px 0;
 }
 
-.p-register{
+.p-register {
     font-size: 1.5rem;
     color: white;
     margin: 0;
 }
 
-.input-contenedor-register{
+.input-contenedor-register {
     width: 70%;
     margin-bottom: 10px;
 
 }
 
-.label-text-register{
+.label-text-register {
     font-size: 1.5rem;
     color: white;
 }
 
-.input-register{
+.input-register {
     width: 70%;
     padding: 10px;
     color: white;
     border-radius: 40px;
     border: 3px solid #ccc;
     background-color: #d9d9d917;
-    outline: none; 
+    outline: none;
     text-align: center;
 }
 
@@ -50,40 +49,38 @@
 }
 
 .input-register:focus {
-    border-color: #F6D3C1; /* Cambiar el color del borde al hacer clic en el input */
-  }
+    border-color: #F6D3C1;
+    /* Cambiar el color del borde al hacer clic en el input */
+}
 
 .button-register {
     background-color: #4a2fa3ed;
     color: #fff;
     border: none;
     border-radius: 10px;
-    padding: 12px 24px; /* Aumentar un poco el padding para un aspecto más equilibrado */
+    padding: 12px 24px;
     cursor: pointer;
-    font-size: 1.5rem; /* Tamaño de fuente más grande */
-    transition: background-color 0.3s; /* Agregar una transición suave de color de fondo */
-
-    /* Estilo al pasar el ratón por encima del botón */
-    &:hover {
-        background-color: #4F59CF;
-    }
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
 }
-  
-  /* Estilo del botón cuando está deshabilitado (opcional) */
+.button-register:hover {
+    background-color: #4F59CF;
+}
+
 .button-register:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
-  
-/* Aquí puedes aplicar tus estilos específicos para dispositivos móviles */
+
+
 @media (max-width: 768px) {
-    .input-contenedor{
+    .input-contenedor {
         width: 90%;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .input-contenedor{
+    .input-contenedor {
         width: 90%;
     }
 }

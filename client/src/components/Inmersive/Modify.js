@@ -29,38 +29,25 @@ AFRAME.registerComponent('play-all-model-animations', {
 });
 
 
+AFRAME.registerComponent('thumbstick-logging',{
+  init: function () {
+    this.el.addEventListener('thumbstickmoved', this.logThumbstick);
+  },
+  logThumbstick: function (evt) {
+    if (evt.detail.y > 0.95) { console.log("DOWN"); }
+    if (evt.detail.y < -0.95) { console.log("UP"); }
+    if (evt.detail.x < -0.95) { console.log("LEFT"); }
+    if (evt.detail.x > 0.95) { console.log("RIGHT"); }
+  }
+});
+
+
 AFRAME.registerComponent('collider-check', {
   dependencies: ['raycaster'],
 
   init: function () {
     this.el.addEventListener('raycaster-intersection', function () {
       console.log('Player hit something!');
-    });
-  }
-});
-
-
-
-AFRAME.registerComponent('click-listener', {
-  init: function () {
-    var el = this.el;
-
-    el.addEventListener('click', function () {
-      var currentPosition = el.getAttribute('position');
-      var originalPosition = el.getAttribute('DoorAnimation');
-
-      if (!originalPosition) {
-        originalPosition = currentPosition;
-        el.setAttribute('DoorAnimation', currentPosition);
-      }
-
-      if (AFRAME.utils.deepEqual(currentPosition, originalPosition)) {
-        // El modelo está en su posición original, mueve el modelo a la posición deseada
-        el.setAttribute('position', '33.35131 -97.92487 -225');
-      } else {
-        // El modelo no está en su posición original, restaura la posición original
-        el.setAttribute('position', originalPosition);
-      }
     });
   }
 });
@@ -126,3 +113,114 @@ JSON.stringifyWithCircularRefs = (function() {
 })();
 
 
+function init(id) {
+  showLoading();
+  scene = new THREE.Scene();
+  light = new THREE.AmbientLight(0xffffff);
+  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  boundingBox = new THREE.Box3();
+
+  canvas = document.getElementById(id);
+
+  renderer = new THREE.WebGLRenderer({
+    canvas: canvas,
+    preserveDrawingBuffer: true,
+  });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setClearColor("#f2f2f2");
+
+  controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableZoom = true;
+  controls.enableRotate = true;
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.05;
+
+  scene.add(light);
+}
+
+
+function load_gltf(gltf_url) {
+  let loader = new GLTFLoader();
+  loader.load(gltf_url, (gltf) => {
+    model = gltf;
+    scene.add(gltf.scene);
+    boundingBox.setFromObject(gltf.scene);
+
+    let size = boundingBox.getSize(new THREE.Vector3());
+    let center = boundingBox.getCenter(new THREE.Vector3());
+    let distance = Math.max(
+      MIN_DISTANCE,
+      Math.min(size.length() / 2, MAX_DISTANCE)
+    );
+    camera.position.set(center.x, center.y, center.z - 4 + distance);
+    camera.lookAt(center);
+    groups = gltf.scene.children[0].children;
+
+    render();
+  });
+}
+
+loadGLTF();{
+        
+  const self = this;
+
+  const textureLoader = new THREE.TextureLoader();
+  const texture = textureLoader.load( '../../assets/ClassroomBakeLightMap.jpg' );
+  texture.flipY = false;
+  
+  const loader = new GLTFLoader( ).setPath('../../assets/');
+  loader.load(
+      'classroom-v6.glb',
+      function ( gltf ) {
+          const classroom = gltf.scene;
+
+          classroom.traverse(function (room) {
+              if (room.isMesh) {
+                  room.material.lightMap = texture;
+                  room.material.needsUpdate = true;
+              }
+            });
+          self.scene.add( classroom );
+      },
+              );
+}
+
+
+// --
+
+module.exports = AFRAME.registerComponent('gltf-model-legacy', {
+  schema: {type: 'model'},
+
+  init: function () {
+    this.model = null;
+    this.loader = null;
+    this.loaderPromise = loadLoader().then(() => {
+      this.loader = new THREE.GLTFLoader();
+      this.loader.setCrossOrigin('Anonymous');
+    });
+  },
+
+  update: function () {
+    const self = this;
+    const el = this.el;
+    const src = this.data;
+
+    if (!src) { return; }
+
+    this.remove();
+
+    this.loaderPromise.then(() => {
+      this.loader.load(src, function gltfLoaded (gltfModel) {
+        self.model = gltfModel.scene;
+        self.model.animations = gltfModel.animations;
+        el.setObject3D('mesh', self.model);
+        el.emit('model-loaded', {format: 'gltf', model: self.model});
+      });
+    });
+  },
+
+  remove: function () {
+    if (!this.model) { return; }
+    this.el.removeObject3D('mesh');
+  }
+});

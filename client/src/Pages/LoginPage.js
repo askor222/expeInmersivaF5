@@ -12,7 +12,7 @@ const LoginPage = () => {
     password: '',
   });
 
-  const [error, setError] = useState(null); // Estado para manejar errores
+  const [error, setError] = useState(null); 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,7 +27,6 @@ const LoginPage = () => {
 
     setError(null);
 
-    // Realiza una solicitud POST al servidor para iniciar sesión
     try {
       const response = await fetch('https://factoriaei.coderf5.es/api/login', {
         method: 'POST',
@@ -38,11 +37,9 @@ const LoginPage = () => {
       });
 
       if (response.ok) {
-        // Si la solicitud fue exitosa, obtén el token de respuesta
         const data = await response.json();
         const { token } = data;
 
-        // Guarda el token en localStorage
         localStorage.setItem('token', token);
 
         window.location.href = '/';
