@@ -4,7 +4,7 @@
 .modal-content {
     width: 600px;
     background-color: #F6D3C1;
-    justify-content:center;
+    justify-content: center;
     font-family: "Poppins", sans-serif, Helvetica;
     align-content: center;
 }
@@ -14,9 +14,9 @@
 }
 
 .modal-title.h4 {
- font-family: "Poppins";
- color: aliceblue;
- 
+    font-family: "Poppins";
+    color: aliceblue;
+
 }
 
 .modal-footer {
@@ -24,20 +24,19 @@
 }
 
 .StyleText {
-color: black;
+    color: black;
 }
 
 div.modal-body {
     background-color: rgb(241, 228, 217);
 }
 
-div.fade.modal.show{ 
-justify-content:flex-start;
+div.fade.modal.show {
+    justify-content: flex-start;
 }
 
 #botonhome {
-    position: absolute;
-  margin-top: 30px;
-  margin-left: 10px;
+    position:absolute;
+    margin-top: 30px;
+    margin-left: 10px;
 }
-

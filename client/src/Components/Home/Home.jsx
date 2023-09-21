@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Login.css';
 import Header from '../header/Header';
@@ -8,15 +8,7 @@ import Botones from '../Botones/Botones';
 import Boton2 from '../Botones/Boton2';
 
 const Home = () => {
-  const [showModal, setShowModal] = useState(false);
 
-  const handleBoxClick = () => {
-    setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
     return (
         <>
           <Header />

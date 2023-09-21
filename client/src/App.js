@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Routes, Route  } from 'react-router-dom';
 import Inmersive from '../src/Components/Inmersive/Inmersive';
 import Login from '../src/Components/Login/Login';
 import Register from '../src/Components/Register/Register';
@@ -28,37 +28,36 @@ import RegisterPage from './Pages/RegisterPage';
 
 function App() {
   return (
-    <>
+    <div>
+    
      <Routes>
-        <Route path='/' element={<Home />} > </Route>
-        <Route path='/login' element={<Login />}> </Route>
-        <Route path='/register' element={<Register />} > </Route>
-        <Route path='/RegisterConfirmation' element={<RegisterConfirmation />} > </Route>
-        <Route path='/ContactConfirmation' element={<ContactConfirmation />} > </Route>
-        <Route path='/Inmersive' element={<Inmersive />} ></Route>
-        
-        <Route path='/Index360' element={<Index360 />} ></Route>
-        <Route path='/Contact' element={<Contact />} > </Route>
-        <Route path='/Contactanos' element={<Contactanos />} > </Route> 
-        <Route path='/login' element={<Login />} > </Route> 
-
-        <Route path='/Recepcion' element={<Recepcion />} > </Route>
-        <Route path='/Oficina' element={<Oficina />} > </Route>
-        <Route path='/Salon1' element={<Salon1 />} > </Route>
-        <Route path='/Salon2' element={<Salon2 />} > </Route>
-        <Route path='/EstanciaCocina' element={<EstanciaCocina />} > </Route>
-        <Route path='/Street' element={<Street />} > </Route>
-        <Route path='/IndexPage' element={<IndexPage />} > </Route>
-        <Route path='/EstanciaCocinaPage' element={<EstanciaCocinaPage />} > </Route>
-        <Route path='/Salon1Page' element={<Salon1Page />} > </Route>
-        <Route path='/Salon2Page' element={<Salon2Page />} > </Route>
-        <Route path='/StreetPage' element={<StreetPage />} > </Route>
-        <Route path='/OficinaPage' element={<OficinaPage />} > </Route>
-        <Route path='/LoginPage' element={<LoginPage />} > </Route>
-        <Route path='/RegisterPage' element={<RegisterPage />} > </Route>
-
+        <Route path='/' element={<Home />} >Home</Route>
+        <Route path='/login' element={<Login />}>Login</Route>
+        <Route path='/register' element={<Register />}>Register</Route>
+        <Route path='/RegisterConfirmation' element={<RegisterConfirmation />}>RegisterConfirmation</Route>
+        <Route path='/ContactConfirmation' element={<ContactConfirmation />}>ContactConfirmation</Route>
+        <Route path='/Inmersive' element={<Inmersive />}>Inmersive</Route>
+        <Route path='/Index360' element={<Index360 />}>Index360</Route>
+        <Route path='/Contact' element={<Contact />}>Contact</Route>
+        <Route path='/Contactanos' element={<Contactanos />}>Contactanos</Route> 
+        <Route path='/login' element={<Login />} >login</Route> 
+        <Route path='/Recepcion' element={<Recepcion />}>Recepcion</Route>
+        <Route path='/Oficina' element={<Oficina />}>Oficina</Route>
+        <Route path='/Salon1' element={<Salon1 />} >Salon1</Route>
+        <Route path='/Salon2' element={<Salon2 />}>Salon2</Route>
+        <Route path='/EstanciaCocina' element={<EstanciaCocina />}>EstanciaCocina</Route>
+        <Route path='/Street' element={<Street />}>Street</Route>
+        <Route path='/IndexPage' element={<IndexPage />}>IndexPage</Route>
+        <Route path='/EstanciaCocinaPage' element={<EstanciaCocinaPage />}>EstanciaCocinaPage</Route>
+        <Route path='/Salon1Page' element={<Salon1Page />}>Salon1Page</Route>
+        <Route path='/Salon2Page' element={<Salon2Page />}>Salon2Page</Route>
+        <Route path='/StreetPage' element={<StreetPage />}>StreetPage</Route>
+        <Route path='/OficinaPage' element={<OficinaPage />}>OficinaPage</Route>
+        <Route path='/LoginPage' element={<LoginPage />}>LoginPage</Route>
+        <Route path='/RegisterPage' element={<RegisterPage />}>RegisterPage</Route>
      </Routes>
-    </>
+     
+    </div>
   );
 }
 

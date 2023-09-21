@@ -13,8 +13,6 @@ AFRAME.registerComponent('log', {
       debugtxt.setAttribute("value", "goodnite");
     },
   });
-    
-   
   
   AFRAME.registerComponent("thumbstick-logging", {
     init: function () {

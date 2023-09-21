@@ -29,7 +29,8 @@ const StyledButton2 = styled.button`
   }
 
   @media screen and (max-width: 750px) {
-    margin-top: 105px;
+    margin-top: 210px;
+    font-size: 1.2rem;
     }
 `;
 

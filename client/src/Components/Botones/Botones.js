@@ -27,7 +27,8 @@ const StyledButton = styled.button`
     background-color: #4F59CF;
   }
   @media screen and (max-width: 750px) {
-    margin-top: 110px;
+    margin-top: 210px;
+    font-size: 1.2rem;
     }
 `;
 export default Botones

@@ -1,226 +1,193 @@
-AFRAME.registerComponent('play-all-model-animations', {
+AFRAME.registerComponent('modify-materials', {
   init: function () {
-    this.model = null;
-    this.mixer = null;
-
-    var model = this.el.getObject3D('mesh');
-    if (model) {
-      this.load(model);
-    } else {
-      this.el.addEventListener('model-loaded', function (e) {
-        this.load(e.detail.model);
-      }.bind(this));
-    }
-  },
-
-  load: function (model) {
-    this.model = model;
-    this.mixer = new THREE.AnimationMixer(model);
-    this.model.animations.forEach(animation => {
-      this.mixer.clipAction(animation, model).play();
-    });
-  },
-
-  tick: function (t, dt) {
-    if (this.mixer && !isNaN(dt)) {
-      this.mixer.update(dt / 1000);
-    }
-  }
-});
-
-
-AFRAME.registerComponent('thumbstick-logging',{
-  init: function () {
-    this.el.addEventListener('thumbstickmoved', this.logThumbstick);
-  },
-  logThumbstick: function (evt) {
-    if (evt.detail.y > 0.95) { console.log("DOWN"); }
-    if (evt.detail.y < -0.95) { console.log("UP"); }
-    if (evt.detail.x < -0.95) { console.log("LEFT"); }
-    if (evt.detail.x > 0.95) { console.log("RIGHT"); }
-  }
-});
-
-
-AFRAME.registerComponent('collider-check', {
-  dependencies: ['raycaster'],
-
-  init: function () {
-    this.el.addEventListener('raycaster-intersection', function () {
-      console.log('Player hit something!');
-    });
-  }
-});
-
-
-JSON.stringifyWithCircularRefs = (function() {
-  const refs = new Map();
-  const parents = [];
-  const path = ["this"];
-
-  function clear() {
-    refs.clear();
-    parents.length = 0;
-    path.length = 1;
-  }
-
-  function updateParents(key, value) {
-    var idx = parents.length - 1;
-    var prev = parents[idx];
-    if (prev[key] === value || idx === 0) {
-      path.push(key);
-      parents.push(value);
-    } else {
-      while (idx-- >= 0) {
-        prev = parents[idx];
-        if (prev[key] === value) {
-          idx += 2;
-          parents.length = idx;
-          path.length = idx;
-          --idx;
-          parents[idx] = value;
-          path[idx] = key;
-          break;
+    // Wait for model to load.
+    this.el.addEventListener('model-loaded', () => {
+      // Grab the mesh / scene.
+      const obj = this.el.getObject3D('mesh');
+      // Go over the submeshes and modify materials we want.
+      obj.traverse(node => {
+        if (node.name.indexOf('ship') !== -1) {
+          node.material.color.set('red');
         }
-      }
-    }
-  }
-
-  function checkCircular(key, value) {
-    if (value != null) {
-      if (typeof value === "object") {
-        if (key) { updateParents(key, value); }
-
-        let other = refs.get(value);
-        if (other) {
-          return '[Circular Reference]' + other;
-        } else {
-          refs.set(value, path.join('.'));
-        }
-      }
-    }
-    return value;
-  }
-
-  return function stringifyWithCircularRefs(obj, space) {
-    try {
-      parents.push(obj);
-      return JSON.stringify(obj, checkCircular, space);
-    } finally {
-      clear();
-    }
-  }
-})();
-
-
-function init(id) {
-  showLoading();
-  scene = new THREE.Scene();
-  light = new THREE.AmbientLight(0xffffff);
-  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  boundingBox = new THREE.Box3();
-
-  canvas = document.getElementById(id);
-
-  renderer = new THREE.WebGLRenderer({
-    canvas: canvas,
-    preserveDrawingBuffer: true,
-  });
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setClearColor("#f2f2f2");
-
-  controls = new OrbitControls(camera, renderer.domElement);
-  controls.enableZoom = true;
-  controls.enableRotate = true;
-  controls.enableDamping = true;
-  controls.dampingFactor = 0.05;
-
-  scene.add(light);
-}
-
-
-function load_gltf(gltf_url) {
-  let loader = new GLTFLoader();
-  loader.load(gltf_url, (gltf) => {
-    model = gltf;
-    scene.add(gltf.scene);
-    boundingBox.setFromObject(gltf.scene);
-
-    let size = boundingBox.getSize(new THREE.Vector3());
-    let center = boundingBox.getCenter(new THREE.Vector3());
-    let distance = Math.max(
-      MIN_DISTANCE,
-      Math.min(size.length() / 2, MAX_DISTANCE)
-    );
-    camera.position.set(center.x, center.y, center.z - 4 + distance);
-    camera.lookAt(center);
-    groups = gltf.scene.children[0].children;
-
-    render();
-  });
-}
-
-loadGLTF();{
-        
-  const self = this;
-
-  const textureLoader = new THREE.TextureLoader();
-  const texture = textureLoader.load( '../../assets/ClassroomBakeLightMap.jpg' );
-  texture.flipY = false;
-  
-  const loader = new GLTFLoader( ).setPath('../../assets/');
-  loader.load(
-      'classroom-v6.glb',
-      function ( gltf ) {
-          const classroom = gltf.scene;
-
-          classroom.traverse(function (room) {
-              if (room.isMesh) {
-                  room.material.lightMap = texture;
-                  room.material.needsUpdate = true;
-              }
-            });
-          self.scene.add( classroom );
-      },
-              );
-}
-
-
-// --
-
-module.exports = AFRAME.registerComponent('gltf-model-legacy', {
-  schema: {type: 'model'},
-
-  init: function () {
-    this.model = null;
-    this.loader = null;
-    this.loaderPromise = loadLoader().then(() => {
-      this.loader = new THREE.GLTFLoader();
-      this.loader.setCrossOrigin('Anonymous');
-    });
-  },
-
-  update: function () {
-    const self = this;
-    const el = this.el;
-    const src = this.data;
-
-    if (!src) { return; }
-
-    this.remove();
-
-    this.loaderPromise.then(() => {
-      this.loader.load(src, function gltfLoaded (gltfModel) {
-        self.model = gltfModel.scene;
-        self.model.animations = gltfModel.animations;
-        el.setObject3D('mesh', self.model);
-        el.emit('model-loaded', {format: 'gltf', model: self.model});
       });
     });
-  },
-
-  remove: function () {
-    if (!this.model) { return; }
-    this.el.removeObject3D('mesh');
   }
 });
+
+AFRAME.registerComponent('play-all-model-animations', {
+    init: function () {
+      this.model = null;
+      this.mixer = null;
+  
+      var model = this.el.getObject3D('mesh');
+      if (model) {
+        this.load(model);
+      } else {
+        this.el.addEventListener('model-loaded', function (e) {
+          this.load(e.detail.model);
+        }.bind(this));
+      }
+    },
+  
+    load: function (model) {
+      this.model = model;
+      this.mixer = new THREE.AnimationMixer(model);
+      this.model.animations.forEach(animation => {
+        this.mixer.clipAction(animation, model).play();
+      });
+    },
+  
+    tick: function (t, dt) {
+      if (this.mixer && !isNaN(dt)) {
+        this.mixer.update(dt / 1000);
+      }
+    }
+  });
+  
+  
+  AFRAME.registerComponent('thumbstick-logging',{
+    init: function () {
+      this.el.addEventListener('thumbstickmoved', this.logThumbstick);
+    },
+    logThumbstick: function (evt) {
+      if (evt.detail.y > 0.95) { console.log("DOWN"); }
+      if (evt.detail.y < -0.95) { console.log("UP"); }
+      if (evt.detail.x < -0.95) { console.log("LEFT"); }
+      if (evt.detail.x > 0.95) { console.log("RIGHT"); }
+    }
+  });
+  
+  
+  AFRAME.registerComponent('collider-check', {
+    dependencies: ['raycaster'],
+  
+    init: function () {
+      this.el.addEventListener('raycaster-intersection', function () {
+        console.log('Player hit something!');
+      });
+    }
+  });
+  
+  
+  JSON.stringifyWithCircularRefs = (function() {
+    const refs = new Map();
+    const parents = [];
+    const path = ["this"];
+  
+    function clear() {
+      refs.clear();
+      parents.length = 0;
+      path.length = 1;
+    }
+  
+    function updateParents(key, value) {
+      var idx = parents.length - 1;
+      var prev = parents[idx];
+      if (prev[key] === value || idx === 0) {
+        path.push(key);
+        parents.push(value);
+      } else {
+        while (idx-- >= 0) {
+          prev = parents[idx];
+          if (prev[key] === value) {
+            idx += 2;
+            parents.length = idx;
+            path.length = idx;
+            --idx;
+            parents[idx] = value;
+            path[idx] = key;
+            break;
+          }
+        }
+      }
+    }
+  
+    function checkCircular(key, value) {
+      if (value != null) {
+        if (typeof value === "object") {
+          if (key) { updateParents(key, value); }
+  
+          let other = refs.get(value);
+          if (other) {
+            return '[Circular Reference]' + other;
+          } else {
+            refs.set(value, path.join('.'));
+          }
+        }
+      }
+      return value;
+    }
+  
+    return function stringifyWithCircularRefs(obj, space) {
+      try {
+        parents.push(obj);
+        return JSON.stringify(obj, checkCircular, space);
+      } finally {
+        clear();
+      }
+    }
+  })();
+  
+  
+  function init(id) {
+    showLoading();
+    scene = new THREE.Scene();
+    light = new THREE.AmbientLight(0xffffff);
+    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    boundingBox = new THREE.Box3();
+  
+    canvas = document.getElementById(id);
+  
+    renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
+      preserveDrawingBuffer: true,
+    });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor("#f2f2f2");
+  
+    controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableZoom = true;
+    controls.enableRotate = true;
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+  
+    scene.add(light);
+  }
+  
+ 
+  export default AFRAME.registerComponent('gltf-model-legacy', {
+    schema: {type: 'model'},
+  
+    init: function () {
+      this.model = null;
+      this.loader = null;
+      this.loaderPromise = loadLoader().then(() => {
+        this.loader = new THREE.GLTFLoader();
+        this.loader.setCrossOrigin('Anonymous');
+      });
+    },
+  
+    update: function () {
+      const self = this;
+      const el = this.el;
+      const src = this.data;
+  
+      if (!src) { return; }
+  
+      this.remove();
+  
+      this.loaderPromise.then(() => {
+        this.loader.load(src, function gltfLoaded (gltfModel) {
+          self.model = gltfModel.scene;
+          self.model.animations = gltfModel.animations;
+          el.setObject3D('mesh', self.model);
+          el.emit('model-loaded', {format: 'gltf', model: self.model});
+        });
+      });
+    },
+  
+    remove: function () {
+      if (!this.model) { return; }
+      this.el.removeObject3D('mesh');
+    }
+  });

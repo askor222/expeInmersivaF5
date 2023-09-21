@@ -77,7 +77,7 @@ const RegisterPage = () => {
       <Header />
       <Logo />
       <div className='contenedor-register'>
-        <h2 className='h2-register'>Register</h2>
+        <h2 className='h2-register'>Registrate</h2>
         <p className='p-register'> ¡Crea tu cuenta en <strong>F5</strong>! </p>
         <div className='input-contenedor-register'>
           <label className='label-text-register'>Nombre:</label><br></br>

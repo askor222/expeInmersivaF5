@@ -1,4 +1,5 @@
-
+THREE.DRACOLoader.setDecoderPath( '/path/to/decoder' );
+Loader.setDRACOLoader( new THREE.DRACOLoader() );
 /**
  * @license
  * Copyright 2010-2021 Three.js Authors
@@ -357,28 +358,24 @@ function inverseLerp( x, y, value ) {
 
 }
 
-// https://en.wikipedia.org/wiki/Linear_interpolation
 function lerp( x, y, t ) {
 
 	return ( 1 - t ) * x + t * y;
 
 }
 
-// http://www.rorydriscoll.com/2016/03/07/frame-rate-independent-damping-using-lerp/
 function damp( x, y, lambda, dt ) {
 
 	return lerp( x, y, 1 - Math.exp( - lambda * dt ) );
 
 }
 
-// https://www.desmos.com/calculator/vcsjnyz7x4
 function pingpong( x, length = 1 ) {
 
 	return length - Math.abs( euclideanModulo( x, length * 2 ) - length );
 
 }
 
-// http://en.wikipedia.org/wiki/Smoothstep
 function smoothstep( x, min, max ) {
 
 	if ( x <= min ) return 0;
@@ -467,11 +464,9 @@ function floorPowerOfTwo( value ) {
 
 function setQuaternionFromProperEuler( q, a, b, c, order ) {
 
-	// Intrinsic Proper Euler Angles - see https://en.wikipedia.org/wiki/Euler_angles
 
 	// rotations are applied to the axes in the order specified by 'order'
 	// rotation by angle 'a' is applied first, then by angle 'b', then by angle 'c'
-	// angles are in radians
 
 	const cos = Math.cos;
 	const sin = Math.sin;
@@ -516,7 +511,6 @@ function setQuaternionFromProperEuler( q, a, b, c, order ) {
 
 		default:
 			console.warn( 'THREE.MathUtils: .setQuaternionFromProperEuler() encountered an unknown order: ' + order );
-
 	}
 
 }
