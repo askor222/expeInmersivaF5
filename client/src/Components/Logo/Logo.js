@@ -21,11 +21,12 @@ const Logo = () => {
         raycaster="objects: a-entity"
         cursor="fuse: false; rayOrigin: mouse"
       ></a-cursor>
+      <a-text value=">>Click<<"  position="-0.2 1.4 -1.5" scale="0.3 0.3 0.1" ></a-text>
 
       <a-entity
         id="logo"
-        position="-0.3 1.3 -1.5"
-        rotation="20 -50 -60"
+        position="-0 1.8 -1.5"
+        rotation="20 120 -60"
         scale="50 50 50"
         modify-materials
         animation-mixer="clip: *; loop: true"
@@ -41,4 +42,3 @@ const Logo = () => {
 };
 
 export default Logo;
-

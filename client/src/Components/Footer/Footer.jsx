@@ -21,7 +21,7 @@ const Footer = () => {
           <p className='footer-p' href="/">Home</p>
           <p className='footer-p' href="/">Somos F5</p>
           <p className='footer-p' href="/">Factoria F5</p>
-          <p className='footer-p' href="/">Contáctanos</p>
+          <p className='footer-p'>Contáctanos</p>
         </div>
         <div className="column">
           <div className="logo">

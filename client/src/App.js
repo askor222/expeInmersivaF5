@@ -41,6 +41,7 @@ function App() {
         <Route path='/Contact' element={<Contact />}>Contact</Route>
         <Route path='/Contactanos' element={<Contactanos />}>Contactanos</Route> 
         <Route path='/login' element={<Login />} >login</Route> 
+
         <Route path='/Recepcion' element={<Recepcion />}>Recepcion</Route>
         <Route path='/Oficina' element={<Oficina />}>Oficina</Route>
         <Route path='/Salon1' element={<Salon1 />} >Salon1</Route>
@@ -56,7 +57,6 @@ function App() {
         <Route path='/LoginPage' element={<LoginPage />}>LoginPage</Route>
         <Route path='/RegisterPage' element={<RegisterPage />}>RegisterPage</Route>
      </Routes>
-     
     </div>
   );
 }
