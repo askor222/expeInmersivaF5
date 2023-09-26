@@ -131,7 +131,7 @@ function Inmersive() {
         <a-gltf-model src="#ground" position="-199.308 5.800 230.262" scale="21 180 27.500"></a-gltf-model>
         <a-gltf-model src="#walls" dynamic-body="shape: glb; mass: 2"  className=".objects" position="0 2.099 0"></a-gltf-model>
         <a-gltf-model src="#cabins" position="32.5898 10 -6.7067"></a-gltf-model>
-        {/* <a-gltf-model src="#ceiling" position="-199.928 117.298 233.193" scale="21 180 27.500"></a-gltf-model> */}
+        <a-gltf-model src="#ceiling" position="-199.928 117.298 233.193" scale="21 180 27.500"></a-gltf-model>
 
         {/* sidewalk & flowers */}
         <a-gltf-model src="#sidewalk"  position="237.867 14.805 -15.488" scale="0.285 2.5 0.200" rotation="0 90 0"></a-gltf-model>
