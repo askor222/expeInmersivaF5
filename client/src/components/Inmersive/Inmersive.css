@@ -36,7 +36,7 @@ div.fade.modal.show {
 }
 
 #botonhome {
-    position:fixed;
+    position:absolute;
     margin-top: 30px;
     margin-left: 10px;
 }

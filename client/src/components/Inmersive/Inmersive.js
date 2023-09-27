@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Modal } from 'react-bootstrap';
 import './Inmersive.css'
 import FetchLink from './FetchLink';
-// import 'three';
+import { Link } from 'react-router-dom';
+import 'three';
 
 function Inmersive() {
   const [showModal, setShowModal] = useState(false);
@@ -15,7 +16,6 @@ function Inmersive() {
   const handleCloseModal = () => {
     setShowModal(false);
   };
-
 
   const link1 = FetchLink({ pageNumber: 1 });
   const link2 = FetchLink({ pageNumber: 2 });
@@ -100,16 +100,17 @@ function Inmersive() {
         <a-asset-item id="number1" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/95f1fc10d2394c6490a3ae7151027653.glb?v=1694287652282" crossOrigin="anonymous" alt=""></a-asset-item>
         <a-asset-item id="curtain" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/curtains.glb?v=1694345440901" crossOrigin="anonymous" alt="curtains"></a-asset-item>
         <a-asset-item id="cabinet" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/Double%20Door%20Upper%20Cabin.glb?v=1694345537335" crossOrigin="anonymous" alt="Cabin"></a-asset-item>
-        <img id="qrstreet" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/Street.png?v=1694356114293" alt="qr1" crossOrigin="anonymous"/>
-        <img id="qrentrada" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/entrada.png?v=1694356117961" alt="qr2" crossOrigin="anonymous"/>
-        <img id="qroficina" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/oficina.png?v=1694356134179" alt="qr3" crossOrigin="anonymous"/>
-        <img id="qrcocina" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/EstanciaCocina.png?v=1694356130232" alt="qr4" crossOrigin="anonymous"/>
-        <img id="qrsalon1" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/salon1.png?v=1694356137654" alt="qr5" crossOrigin="anonymous"/>
-        <img id="qrsalon2" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/salon2.png?v=1694356142182" alt="qr6" crossOrigin="anonymous"/>
+        <img id="qrstreet" src="https://cdn.glitch.global/6211dc8f-6ce8-489a-a462-10f300f2e1cc/street.png?v=1695820029802" alt="qr1" crossOrigin="anonymous"/>
+        <img id="qrentrada" src="https://cdn.glitch.global/3b27913a-e0c0-4999-8a6b-3cacbaa548f5/recepcion.png?v=1695821732540" alt="qr2" crossOrigin="anonymous"/>
+        <img id="qroficina" src="https://cdn.glitch.global/951679fc-d311-45ac-8cec-a0dd794eb9b3/oficina.png?v=1695820360594" alt="qr3" crossOrigin="anonymous"/>
+        <img id="qrcocina" src="https://cdn.glitch.global/3b27913a-e0c0-4999-8a6b-3cacbaa548f5/cocina.png?v=1695821983569" alt="qr4" crossOrigin="anonymous"/>
+        <img id="qrsalon1" src="https://cdn.glitch.global/28e505cf-42af-445b-8568-60b7486fe815/salon1.png?v=1695822138979" alt="qr5" crossOrigin="anonymous"/>
+        <img id="qrsalon2" src="https://cdn.glitch.global/18f39ff2-1b2d-4e59-a8d4-8de045bab8e5/salon2.png?v=1695822251441" alt="qr6" crossOrigin="anonymous"/>
         <a-asset-item id="firstdoor" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/DoorCristalentrada.only.glb?v=1694414908394" crossOrigin="anonymous" alt=""></a-asset-item>
         <img id="ar1" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/IMG_20230908_094322.jpg?v=1694458745402" alt="ar1" crossOrigin="anonymous"/>
         <img id="ar2" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/door1.jpg?v=1694458748471" alt="ar2" crossOrigin="anonymous"/>
         <img id="ar3" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/IMG_20230908_094344(1).jpg?v=1694458759027" alt="ar3" crossOrigin="anonymous"/>
+        <img id="ar4" src="" alt="ar4" crossOrigin="anonymous"/>
         <img id="texttest" src="https://cdn.glitch.global/13335002-678c-41c0-b54f-50b392a3793b/texttest.png?v=1695655250486" alt="texttest" crossOrigin="anonymous"/>
         <img id="textreact" src="https://cdn.glitch.global/13335002-678c-41c0-b54f-50b392a3793b/react.png?v=1695656791931" alt="textreact" crossOrigin="anonymous"/>
 
@@ -304,7 +305,7 @@ function Inmersive() {
         <a-image geometry="primitive: box" material="src: #textwalltables; side: double" position="-58 79 -150.5337" scale="90 40 1"></a-image>
         <a-image geometry="primitive: box" material="src: #textwallorange; side: front" position="45 75 134" scale="50 40 1"></a-image>
         <a-image geometry="primitive: box" material="src: #textwallkitchen; side: double" position="-108 82 -96" rotation="0 90 0" scale="45 25 1"></a-image>
-        <a-image geometry="primitive: box" material="src: #qrstreet; side: double" position="197 60 199" rotation="0 50 0" scale="18 15 1"></a-image>
+        <a-image geometry="primitive: box" material="src: #qrstreet; side: double" position="193 60 195" rotation="0 44 0" scale="18 15 1"></a-image>
         <a-image geometry="primitive: box" material="src: #qrentrada; side: double" position="-3 80 144" rotation="0 0 0" scale="12 12 1"></a-image>
         <a-image geometry="primitive: box" material="src: #qroficina; side: double" position="-60 50 200.69945" rotation="0 90 0" scale="25 20 1"></a-image>
         <a-image geometry="primitive: box" material="src: #qrcocina; side: double" position="-13 70 79" rotation="0 90 0" scale="30 25 1"></a-image>
@@ -391,9 +392,11 @@ function Inmersive() {
         </Modal.Footer>
       </Modal>
 
-      <div>
-        <button id="botonhome" type="button" className="btn btn-light" href="/"><strong>Volver</strong></button>
-      </div>
+      <Link to="/"> 
+        <button className="btn btn-light" id="botonhome">
+          <strong>Volver</strong>
+        </button>
+      </Link>
     </div>
   );
 }
