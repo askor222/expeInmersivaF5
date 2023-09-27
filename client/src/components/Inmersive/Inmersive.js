@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Modal } from 'react-bootstrap';
 import './Inmersive.css'
 import FetchLink from './FetchLink';
-import 'three';
+// import 'three';
 
 function Inmersive() {
   const [showModal, setShowModal] = useState(false);
@@ -287,10 +287,8 @@ function Inmersive() {
         <a-gltf-model src="#sink" position="-185.490 51.528 -73.125" scale="0.3 0.3 0.3"></a-gltf-model>
         <a-gltf-model src="#sink"  position="-155.294 51.528 90.406" scale="0.3 0.3 0.3" rotation="0 270 0"></a-gltf-model>
         <a-gltf-model src="#wfountain"  position="-155.604 45.135 73.014" scale="20 20 20" rotation="0 -90 0"></a-gltf-model>
-        {/* <a-gltf-model src="#bin2" position="-161.243 21.511 100.002" scale="30 30 30 "></a-gltf-model>
-        <a-gltf-model src="#bin2" position="7.614 22.990 125.781" scale="30 30 30 "></a-gltf-model> */}
-        <a-gltf-model src="#cubicle" position="-121.531 35.397 145.865" scale="4 4 4" rotation="0 180 0"></a-gltf-model>
-        <a-gltf-model src="#cubicle" position="-195.464 35.397 232.403" scale="4 4 4"></a-gltf-model>
+        <a-gltf-model src="#cubicle" position="-121.531 20.397 145.865" scale="4 4 4" rotation="0 180 0"></a-gltf-model>
+        <a-gltf-model src="#cubicle" position="-195.464 20.397 232.403" scale="4 4 4"></a-gltf-model>
         {/* classrooms */}
         <a-gltf-model src="#drawer"  position="-2.288 33.602 87.767" scale="2.990 4 5"></a-gltf-model>
         <a-gltf-model src="#drawer"  position="-2.288 33.602 76.760" scale="2.990 4 5"></a-gltf-model>

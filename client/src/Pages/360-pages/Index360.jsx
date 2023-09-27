@@ -8,7 +8,7 @@ const Index360 = () => {
     setClicked(!clicked)
   }
   return (
-    <>
+    <div className='indexbackground'>
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container">
         <div className="logo"></div>
@@ -109,7 +109,9 @@ const Index360 = () => {
         </div>
       </div>
     </nav>
-  </>
+
+   
+  </div>
   );
 }
 

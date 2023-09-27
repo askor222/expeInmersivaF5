@@ -20,15 +20,15 @@ const StyledButton = styled.button`
   z-index: 100;
   position: relative;
   height: 60px;
-  margin: 20px;
-  margin-top: 22%;
+  margin: 80px;
+  margin-top: 15rem;
 
   &:hover {
     background-color: #4F59CF;
   }
-  @media screen and (max-width: 750px) {
-    margin-top: 210px;
-    font-size: 1.2rem;
+  @media screen and (max-width: 650px) {
+    margin-top: 150px;
+    font-size: 1.0rem;
     }
 `;
 export default Botones

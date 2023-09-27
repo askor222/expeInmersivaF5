@@ -27,10 +27,13 @@ footer {
 .column {
   padding: 12px;
   text-align: center;
+ 
 }
 
 .column p {
   margin: 5px 0; 
+  text-decoration: none;
+  color: black;
 }
 
 .logo img {

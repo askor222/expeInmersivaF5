@@ -5,3 +5,7 @@
     width: 100%;
     height: 100vh;
 }
+
+.indexbackground {
+    background-image: url("../360-pages/Pages-aframe/Recepcion.jsx");
+}

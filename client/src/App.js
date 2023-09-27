@@ -10,7 +10,6 @@ import Home from '../src/Components/Home/Home';
 import Index360 from '../src/Pages/360-pages/Index360';
 import '../src/Pages/360-pages/StreetPage';
 import '../src/Components/Boton360/Boton.js';
-import Contactanos from './Pages/contactanos/Contactanos';
 import Recepcion from './Pages/360-pages/Pages-aframe/Recepcion';
 import Oficina from './Pages/360-pages/Pages-aframe/Oficina';
 import Salon1 from './Pages/360-pages/Pages-aframe/Salon1';
@@ -39,7 +38,6 @@ function App() {
         <Route path='/Inmersive' element={<Inmersive />}>Inmersive</Route>
         <Route path='/Index360' element={<Index360 />}>Index360</Route>
         <Route path='/Contact' element={<Contact />}>Contact</Route>
-        <Route path='/Contactanos' element={<Contactanos />}>Contactanos</Route> 
         <Route path='/login' element={<Login />} >login</Route> 
 
         <Route path='/Recepcion' element={<Recepcion />}>Recepcion</Route>

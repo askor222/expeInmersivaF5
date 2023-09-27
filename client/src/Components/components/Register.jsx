@@ -73,6 +73,12 @@ const Register1 = () => {
   };
 
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
+
   return (
     <div className='contenedor-register'>
       <h2 className='h2-register'>¡Registrate!</h2>
@@ -106,8 +112,10 @@ const Register1 = () => {
         <p  style={{ display: 'inline-block', marginRight: '20px' }} className='p-register'> ¿Ya tienes cuenta? </p>
 
         <a href="/Login" className='p-register'>Iniciar Sesión</a>
+        
+        <button onClick={toggleModal}>Cerrar</button>
         </div>
-
+ 
     </div>
   );
 }
