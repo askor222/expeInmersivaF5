@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Footer/Footer.css';
 import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 
 const Footer = () => {
   return (

@@ -6,6 +6,10 @@
     height: 100vh;
 }
 
-.indexbackground {
-    background-image: url("../360-pages/Pages-aframe/Recepcion.jsx");
+.backgroundrecepcion {
+    z-index: -1000;
+    position: relative;
+}
+#navcolaps {
+    position: relative;
 }

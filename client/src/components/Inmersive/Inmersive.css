@@ -28,15 +28,16 @@
 }
 
 div.modal-body {
-    background-color: rgb(241, 228, 217);
+    background-color: rgba(241, 228, 217, 0.737);
 }
 
 div.fade.modal.show {
     justify-content: flex-start;
+    background: none;
 }
 
 #botonhome {
-    position:absolute;
+    position:fixed;
     margin-top: 30px;
     margin-left: 10px;
 }

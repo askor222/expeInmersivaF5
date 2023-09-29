@@ -4,15 +4,20 @@ import '../360-pages/index360.css';
 const Index360 = () => {
   const [clicked, setClicked] = useState(false)
   const handleClick = () => {
-
     setClicked(!clicked)
   }
   return (
-    <div className='indexbackground'>
+    <div>
+
+<section>
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container">
-        <div className="logo"></div>
-        <button
+      <div className="container" id="navcolaps">
+      <img
+                src="./SomosF5.svg"
+                height="50px"
+                width="50px"
+                alt="logo"
+              />        <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -24,14 +29,11 @@ const Index360 = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+         
             <li className="nav-item">
-              <img
-                src="./SomosF5.svg"
-                height="50px"
-                width="50px"
-                alt="logo"
-              />
+              
               <a
                 className="nav-link active"
                 aria-current="page"
@@ -97,20 +99,14 @@ const Index360 = () => {
               </a>
             </li>
             <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              ></a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    </section>
+  
 
-   
   </div>
   );
 }

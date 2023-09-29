@@ -5,9 +5,7 @@ const Salon2Page = () => {
     return (
         <>
           <Index360 />
-          <iframe className='aframe-360' src="/salon2" width="500" height="400" >…</iframe>
-    
-    
+          <iframe className='aframe-360' src="/salon2" width="500" height="400" title='salon2' >…</iframe>
         </>
     )
 }

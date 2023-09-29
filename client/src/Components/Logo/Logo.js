@@ -21,7 +21,7 @@ const Logo = () => {
         raycaster="objects: a-entity"
         cursor="fuse: false; rayOrigin: mouse"
       ></a-cursor>
-      <a-text value=">>Acceso Inmersiva<<" position="-0.3 1.4 -1.5" scale="0.3 0.3 0.1">👆</a-text>
+      <a-text value=">>Acceso Inmersiva<<" position="-0.3 1.5 -1.5" scale="0.3 0.3 0.1">👆</a-text>
 
       <a-entity
         id="logo"

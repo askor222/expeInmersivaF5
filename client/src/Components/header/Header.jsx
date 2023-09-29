@@ -24,7 +24,7 @@ function Header() {
           <Nav className="me-auto" id="navcolaps">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/Inmersive"><strong>Inmersiva</strong></Nav.Link>
-            <Nav.Link href="/Index360">Experiencia360</Nav.Link>
+            <Nav.Link href="/IndexPage">Experiencia360</Nav.Link>
             <NavDropdown title="Sobre F5" id="basic-nav-dropdown">
               <NavDropdown.Item href="https://www.factoriaf5.org/somos" target="_blank">Factoria F5</NavDropdown.Item>
               <NavDropdown.Item href="https://www.somosf5.org/about" target="_blank">

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import 'three';
 
 function Inmersive() {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal, setBotonClick] = useState(false);
 
   const handleBoxClick = () => {
     setShowModal(true);
@@ -17,6 +17,7 @@ function Inmersive() {
     setShowModal(false);
   };
 
+  
   const link1 = FetchLink({ pageNumber: 1 });
   const link2 = FetchLink({ pageNumber: 2 });
   const link3 = FetchLink({ pageNumber: 3 });
@@ -332,7 +333,7 @@ function Inmersive() {
           onClick={handleBoxClick}><a-text value="...Cursos-F5" text="color: #121111; side: double" scale="4 4 4" rotation="0 260 0"></a-text>
         </a-box>
 
-        <a-gltf-model id="dooranimation" class="clickable" src="#blueDoor" cursor-listener="true" position="33.35131 -93.92487 -225" rotation="" scale="1 1 1.2"
+        <a-gltf-model id="dooranimation" class="clickable" src="#blueDoor" position="33.35131 -93.92487 -225" rotation="" scale="1 1 1.2"
           dynamic-body animation-mixer="action" play-all-model-animations animation="property: position; to: 33.35131 -97.92487 -220; dur: 3000; click;"
         ></a-gltf-model>
 
@@ -393,7 +394,7 @@ function Inmersive() {
       </Modal>
 
       <Link to="/"> 
-        <button className="btn btn-light" id="botonhome">
+        <button className="btn btn-light" id="botonhome" onClick>
           <strong>Volver</strong>
         </button>
       </Link>

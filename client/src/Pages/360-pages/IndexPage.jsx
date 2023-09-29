@@ -5,7 +5,8 @@ const IndexPage = () => {
     return (
         <>
           <Index360 />
-          <iframe className='aframe-360' src="/recepcion" width="500" height="400" >…</iframe>        </>
+          <iframe className='aframe-360' src="/recepcion" width="500" height="400" title='recepcion'>…</iframe>        
+          </>
     )
 }
 
