@@ -21,6 +21,7 @@
 
 .modal-footer {
     background-color: #3A3280;
+    height: 50px;
 }
 
 .StyleText {
@@ -36,8 +37,8 @@ div.fade.modal.show {
     background: none;
 }
 
-#botonhome {
+.btn.btn-light {
     position:fixed;
-    margin-top: 30px;
+    margin: auto;
     margin-left: 10px;
 }

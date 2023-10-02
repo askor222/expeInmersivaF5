@@ -59,61 +59,61 @@ function Inmersive() {
         </a-entity>
 
         {/* Asset management system  */}
-        <a-asset-item id="walls" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/Oficina10.glb?v=1693579074653" crossOrigin="anonymous" alt="walls"></a-asset-item>
-        <a-asset-item id="cabins" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/Cabinas1.glb?v=1693982095823" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="ground" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/floor_whitetile_20x20_meters.glb?v=1692870723480" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="ceiling" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/floor_whitetile_20x20_meters.glb?v=1692870723480" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="sidewalk" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/sidewalk_mm1.glb?v=1693303827295" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="cylinder" src="https://cdn.glitch.me/078ce1a5-734a-4824-8ef5-cf5a78251ea1/concrete_test_cylinder_w1_1.glb?v=1693308727583" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="sign" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/forward_right_mandatory_direction_sign_traffic.glb?v=1693310898480" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="flower" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/geranium_flower.glb?v=1693311919022" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="table" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/office_table.glb?v=1693471856833" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="bigchair" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/sillaSalones.glb?v=1693571975940" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="littlechair" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/side_chair.glb?v=1693572977645" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="micro" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/micro.glb?v=1693571982721" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="shelf" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/shoe_shelf.glb?v=1693829626150" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="counter" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/mesonCorcho.glb?v=1693828959299" crossOrigin="anonymous" alt="" ></a-asset-item>
-        <a-asset-item id="fridge" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/avali_fridge.glb?v=1693834008536" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="bin" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/rubbish_bin.glb?v=1693835604945" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="officedoor" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/puertaOficina.glb?v=1693474755665" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="stairTables" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/escalerasCocho.glb?v=1693550218142" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="robot" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/robot.glb?v=1693812662910" crossOrigin="anonymous" alt="robot"></a-asset-item>
-        <a-asset-item id="blueDoor" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/puertaAzulFlores.glb?v=1693570610262" crossOrigin="anonymous" alt="puertaAzulFlores"></a-asset-item>
-        <img id="textwallorange" src="https://cdn.glitch.global/5e54b684-756b-413c-8816-13237484939c/Captura%20de%20pantalla%202023-09-09%20212745.png?v=1694288160748" alt="textoOrange" crossOrigin="anonymous"/>
-        <img id="textwallkitchen" src="https://cdn.glitch.global/5e54b684-756b-413c-8816-13237484939c/11.png?v=1694288796358" alt="textoKitchen" crossOrigin="anonymous" />
-        <img id="textwalltables" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/Captura%20de%20pantalla%202023-09-06%20073207.png?v=1693978342118" alt="textoTables" crossOrigin="anonymous"/>
-        <a-asset-item id="whitedoor" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/whiteDoor.glb?v=1693982738385" crossOrigin="anonymous" alt="whiteDoor"></a-asset-item>
-        <a-asset-item id="coffee" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/cafetiere.glb?v=1693908142500" crossOrigin="anonymous" alt="cafetiere"></a-asset-item>
-        <a-asset-item id="kettle" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/water_kettle.glb?v=1693908142058" crossOrigin="anonymous" alt="water_kettle"></a-asset-item>
-        <a-asset-item id="papertowel" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/paper_towel_roll.glb?v=1693908140474" crossOrigin="anonymous" alt="paper_towel_roll"></a-asset-item>
-        <a-asset-item id="shelfcomplement" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/metal_shelf.glb?v=1693908140957" crossOrigin="anonymous" alt="metal_shelf"></a-asset-item>
-        <a-asset-item id="doorone" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/puertaOficina.glb?v=1693474755665" crossOrigin="anonymous" alt="puertaOficina"></a-asset-item>
-        <a-asset-item id="stool" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/TabureteFrenteMicro.glb?v=1693571972405" crossOrigin="anonymous" alt="TabureteFrenteMicro"></a-asset-item>
-        <a-asset-item id="ktable" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/table_with_metal_legs.glb?v=1693917468558" crossOrigin="anonymous" alt="table_with_metal_legs"></a-asset-item>
-        <a-asset-item id="wc" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/wc_3d_model_-_nora.glb?v=1693942921041" crossOrigin="anonymous" alt="_nora"></a-asset-item>
-        <a-asset-item id="sink" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/unseen_bathroom_sink.glb?v=1693942922359" crossOrigin="anonymous" alt="unseen_bathroom_sink"></a-asset-item>
-        <a-asset-item id="wfountain" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/drinking_fountain.glb?v=1693942923145" crossOrigin="anonymous" alt="drinking_fountain"></a-asset-item>
-        <a-asset-item id="board" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/stuff_in_my_room_whiteboard.glb?v=1693942924452" crossOrigin="anonymous" alt="stuff_in_my_room_whiteboard"></a-asset-item>
-        <a-asset-item id="cubicle" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/office_cubicle.glb?v=1694082621594" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="livingwall" src="https://cdn.glitch.me/078ce1a5-734a-4824-8ef5-cf5a78251ea1/landscape_living_wall_university_of_greenwich.glb?v=1694084082833" crossOrigin="anonymous" alt="landscape_living_wall_university_of_greenwich"></a-asset-item>
-        <a-asset-item id="drawer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/file_folder_drawer.glb?v=1694275788482" crossOrigin="anonymous" alt="folder_drawer"></a-asset-item>
-        <a-asset-item id="zero" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/4b75afd6a6094efd8e942093aef10de4.glb?v=1694287652663" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="number1" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/95f1fc10d2394c6490a3ae7151027653.glb?v=1694287652282" crossOrigin="anonymous" alt=""></a-asset-item>
-        <a-asset-item id="curtain" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/curtains.glb?v=1694345440901" crossOrigin="anonymous" alt="curtains"></a-asset-item>
-        <a-asset-item id="cabinet" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/Double%20Door%20Upper%20Cabin.glb?v=1694345537335" crossOrigin="anonymous" alt="Cabin"></a-asset-item>
-        <img id="qrstreet" src="https://cdn.glitch.global/6211dc8f-6ce8-489a-a462-10f300f2e1cc/street.png?v=1695820029802" alt="qr1" crossOrigin="anonymous"/>
-        <img id="qrentrada" src="https://cdn.glitch.global/3b27913a-e0c0-4999-8a6b-3cacbaa548f5/recepcion.png?v=1695821732540" alt="qr2" crossOrigin="anonymous"/>
-        <img id="qroficina" src="https://cdn.glitch.global/951679fc-d311-45ac-8cec-a0dd794eb9b3/oficina.png?v=1695820360594" alt="qr3" crossOrigin="anonymous"/>
-        <img id="qrcocina" src="https://cdn.glitch.global/3b27913a-e0c0-4999-8a6b-3cacbaa548f5/cocina.png?v=1695821983569" alt="qr4" crossOrigin="anonymous"/>
-        <img id="qrsalon1" src="https://cdn.glitch.global/28e505cf-42af-445b-8568-60b7486fe815/salon1.png?v=1695822138979" alt="qr5" crossOrigin="anonymous"/>
-        <img id="qrsalon2" src="https://cdn.glitch.global/18f39ff2-1b2d-4e59-a8d4-8de045bab8e5/salon2.png?v=1695822251441" alt="qr6" crossOrigin="anonymous"/>
-        <a-asset-item id="firstdoor" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/DoorCristalentrada.only.glb?v=1694414908394" crossOrigin="anonymous" alt=""></a-asset-item>
-        <img id="ar1" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/IMG_20230908_094322.jpg?v=1694458745402" alt="ar1" crossOrigin="anonymous"/>
-        <img id="ar2" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/door1.jpg?v=1694458748471" alt="ar2" crossOrigin="anonymous"/>
-        <img id="ar3" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/IMG_20230908_094344(1).jpg?v=1694458759027" alt="ar3" crossOrigin="anonymous"/>
-        <img id="ar4" src="" alt="ar4" crossOrigin="anonymous"/>
-        <img id="texttest" src="https://cdn.glitch.global/13335002-678c-41c0-b54f-50b392a3793b/texttest.png?v=1695655250486" alt="texttest" crossOrigin="anonymous"/>
-        <img id="textreact" src="https://cdn.glitch.global/13335002-678c-41c0-b54f-50b392a3793b/react.png?v=1695656791931" alt="textreact" crossOrigin="anonymous"/>
+        <a-asset-item id="walls" response-type="arraybuffer" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/Oficina10.glb?v=1693579074653" crossOrigin="anonymous" alt="walls"></a-asset-item>
+        <a-asset-item id="cabins" response-type="arraybuffer" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/Cabinas1.glb?v=1693982095823" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="ground" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/floor_whitetile_20x20_meters.glb?v=1692870723480" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="ceiling" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/floor_whitetile_20x20_meters.glb?v=1692870723480" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="sidewalk" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/sidewalk_mm1.glb?v=1693303827295" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="cylinder" response-type="arraybuffer" src="https://cdn.glitch.me/078ce1a5-734a-4824-8ef5-cf5a78251ea1/concrete_test_cylinder_w1_1.glb?v=1693308727583" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="sign" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/forward_right_mandatory_direction_sign_traffic.glb?v=1693310898480" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="flower" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/geranium_flower.glb?v=1693311919022" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="table" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/office_table.glb?v=1693471856833" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="bigchair" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/sillaSalones.glb?v=1693571975940" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="littlechair" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/side_chair.glb?v=1693572977645" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="micro" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/micro.glb?v=1693571982721" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="shelf" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/shoe_shelf.glb?v=1693829626150" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="counter" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/mesonCorcho.glb?v=1693828959299" crossOrigin="anonymous" alt="" ></a-asset-item>
+        <a-asset-item id="fridge" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/avali_fridge.glb?v=1693834008536" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="bin" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/rubbish_bin.glb?v=1693835604945" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="officedoor" response-type="arraybuffer" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/puertaOficina.glb?v=1693474755665" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="stairTables" response-type="arraybuffer" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/escalerasCocho.glb?v=1693550218142" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="robot" response-type="arraybuffer" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/robot.glb?v=1693812662910" crossOrigin="anonymous" alt="robot"></a-asset-item>
+        <a-asset-item id="blueDoor" response-type="arraybuffer" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/puertaAzulFlores.glb?v=1693570610262" crossOrigin="anonymous" alt="puertaAzulFlores"></a-asset-item>
+        <img id="textwallorange" response-type="arraybuffer" src="https://cdn.glitch.global/5e54b684-756b-413c-8816-13237484939c/Captura%20de%20pantalla%202023-09-09%20212745.png?v=1694288160748" alt="textoOrange" crossOrigin="anonymous"/>
+        <img id="textwallkitchen" response-type="arraybuffer" src="https://cdn.glitch.global/5e54b684-756b-413c-8816-13237484939c/11.png?v=1694288796358" alt="textoKitchen" crossOrigin="anonymous" />
+        <img id="textwalltables" response-type="arraybuffer" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/Captura%20de%20pantalla%202023-09-06%20073207.png?v=1693978342118" alt="textoTables" crossOrigin="anonymous"/>
+        <a-asset-item id="whitedoor" response-type="arraybuffer" src="https://cdn.glitch.global/14078d2f-a798-4e8b-893e-5f9452ffb468/whiteDoor.glb?v=1693982738385" crossOrigin="anonymous" alt="whiteDoor"></a-asset-item>
+        <a-asset-item id="coffee" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/cafetiere.glb?v=1693908142500" crossOrigin="anonymous" alt="cafetiere"></a-asset-item>
+        <a-asset-item id="kettle" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/water_kettle.glb?v=1693908142058" crossOrigin="anonymous" alt="water_kettle"></a-asset-item>
+        <a-asset-item id="papertowel" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/paper_towel_roll.glb?v=1693908140474" crossOrigin="anonymous" alt="paper_towel_roll"></a-asset-item>
+        <a-asset-item id="shelfcomplement" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/metal_shelf.glb?v=1693908140957" crossOrigin="anonymous" alt="metal_shelf"></a-asset-item>
+        <a-asset-item id="doorone" response-type="arraybuffer" src="https://cdn.glitch.global/c8a0bc9d-fb9c-45fb-a9ff-0a617f5dfe6e/puertaOficina.glb?v=1693474755665" crossOrigin="anonymous" alt="puertaOficina"></a-asset-item>
+        <a-asset-item id="stool" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/TabureteFrenteMicro.glb?v=1693571972405" crossOrigin="anonymous" alt="TabureteFrenteMicro"></a-asset-item>
+        <a-asset-item id="ktable" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/table_with_metal_legs.glb?v=1693917468558" crossOrigin="anonymous" alt="table_with_metal_legs"></a-asset-item>
+        <a-asset-item id="wc" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/wc_3d_model_-_nora.glb?v=1693942921041" crossOrigin="anonymous" alt="_nora"></a-asset-item>
+        <a-asset-item id="sink" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/unseen_bathroom_sink.glb?v=1693942922359" crossOrigin="anonymous" alt="unseen_bathroom_sink"></a-asset-item>
+        <a-asset-item id="wfountain" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/drinking_fountain.glb?v=1693942923145" crossOrigin="anonymous" alt="drinking_fountain"></a-asset-item>
+        <a-asset-item id="board" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/stuff_in_my_room_whiteboard.glb?v=1693942924452" crossOrigin="anonymous" alt="stuff_in_my_room_whiteboard"></a-asset-item>
+        <a-asset-item id="cubicle" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/office_cubicle.glb?v=1694082621594" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="livingwall" response-type="arraybuffer" src="https://cdn.glitch.me/078ce1a5-734a-4824-8ef5-cf5a78251ea1/landscape_living_wall_university_of_greenwich.glb?v=1694084082833" crossOrigin="anonymous" alt="landscape_living_wall_university_of_greenwich"></a-asset-item>
+        <a-asset-item id="drawer" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/file_folder_drawer.glb?v=1694275788482" crossOrigin="anonymous" alt="folder_drawer"></a-asset-item>
+        <a-asset-item id="zero" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/4b75afd6a6094efd8e942093aef10de4.glb?v=1694287652663" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="number1" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/95f1fc10d2394c6490a3ae7151027653.glb?v=1694287652282" crossOrigin="anonymous" alt=""></a-asset-item>
+        <a-asset-item id="curtain" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/curtains.glb?v=1694345440901" crossOrigin="anonymous" alt="curtains"></a-asset-item>
+        <a-asset-item id="cabinet" response-type="arraybuffer" src="https://cdn.glitch.global/078ce1a5-734a-4824-8ef5-cf5a78251ea1/Double%20Door%20Upper%20Cabin.glb?v=1694345537335" crossOrigin="anonymous" alt="Cabin"></a-asset-item>
+        <img id="qrstreet" response-type="arraybuffer" src="https://cdn.glitch.global/6211dc8f-6ce8-489a-a462-10f300f2e1cc/street.png?v=1695820029802" alt="qr1" crossOrigin="anonymous"/>
+        <img id="qrentrada" response-type="arraybuffer" src="https://cdn.glitch.global/3b27913a-e0c0-4999-8a6b-3cacbaa548f5/recepcion.png?v=1695821732540" alt="qr2" crossOrigin="anonymous"/>
+        <img id="qroficina" response-type="arraybuffer" src="https://cdn.glitch.global/951679fc-d311-45ac-8cec-a0dd794eb9b3/oficina.png?v=1695820360594" alt="qr3" crossOrigin="anonymous"/>
+        <img id="qrcocina" response-type="arraybuffer" src="https://cdn.glitch.global/3b27913a-e0c0-4999-8a6b-3cacbaa548f5/cocina.png?v=1695821983569" alt="qr4" crossOrigin="anonymous"/>
+        <img id="qrsalon1" response-type="arraybuffer" src="https://cdn.glitch.global/28e505cf-42af-445b-8568-60b7486fe815/salon1.png?v=1695822138979" alt="qr5" crossOrigin="anonymous"/>
+        <img id="qrsalon2" response-type="arraybuffer" src="https://cdn.glitch.global/18f39ff2-1b2d-4e59-a8d4-8de045bab8e5/salon2.png?v=1695822251441" alt="qr6" crossOrigin="anonymous"/>
+        <a-asset-item id="firstdoor" response-type="arraybuffer" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/DoorCristalentrada.only.glb?v=1694414908394" crossOrigin="anonymous" alt=""></a-asset-item>
+        <img id="ar1" response-type="arraybuffer" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/IMG_20230908_094322.jpg?v=1694458745402" alt="ar1" crossOrigin="anonymous"/>
+        <img id="ar2" response-type="arraybuffer" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/door1.jpg?v=1694458748471" alt="ar2" crossOrigin="anonymous"/>
+        <img id="ar3" response-type="arraybuffer" src="https://cdn.glitch.global/860cdd0a-dc8f-4cf3-9491-eed9e6420fd3/IMG_20230908_094344(1).jpg?v=1694458759027" alt="ar3" crossOrigin="anonymous"/>
+        <img id="ar4" response-type="arraybuffer" src="" alt="ar4" crossOrigin="anonymous"/>
+        <img id="texttest" response-type="arraybuffer" src="https://cdn.glitch.global/13335002-678c-41c0-b54f-50b392a3793b/texttest.png?v=1695655250486" alt="texttest" crossOrigin="anonymous"/>
+        <img id="textreact" response-type="arraybuffer" src="https://cdn.glitch.global/13335002-678c-41c0-b54f-50b392a3793b/react.png?v=1695656791931" alt="textreact" crossOrigin="anonymous"/>
 
         <a-entity id="Ana" position="82.311 19 -4.728" rotation="0 -70 0" scale="25 26 28"
             animation-mixer="clip: *; loop: true" play-all-model-animations modify-materials 
@@ -394,7 +394,7 @@ function Inmersive() {
       </Modal>
 
       <Link to="/"> 
-        <button className="btn btn-light" id="botonhome" onClick>
+        <button className="btn btn-light" onClick>
           <strong>Volver</strong>
         </button>
       </Link>
