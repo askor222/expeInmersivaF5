@@ -79,3 +79,5 @@ El repositorio está hecho usando Symfony y REACT, en ambos casos es necesario s
 * Marcela Romero. Developer. (https://github.com/Marcela3290)
 * Kibria Ali Askor. Developer. (https://github.com/askor222)
 * Chantell Gebauer. Stakeholder.
+
+## Deploy: (https://expeinmersiva.vercel.app/Inmersive)
